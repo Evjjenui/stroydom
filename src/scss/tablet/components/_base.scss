@@ -5,3 +5,11 @@
 .show-all {
   right: 20px;
 }
+
+.video-block {
+
+  iframe {
+    max-width: 100%;
+    max-height: 450px;
+  }
+}

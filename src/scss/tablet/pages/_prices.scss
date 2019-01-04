@@ -1,20 +1,14 @@
 .prices {
-  margin-top: 80px;
+  margin-top: 40px;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
 
-  &-content {
-    width: 100%;
+  .content-title {
+    padding: 0 20px;
   }
 
   &-table {
-    margin: 60px 0 20px;
-    width: 100%;
-
-    &__head {
-
-      strong {
-        font-size: 18px;
-      }
-    }
 
     &__body {
 
@@ -27,21 +21,9 @@
     }
 
     &__row {
-      line-height: 30px;
-      padding: 15px 0 15px 40px;
+      padding: 15px 0 15px 20px;
       
       @include flexbox();
-    }
-
-    &__cell {
-
-      &:first-child {
-        width: 60%;
-      }
-
-      p {
-        font-size: 16px;
-      }
     }
   }
 
@@ -91,104 +73,21 @@
           vertical-align: middle;
         }
       }
-
-      &.material {
-
-        .icon {
-          background-image: url(../images/service_advantage_icon5.png);
-        }
-      }
-
-      &.size {
-
-        .icon {
-          background-image: url(../images/build_sprite.png);
-          background-size: 200px;
-          background-position: 0 -92px;
-        }
-      }
-
-      &.floors {
-
-        .icon {
-          background-image: url(../images/build_sprite.png);
-          background-size: 190px;
-          background-position: 0 -157px;
-        }
-      }
-
-      &.roof {
-
-        .icon {
-          background-image: url(../images/build_sprite.png);
-          background-size: 190px;
-          background-position: -84px -46px;
-        }
-      }
     }
 
     &__subitem {
-      width: 30%;
-      display: inline-block;
-      vertical-align: bottom;
+      width: 26%;
+      margin-right: 20px;
 
-      .radiobuttons {
-        width: 190px;
-      }
-
-      strong {
-        font-weight: normal;
-        display: block;
-        margin-bottom: 30px;
+      &:last-child {
+        margin-right: 0;
       }
 
       &.size {
-        width: 35%;
+        width: 41%;
 
         label {
-          display: inline-block;
-          vertical-align: middle;
-          line-height: 24px;
-          width: 190px;
-          margin-top: 10px;
-        }
-
-        input[type="text"] {
-          border: 1px solid #f0f4f9;
-          background-color: #f0f4f9;
-          height: 60px;
-          line-height: 58px;
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 8px;
-          text-align: center;
-          width: 94px;
-          font-size: 14px;
-          margin-top: 10px;
-
-          @include border-radius(5px);
-
-          &::-webkit-input-placeholder {
-            color: #999999;
-          }
-
-          &::-moz-placeholder {
-            color: #999999;
-          }
-
-          &:-moz-placeholder {
-            color: #999999;
-          }
-
-          &:-ms-input-placeholder {
-            color: #999999;
-          }
-
-          + span {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 7px;
-          }
+          width: 170px;
         }
       }
     }
