@@ -10,9 +10,12 @@
       }
 
       .accordion-item__title {
-        
-        &:after {
-          @include transform(rotate(90deg));
+
+        span {
+
+          &:after {
+            @include transform(rotate(90deg));
+          }
         }
       }
     }
@@ -55,25 +58,30 @@
     &__title {
       line-height: 28px;
       font-weight: 700;
-      padding: 0 60px 0 50px  ;
+      padding: 0 0 0 50px  ;
       position: relative;
-      display: inline-block;
-      vertical-align: top;
       cursor: pointer;
 
       background: url(../images/accordion_sprite.png) no-repeat;
 
-      &:after {
-        position: absolute;
-        display: block;
-        content: '';
-        width: 10px;
-        height: 19px;
-        right: 0;
-        top: calc(50% - 10px);
-        background: url(../images/sprite.png) -225px top no-repeat;
+      span {
+        padding-right: 60px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
 
-        @include transition(.25s all linear);
+        &:after {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 10px;
+          height: 19px;
+          right: 0;
+          top: calc(50% - 10px);
+          background: url(../images/sprite.png) -225px top no-repeat;
+
+          @include transition(.25s all linear);
+        }
       }
     }
 

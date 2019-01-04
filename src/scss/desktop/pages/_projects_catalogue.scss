@@ -29,13 +29,14 @@
       color: #1758a5;
       font-size: 16px;
       font-weight: 700;
+      text-decoration: none;
       display: block;
       position: relative;
       border: 2px solid #1758a5;
       margin-top: 41px;
-      text-decoration: none;
       text-align: left;
       cursor: pointer;
+      background-color: #fff;
 
       @include border-radius(5px);
 

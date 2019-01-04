@@ -1,0 +1,26 @@
+.component-service_advantages {
+  background-color: #f0f4f9;
+  padding: 90px 0 60px;
+
+  .content-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .service_advantages__content {
+    width: 100%;
+    margin-top: 55px;
+
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .service_advantages-item {
+      margin-bottom: 34px;
+      width: calc(50% - 80px);
+      
+      .advantage-item__icon {
+        margin-bottom: 21px;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.component-popular__projects {
+
+  .project-item {
+    
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+.project {
+
+  &s-block {
+    justify-content: space-between;
+  }
+
+  &-item {
+    width: calc(50% - 10px);
+    margin: 0 0 20px 0;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    .photo {
+      display: block;
+      height: 230px;
+
+      @include transition(.25s opacity linear);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .hide-content {
+      display: none;
+      color: #fff;
+      height: 230px;
+      padding: 60px 34px 0;
+
+      a {
+        color: inherit;
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: bold;
+        padding-right: 54px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 32px;
+          height: 23px;
+          right: 0;
+          top: calc(50% - 12px);
+          background: url(../images/sprite.png) -63px 0 no-repeat;
+        }
+      }
+
+      p {
+        margin-top: 16px;
+      }
+    }
+  }
+}

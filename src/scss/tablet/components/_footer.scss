@@ -1,0 +1,31 @@
+.footer {
+
+  .content-wrapper {
+    padding: 0 20px;
+  }
+
+  &__navigation {
+    max-width: 140px;
+
+    li {
+      width: 100%;
+      padding: 8px 0;
+    }
+  }
+
+  &__contacts {
+    max-width: 210px;
+
+    .contacts-block {
+      margin: 0;
+
+      .call-me {
+
+        &:after {
+          background-size: 200px;
+          background-position: -38px -19px;
+        }
+      }
+    }
+  }
+}

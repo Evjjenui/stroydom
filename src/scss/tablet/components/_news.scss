@@ -1,0 +1,12 @@
+.component-news {
+  margin-bottom: 0;
+
+  &__item {
+    width: calc(50% - 10px);
+    max-width: 100%;
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}

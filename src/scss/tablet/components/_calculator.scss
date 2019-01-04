@@ -1,0 +1,196 @@
+.component-calculator {
+}
+
+.component-doubled__forms {
+  width: 57%;
+
+  .step {
+    padding-left: 40px;
+  }
+}
+
+.component-calculator__forms {
+  
+  &_step2 {
+
+    .step-form__item {
+
+      > label {
+        width: 192px;
+      }
+    }
+  }
+
+  &_step5.step {
+    justify-content: center;
+    padding-top: 0;
+
+    .total-price {
+      margin-bottom: 42px;
+
+      p {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      span {
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 700;
+      }
+    }
+
+    .step-form__item {
+      margin-bottom: 20px;
+      padding: 0;
+    }
+
+    .step-button {
+      margin-top: 0;
+    }
+
+    input[type="text"] {
+      width: 306px;
+      height: 60px;
+      line-height: 58px;
+      text-align: left;
+      padding: 0 10px 0 17px;
+    }
+  }
+
+  &_controls {
+    width: 114px;
+    padding-bottom: 85px;
+
+    @include flexbox();
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    .steps-numbers {
+      margin: 115px 0 0;
+      color: #1758a5;
+
+      p {
+        font-weight: 900;
+        font-size: 16px;
+
+        span {
+          font-size: 36px;
+        }
+      } 
+    }
+  }
+}
+
+.component-doubled {
+
+  &__content {
+    position: relative;
+    border: 10px solid transparent;
+    width: 100%;
+    @include flexbox;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      left: -10px;
+      top: -10px;
+      z-index: -1;
+      
+      background: #66a9ec;
+      background: -moz-linear-gradient(61deg, #66a9ec 0%, #17559e 100%);
+      background: -webkit-linear-gradient(61deg, #66a9ec 0%,#17559e 100%);
+      background: linear-gradient(61deg, #66a9ec 0%,#17559e 100%);
+
+      @include border-radius(5px);
+    }
+  }
+  
+  &__info {
+    padding: 0 40px 0 30px;
+    width: 43%;
+  }
+
+  .actions.clearfix {
+    position: absolute;
+    left: 80px;
+    bottom: 50px;
+
+    li:first-child {
+      display: none;
+    }
+
+    li:nth-child(2) {
+      
+      a {
+        width: 306px;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 0 0 32px;
+        color: #1758a5;
+        font-size: 16px;
+        font-weight: 700;
+        display: block;
+        position: relative;
+        border: 2px solid #1758a5;
+        text-decoration: none;
+
+        @include border-radius(5px);
+
+        &:before {
+          display: block;
+          position: absolute;
+          content: '';
+          width: 32px;
+          height: 24px;
+          right: 58px;
+          top: calc(50% - 12px);
+          background-image: url(../images/sprite.png);
+          background-position: -63px -30px;
+          background-repeat: no-repeat;
+
+          @include transform(rotate(180deg));
+        }
+      }
+    }
+  }
+}
+
+
+.steps.clearfix,
+.steps-dots {
+
+  ul {
+    list-style: none;
+  }
+  
+  li {
+
+    a {
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0 0 20px;
+      background-color: #f0f4f9;
+      cursor: pointer;
+
+      @include border-radius(50%);
+    }
+
+    &.last {
+      display: none;
+    }
+
+    &.active,
+    &.current {
+
+      a {
+        background-color: #1758a5;
+      }
+    }
+  }
+}
