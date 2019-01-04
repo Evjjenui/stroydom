@@ -1,0 +1,116 @@
+@mixin pagination-pages() {
+  $pagination-color: #C2C2C2;
+  $pagination-color-current: #1F262A;
+  $pagination-font-size: 15px;
+  $pagination-width: 44px;
+  $pagination-height: 37px;
+  $pagination-border-width: 1px;
+  $pagination-border-color: transparent;
+  $pagination-bg-default: transparent;
+  $pagination-bg-current: transparent;
+  $pagination-element-margin: 18px;
+
+  ul {
+    list-style: none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      margin: 0 $pagination-element-margin 0 0;
+
+      span {
+        border: $pagination-border-color $pagination-border-width solid;
+        background-color: $pagination-bg-default;
+        color: $pagination-color;
+        font-size: $pagination-font-size;
+        display: block;
+        width: $pagination-width;
+        height: $pagination-height;
+        line-height: $pagination-height;
+        position: relative;
+
+        &.pag_prev {
+          @include border-radius(100%);
+          background-color: #EAEAEA;
+          width: 37px;
+          height: 37px;
+          font-size: 0;
+
+          &:before {
+            background: url(../images/page_prev.png) left top no-repeat;
+            background-size: 8px;
+            content: '';
+            display: block;
+            width: 8px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -6px 0 0 -5px;
+
+          }
+
+          &:hover {
+            background-color: #2394FE;
+          }
+
+          a {
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+          }
+        }
+
+        &.pag_next {
+          @include border-radius(100%);
+          background-color: #EAEAEA;
+          width: 37px;
+          height: 37px;
+          font-size: 0;
+
+          &:before {
+            background: url(../images/page_next.png) left top no-repeat;
+            background-size: 8px;
+            content: '';
+            display: block;
+            width: 8px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -6px 0 0 -3px;
+
+          }
+
+          &:hover {
+            background-color: #2394FE;
+          }
+
+          a {
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+          }
+        }
+
+        &.current {
+          background-color: $pagination-bg-current;
+          color: $pagination-color-current;
+          font-weight: bold;
+
+          a {
+            font-weight: bold;
+          }
+        }
+
+        a {
+          color: $pagination-color;
+          display: block;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@mixin button($button-size, $button-bg) {
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+  font-family: "GothamPro", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  clear: both;
+  outline: none;
+  letter-spacing: .4px;
+
+  @include transition(.3s all ease-in);
+  @include border-radius(5px)
+
+  @if $button-size == "big" {
+    font-size: 15px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  @if $button-size == "medium" {
+    font-size: 13px;
+    height: 50px;
+    line-height: 46px;
+  }
+
+  @if $button-size == "small" {
+    font-size: 13px;
+    height: 44px;
+    line-height: 40px;
+  }
+
+  // button bg
+
+  @if $button-bg == "blue" {
+    color: #fff;
+    text-align: center;
+
+    background: linear-gradient(to right, #17559e, #318be5, #318be5, #17559e);
+    background-size: 400%;
+    background-position: 0 0;
+    @include box-shadow(0 15px 24px rgba(#000, .19));
+
+
+    &:hover,
+    &:active {
+      background-position: 100% 0;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+extends ../_layout
+
+block header
+  include ../../base/_header_inner
+
+
+block container
+  .content-wrapper
+    .breadcrumbs
+      ul
+        li
+          a(href="./index.html") Главная
+        li
+          b /
+        li
+          span Контакты
+      
+    .contacts
+      .content-wrapper
+        .content-title
+          h1 Контакты
+        .contacts__content
+          .contacts__info
+            .contacts__info-item
+              .icon
+                img(src="assets/images/contacts_icon1.png", alt="")
+              .contacts__info-text
+                span Адрес: 
+                p
+                  | Стародеревенская улица, 11к2
+                  br
+                  | Санкт-Петербург, 197374
+
+            .contacts__info-item
+              .icon
+                img(src="assets/images/contacts_icon2.png", alt="")
+              .contacts__info-text
+                span Телефон: 
+                p +7 961 802 17 41
+
+            .contacts__info-item
+              .icon
+                img(src="assets/images/contacts_icon3.png", alt="")
+              .contacts__info-text
+                span Эл. почта: 
+                p 
+                  a(href="javascript:void(0)") info@stroy-dom.pro
+
+          .contacts__map
+            img(src="assets/images/contacts_map.jpg", alt="")
+

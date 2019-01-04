@@ -1,0 +1,123 @@
+extends ../_layout
+
+block header
+  include ../../base/_header_inner
+
+
+block container
+  .content-wrapper
+    .breadcrumbs
+      ul
+        li
+          a(href="./index.html") Главная
+        li
+          b /
+        li
+          a(href="./our_objects.html") Наши объекты
+        li
+          b /
+        li
+          span Коттеджный поселок  «Новое Минулово»
+
+    .object-page
+      .content-wrapper
+        .content-title
+          h1
+            | Коттеджный поселок
+            br
+            | «Новое Минулово»
+
+        .content-accordion
+          .accordion-item.foundation
+            .accordion-item__title
+              | Фундамент
+
+            .accordion-item__content(style="display: none;")
+              p Монолитная плита 300мм * с использованием товарного бетона B22,5. (вынос осей на местность; разработка котлована мех. способом и ручное выравнивание дна котлована; укладка геотекстиля Geo Pro 200; подушка из намывного песка 300мм с послойным трамбованием виброплитой; монтаж опалубки; монтаж арматурного каркаса; укладка бетона; уход за бетоном)
+
+              p * Тип и сечение фундамента определяются на основании геологических изысканий места застройки и расчета фундамента. Итоговая стоимость может отличаться в зависимости от характеристик фундамента.
+
+          .accordion-item.walls
+            .accordion-item__title
+              | Несущие стены и перегородки
+
+            .accordion-item__content(style="display: none;")
+              p Несущие стены из автоклавного газобетона D500 толщиной 400мм, перегородки — 300мм и 150мм.
+              p (гидроизоляция по фундаменту;  кладка газобетонных блоков на клей; армирование кладки; монолитные ж/б перемычки; армопояса под межэтажное перекрытие и мауэрлат)
+
+          .accordion-item.floors
+            .accordion-item__title
+              | Межэтажное перекрытие
+
+            .accordion-item__content(style="display: none;")
+              p Монолитное ж/б перекрытие 150мм с использованием товарного бетона B25.
+              p (монтаж опалубки; монтаж арматурного каркаса; укладка бетона; уход за бетоном)
+
+          .accordion-item.roof
+            .accordion-item__title
+              | Кровля
+
+            .accordion-item__content(style="display: none;")
+              p Металлочерепица RUUKKI Monterrey Standart (Финляндия), покрытие — полиэстер (PE) 25мкм
+
+              p (обработка пиломатериалов для кровли огне- биозащитой; монтаж стропильной системы из доски камерной сушки 50х200 мм; монтаж пароизоляции ИЗОСПАН B; утепление кровли 200мм Rockwool Лайт Баттс; монтаж кровельной мембраны Tyvek Soft; монтаж контробрешетки и обрешетки под металлочерепицу; монтаж металлочерепицы)
+          
+          .accordion-item.additional
+            .accordion-item__title
+              | Дополнительно
+
+            .accordion-item__content(style="display: none;")
+              p Установка двухкамерных стеклопакетов, профиль VEKA Softline 70 цвет белый/мореный дуб, установка входной металлической двери, материал трехлистовое полотно (сталь 2мм), полимерно-порошковая покраска, утепление мин. вата.
+        
+        .gallery-content
+          .gallery-item
+            a(href="#obect_img1", data-fancybox="gallery")
+              img(src="assets/images/object_image1.jpg", alt="")
+          .gallery-item
+            a(href="#obect_img2", data-fancybox="gallery")
+              img(src="assets/images/object_image2.jpg", alt="")
+          .gallery-item
+            a(href="#obect_img3", data-fancybox="gallery")
+              img(src="assets/images/object_image3.jpg", alt="")
+          .gallery-item
+            a(href="#obect_img4", data-fancybox="gallery")
+              img(src="assets/images/object_image4.jpg", alt="")
+          .gallery-item
+            a(href="#obect_img5", data-fancybox="gallery")
+              img(src="assets/images/object_image5.jpg", alt="")
+          .gallery-item
+            a(href="#obect_img6", data-fancybox="gallery")
+              img(src="assets/images/object_image6.jpg", alt="")
+          .gallery-item
+            a(href="#obect_img7", data-fancybox="gallery")
+              img(src="assets/images/object_image7.jpg", alt="")
+          .gallery-item
+            a(href="#obect_img8", data-fancybox="gallery")
+              img(src="assets/images/object_image8.jpg", alt="")
+          .gallery-item
+            a(href="#obect_img9", data-fancybox="gallery")
+              img(src="assets/images/object_image9.jpg", alt="")
+
+
+          div#obect_img1(style="display: none;")
+            img(src="assets/images/object_image1.jpg", alt="")
+          div#obect_img2(style="display: none;")
+            img(src="assets/images/object_image2.jpg", alt="")
+          div#obect_img3(style="display: none;")
+            img(src="assets/images/object_image3.jpg", alt="")
+          div#obect_img4(style="display: none;")
+            img(src="assets/images/object_image4.jpg", alt="")
+          div#obect_img5(style="display: none;")
+            img(src="assets/images/object_image5.jpg", alt="")
+          div#obect_img6(style="display: none;")
+            img(src="assets/images/object_image6.jpg", alt="")
+          div#obect_img7(style="display: none;")
+            img(src="assets/images/object_image7.jpg", alt="")
+          div#obect_img8(style="display: none;")
+            img(src="assets/images/object_image8.jpg", alt="")
+          div#obect_img9(style="display: none;")
+            img(src="assets/images/object_image9.jpg", alt="")
+
+
+  include ../../components/_order
+    

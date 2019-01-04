@@ -1,0 +1,15 @@
+@mixin uniform-resize($checkbox-size) {
+  width: $checkbox-size;
+  height: $checkbox-size;
+
+  span {
+    background-size: $checkbox-size;
+    width: $checkbox-size;
+    height: $checkbox-size;
+
+    input {
+      width: $checkbox-size;
+      height: $checkbox-size;
+    }
+  }
+}

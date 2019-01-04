@@ -1,0 +1,112 @@
+.project-page {
+  margin-top: 55px;
+
+  .content-accordion {
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .content-title {
+    margin-bottom: 35px;
+  }
+
+  &__info {
+    width: 100%;
+    margin-top: 85px;
+
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > p {
+      width: 100%;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    &-item {
+      font-size: 18px;
+      line-height: 24px;
+
+      span {
+        font-weight: 700;
+      }
+
+      p {
+        line-height: 30px;
+        color: #1758a5;
+      }
+
+      &_price {
+        margin-left: 0;
+        width: 30%;
+        text-align: right;
+
+        p {
+          font-weight: 700;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.project-visual {
+  width: 100%;
+
+  @include flexbox();
+  justify-content: space-between;
+
+  &__photo {
+    min-width: 690px;
+  }
+
+  &__bar {
+    width: 418px;
+    margin-left: 0;
+  }
+
+  &__item {
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &:first-child {
+      margin-bottom: 4px;
+    }
+
+    span {
+      width: 100%;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__subitem {
+    border: 1px solid #e6e9e9;
+    overflow: hidden;
+    width: calc(50% - 8px);
+    text-align: center;
+    margin-bottom: 16px;
+    height: 135px;
+
+    @include border-radius(5px);
+
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 0;
+      line-height: 0;
+      width: 0;
+      height: 100%;
+    }
+    
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

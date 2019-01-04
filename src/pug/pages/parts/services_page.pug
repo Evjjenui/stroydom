@@ -1,0 +1,27 @@
+extends ../_layout
+
+block header
+  include ../../base/_header_inner
+
+
+block container
+  .content-wrapper
+    .breadcrumbs
+      ul
+        li
+          a(href="./index.html") Главная
+        li
+          b /
+        li
+          a(href="./services.html") Услуги
+        li
+          b /
+        li
+          span Ленточный фундамент
+  
+  include ../../components/_content_component
+  include ../../components/_objects
+  include ../../components/_service_advantages
+  include ../../components/_calculator
+  include ../../components/_video
+  include ../../components/_order

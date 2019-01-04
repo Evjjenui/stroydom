@@ -1,0 +1,23 @@
+.component.component-works
+  .content-wrapper
+    .component__title
+      h1 Наши работы
+    .works-grid
+      .works-grid__item.first
+        .image
+          img(src="assets/images/project_photo.jpg", alt="project photo")
+          .name 
+            | Коттеджный поселок
+            br
+            | «Новый Петербург»
+      -for (i = 0; i < 5; i++)
+        .works-grid__item
+          .image
+            img(src="assets/images/project_photo.jpg", alt="project photo")
+            .name 
+              | д. Жабино
+
+    a.show-all(href="./works.html")
+      | Посмотреть
+      br
+      | все работы

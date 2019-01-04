@@ -1,0 +1,40 @@
+.component {
+  margin: 40px 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.content-wrapper {
+  position: relative;
+}
+
+.show-all {
+  position: absolute;
+  top: 5px;
+  right: 0;
+
+  color: #1758a5;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+
+  padding-right: 60px;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 32px;
+    height: 24px;
+    background-image: url(../images/sprite.png);
+    background-position: -63px -30px;
+    background-repeat: no-repeat;
+
+    right: 0;
+    top: calc(50% - 12px);
+
+    @include transform(rotate(180deg));
+  }
+}

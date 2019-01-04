@@ -1,0 +1,118 @@
+extends ../_layout
+
+block header
+  include ../../base/_header_inner
+
+
+block container
+  .content-wrapper
+    .breadcrumbs
+      ul
+        li
+          a(href="./index.html") Главная
+        li
+          b /
+        li
+          a(href="./index.html") Проекты
+        li
+          b /
+        li
+          span Проект дома Дрезден
+
+    .project-page
+      .content-wrapper
+        .content-title
+          h1 Проект дома Дрезден
+        .project-visual
+          .project-visual__photo
+            img(src="assets/images/project_photo.jpg", alt="project photo")
+          .project-visual__bar
+            .project-visual__item
+              span Планировка
+              a.project-visual__subitem(href="#rooms_1" data-fancybox="rooms")
+                img(src="assets/images/rooms1.jpg", alt="")
+              a.project-visual__subitem(href="#rooms_2" data-fancybox="rooms")
+                img(src="assets/images/rooms2.jpg", alt="")
+
+              div#rooms_1(style="display: none;")
+                img(src="assets/images/rooms1.jpg", alt="")
+              div#rooms_2(style="display: none;")
+                img(src="assets/images/rooms2.jpg", alt="")
+
+            .project-visual__item
+              span Фасад
+              a.project-visual__subitem(href="#facade_1" data-fancybox="facade")
+                img(src="assets/images/facade1.jpg", alt="")
+              a.project-visual__subitem(href="#facade_2" data-fancybox="facade")
+                img(src="assets/images/facade2.jpg", alt="")
+              a.project-visual__subitem(href="#facade_3" data-fancybox="facade")
+                img(src="assets/images/facade3.jpg", alt="")
+              a.project-visual__subitem(href="#facade_4" data-fancybox="facade")
+                img(src="assets/images/facade4.jpg", alt="")
+
+              div#facade_1(style="display: none;")
+                img(src="assets/images/facade1.jpg", alt="")
+              div#facade_2(style="display: none;")
+                img(src="assets/images/facade2.jpg", alt="")
+              div#facade_3(style="display: none;")
+                img(src="assets/images/facade3.jpg", alt="")
+              div#facade_4(style="display: none;")
+                img(src="assets/images/facade4.jpg", alt="")
+        .project-page__info
+          .project-page__info-item
+            span Площадь: 
+            p 170 м2
+          .project-page__info-item
+            span Высота 1-этажа:
+            p 3 метра
+          .project-page__info-item
+            span Высота 2-этажа:
+            p 1,7-3 метра
+          .project-page__info-item.project-page__info-item_price
+            span Стоимость:
+            p 300 000 ₽
+          p Обработка пиломатериалов для кровли огне- биозащитой; монтаж стропильной системы из доски камерной сушки 50х200 мм; монтаж пароизоляции ИЗОСПАН B; утепление кровли 200мм Rockwool Лайт Баттс; монтаж кровельной мембраны Tyvek Soft; монтаж контробрешетки и обрешетки под металлочерепицу; монтаж металлочерепицы
+        .content-accordion
+          .accordion-item.foundation
+            .accordion-item__title
+              | Фундамент
+
+            .accordion-item__content(style="display: none;")
+              p Монолитная плита 300мм * с использованием товарного бетона B22,5. (вынос осей на местность; разработка котлована мех. способом и ручное выравнивание дна котлована; укладка геотекстиля Geo Pro 200; подушка из намывного песка 300мм с послойным трамбованием виброплитой; монтаж опалубки; монтаж арматурного каркаса; укладка бетона; уход за бетоном)
+
+              p * Тип и сечение фундамента определяются на основании геологических изысканий места застройки и расчета фундамента. Итоговая стоимость может отличаться в зависимости от характеристик фундамента.
+
+          .accordion-item.walls
+            .accordion-item__title
+              | Несущие стены и перегородки
+
+            .accordion-item__content(style="display: none;")
+              p Несущие стены из автоклавного газобетона D500 толщиной 400мм, перегородки — 300мм и 150мм.
+              p (гидроизоляция по фундаменту;  кладка газобетонных блоков на клей; армирование кладки; монолитные ж/б перемычки; армопояса под межэтажное перекрытие и мауэрлат)
+
+          .accordion-item.floors
+            .accordion-item__title
+              | Межэтажное перекрытие
+
+            .accordion-item__content(style="display: none;")
+              p Монолитное ж/б перекрытие 150мм с использованием товарного бетона B25.
+              p (монтаж опалубки; монтаж арматурного каркаса; укладка бетона; уход за бетоном)
+
+          .accordion-item.roof
+            .accordion-item__title
+              | Кровля
+
+            .accordion-item__content(style="display: none;")
+              p Металлочерепица RUUKKI Monterrey Standart (Финляндия), покрытие — полиэстер (PE) 25мкм
+
+              p (обработка пиломатериалов для кровли огне- биозащитой; монтаж стропильной системы из доски камерной сушки 50х200 мм; монтаж пароизоляции ИЗОСПАН B; утепление кровли 200мм Rockwool Лайт Баттс; монтаж кровельной мембраны Tyvek Soft; монтаж контробрешетки и обрешетки под металлочерепицу; монтаж металлочерепицы)
+          
+          .accordion-item.additional
+            .accordion-item__title
+              | Дополнительно
+
+            .accordion-item__content(style="display: none;")
+              p Установка двухкамерных стеклопакетов, профиль VEKA Softline 70 цвет белый/мореный дуб, установка входной металлической двери, материал трехлистовое полотно (сталь 2мм), полимерно-порошковая покраска, утепление мин. вата.
+              
+  include ../../components/_order
+  include ../../components/_popular_projects

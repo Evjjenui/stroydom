@@ -1,0 +1,32 @@
+.component.component-popular__projects
+  .content-wrapper
+    .component__title
+      h1
+        | Популярные
+        br
+        | проекты
+    
+    .projects-block
+      - for (i = 0; i < 3; i++)
+        .project-item
+          .photo
+            img(src="assets/images/house_photo.jpg", alt="")
+          .hide-content
+            a(href="project.html") Подробнее
+            p Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой
+          .project-info
+            .project-info__main
+              p Кельн
+              p 30 000 ₽
+            .project-info__sizes
+              .square
+                p 170 м2
+              .frame
+                p 170 м2
+              .floors
+                p 170 м2
+
+    a.show-all(href="./projects.html")
+      | Посмотреть
+      br
+      | все проекты

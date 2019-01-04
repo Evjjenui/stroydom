@@ -1,0 +1,17 @@
+@mixin transition($value...) {
+  transition: $value;
+  -moz-transition: $value;
+  -webkit-transition: $value;
+}
+
+@mixin transform($value...) {
+  transform: $value;
+  -moz-transform: $value;
+  -webkit-transform: $value;
+}
+
+@mixin transform-origin($value) {
+  transform-origin: $value;
+  -moz-transform-origin: $value;
+  -webkit-transform-origin: $value;
+}

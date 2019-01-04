@@ -1,0 +1,28 @@
+.component-order {
+  margin-bottom: 80px;
+
+  .content-wrapper {
+    flex-wrap: wrap;
+    z-index: 1;
+    min-height: 406px;
+  }
+
+  .component-doubled__info {
+
+    > * {
+      width: 100%;
+    }
+
+    .icon {
+      width: 43px;
+      height: 38px;
+      background-image: url(../images/sprite.png);
+      background-position: -162px 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .step-button {
+    margin-top: 0;
+  }
+}

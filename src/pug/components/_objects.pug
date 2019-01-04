@@ -1,0 +1,26 @@
+.component.component-popular__objects
+  .content-wrapper
+    .component__title
+      h1
+        | Наши объекты
+    .objects-block
+      - for (i = 0; i < 3; i++)
+        a.object-item(href="./object.html")
+          span.photo
+            img(src="assets/images/house_photo.jpg", alt="")
+            span.hide-info
+              span.object-info__sizes
+                span.square
+                  p 170 м2
+                span.frame
+                  p 170 м2
+                span.floors
+                  p 170 м2
+
+          .object-info
+            p Коттеджный поселок «Новый Петербург»
+
+    a.show-all(href="./projects.html")
+      | Посмотреть
+      br
+      | все проекты

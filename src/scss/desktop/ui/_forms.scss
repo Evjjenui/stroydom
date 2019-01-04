@@ -1,0 +1,211 @@
+.step-form {
+
+  &__item {
+    padding: 6px 0;
+    @include flexbox();
+    align-items: center;
+
+    .radiobuttons {
+      width: 140px;
+
+      input[type="radio"] + label {
+        margin: 0;
+      }
+
+      label {
+        height: 40px;
+      }
+    }
+  }
+
+  label {
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+
+    i {
+      display: block;
+      font-style: normal;
+      color: #999999;
+    }
+  }
+
+  input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #1758a5;
+    width: 12px;
+    height: 12px;
+
+    @include border-radius(50%);
+
+    &:checked {
+      background-color: #1758a5;
+      @include box-shadow(inset 0 0 0 2px #fff);
+    }
+
+    + label {
+      margin-left: 7px;
+    }
+  }
+
+  input[type="text"] {
+    border: 1px solid #e7e6e6;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    text-align: center;
+    width: 70px;
+    font-size: 13px;
+
+    @include border-radius(5px);
+
+    &::-webkit-input-placeholder {
+      color: #999999;
+    }
+
+    &::-moz-placeholder {
+      color: #999999;
+    }
+
+    &:-moz-placeholder {
+      color: #999999;
+    }
+
+    &:-ms-input-placeholder {
+      color: #999999;
+    }
+
+    + span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 7px;
+    }
+  }
+
+  &__sub-item {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:nth-child(2) {
+      margin: 0 50px 0 6px;
+    }
+  }
+}
+
+.radiobuttons {
+  background-color: #f0f4f9;
+  width: 100%;
+  
+  @include border-radius(5px);
+  @include flexbox();
+
+  label {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(to right,  #318be5, #17559e, #f0f4f9, #f0f4f9);
+    background: linear-gradient(to right, #f0f4f9, #f0f4f9, #318be5, #17559e);
+    background-size: 400%;
+    background-position: 0 0;
+    
+    @include border-radius(5px);
+    @include transition(linear .25s background);
+
+    @include flexbox();
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 1px;
+      height: 80%;
+      background-color: #e7e6e6;
+      top: 10%;
+      left: 0;
+    }
+
+    span {
+      width: 100%;
+      display: block;
+      font-size: 14px;
+      text-align: center;
+
+      i {
+        display: block;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+  
+  input {
+    border: 0 !important;
+    clip: rect(0 0 0 0);
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden;
+    padding: 0 !important;
+    position: absolute;
+    width: 1px !important;
+
+
+
+    &:first-child {
+
+      + label {
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &:checked {
+
+      + label {
+        background-position: 100% 0;
+        color: #fff;
+
+        + input + label {
+
+          &:after {
+            display: none;
+          }
+        }
+
+        &:after {
+          display: none;
+        }
+
+        span {
+          font-weight: 700;
+
+          i {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+select {
+  height: 60px;
+  line-height: 60px;
+  border: none;
+  font-size: 14px;
+  color: #666666;
+  padding: 0 35px 0 19px;
+  cursor: pointer;
+  background: #fff url(../images/select_arrow.png) 88% 27px no-repeat;
+
+  @include border-radius(5px);
+  @include box-shadow(0 14px 34px rgba(#000, .05));
+}

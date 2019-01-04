@@ -1,0 +1,15 @@
+.steps.clearfix {
+  position: absolute;
+  top: 126px;
+  right: 50px;
+  
+  li {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+  }
+}
+
+.hidden-title {
+  display: none;
+}

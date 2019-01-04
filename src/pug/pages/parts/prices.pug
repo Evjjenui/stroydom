@@ -1,0 +1,173 @@
+extends ../_layout
+
+block header
+  include ../../base/_header_inner
+
+
+block container
+  .content-wrapper
+    .breadcrumbs
+      ul
+        li
+          a(href="./index.html") Главная
+        li
+          b /
+        li
+          span Цены
+    .prices
+      .content-wrapper
+        .content-title
+          h1
+            | Цены
+        .prices-content
+          .prices-table
+            .prices-table__head
+              .prices-table__row
+                .prices-table__cell
+                  strong Наименование
+                .prices-table__cell
+                  strong Стоимость
+            .prices-table__body
+              .prices-table__row
+                .prices-table__cell
+                  p Цены на каркасные дома
+                .prices-table__cell
+                  p от 6 500 руб. / кв.м.
+              .prices-table__row
+                .prices-table__cell
+                  p Срубы
+                .prices-table__cell
+                  p от 11 000 руб. / кв.м.
+              .prices-table__row
+                .prices-table__cell
+                  p Дома из бруса
+                .prices-table__cell
+                  p от 9 000 руб. / кв.м.
+              .prices-table__row
+                .prices-table__cell
+                  p Дома из газобетона
+                .prices-table__cell
+                  p от 10 000 руб. / кв.м.
+              .prices-table__row
+                .prices-table__cell
+                  p  Дома из пеноблоков
+                .prices-table__cell
+                  p от 10 000 руб. / кв.м.
+              .prices-table__row
+                .prices-table__cell
+                  p Дачные дома
+                .prices-table__cell
+                  p от 6 500 руб. / кв.м.
+              .prices-table__row
+                .prices-table__cell
+                  p Кирпичные дома
+                .prices-table__cell
+                  p от 18 000 руб. / кв.м.
+  
+  include ../../components/_blue_component
+
+  .content-wrapper
+    .prices-form
+      .prices-form__title
+        .icon
+        h2 Рассчитать стоимость
+        p
+          | С помощью этого калькулятора вы можете сделать приблизительный расчет стоимости строительства дома в комплектации
+          br
+          | «Базовый» включая стоимость строительных материалов.
+      form
+      .prices-form__item.material
+        .prices-form__item-title
+          .icon
+          span Из чего будет ваш дом?
+        .prices-form__item-content
+          .radiobuttons
+            input#material1(type="radio" name="material" checked="checked")
+            label(for="material1")
+              span Дома из газобетона
+            input#material2(type="radio" name="material")
+            label(for="material2")
+              span Каркасные дома
+            input#material3(type="radio" name="material")
+            label(for="material3")
+              span Теплая керамика
+
+
+      .prices-form__item.size
+        .prices-form__item-title
+          .icon
+          span Размеры дома
+        .prices-form__item-content
+          .prices-form__subitem.size
+            label(for="")
+              | Площадь дома
+              br
+              | (по фундаменту)
+            input(type="text" placeholder="10")
+            span м
+            label(for="")
+              | Ширина дома:
+            input(type="text" placeholder="8")
+            span м
+
+          .prices-form__subitem
+            strong
+              | Толщина газобетона
+            .radiobuttons
+              input#depth1(type="radio" name="depth" checked="checked")
+              label(for="depth1")
+                span 300
+              input#depth2(type="radio" name="depth")
+              label(for="depth2")
+                span 400
+
+          .prices-form__subitem
+            strong
+              | Количество этажей:
+            .radiobuttons
+              input#floors1(type="radio" name="floors" checked="checked")
+              label(for="floors1")
+                span 1
+              input#floors2(type="radio" name="floors")
+              label(for="floors2")
+                span 2
+
+      .prices-form__item.floors
+        .prices-form__item-title
+          .icon
+          span Межэтажные перекрытия
+        .prices-form__item-content
+          .radiobuttons
+            input#floor1(type="radio" name="floor" checked="checked")
+            label(for="floor1")
+              span Монолитное перекрытие 
+                i (только для каменных домов)
+            input#floor2(type="radio" name="floor")
+            label(for="floor2")
+              span Плиты перекрытия ПБ 220мм
+                i (только для каменных домов)
+            input#floor3(type="radio" name="floor")
+            label(for="floor3")
+              span Деревянные балки
+
+
+      .prices-form__item.roof
+        .prices-form__item-title
+          .icon
+          span Кровля
+        .prices-form__item-content
+          .radiobuttons
+            input#roof1(type="radio" name="roof" checked="checked")
+            label(for="roof1")
+              span Металлочерепица
+            input#roof2(type="radio" name="roof")
+            label(for="roof2")
+              span Мягкая кровля
+            input#roof3(type="radio" name="roof")
+            label(for="roof3")
+              span Керамическая черепица
+
+
+
+
+  include ../../components/_order

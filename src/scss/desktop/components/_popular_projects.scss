@@ -1,0 +1,196 @@
+.component-popular__projects {
+
+  .content-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .show-all {
+    top: 25px;
+  }
+
+}
+
+.projects-block {
+  width: 100%;
+  margin: 45px 0;
+
+  @include flexbox();
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.project {
+
+  &-item {
+    width: calc(33.3333% - 20px);
+    overflow: hidden;
+    color: #221f1f;
+    margin-right: 30px;
+
+    @include border-radius(6px);
+    @include box-shadow(0 14px 35px rgba(#000000, .11));
+    @include transition(.25s all linear);
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    .photo {
+      display: block;
+      height: 230px;
+
+      @include transition(.25s opacity linear);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .hide-content {
+      display: none;
+      color: #fff;
+      height: 230px;
+      padding: 60px 34px 0;
+
+      a {
+        color: inherit;
+        font-size: 24px;
+        line-height: 26px;
+        font-weight: bold;
+        padding-right: 54px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 32px;
+          height: 23px;
+          right: 0;
+          top: calc(50% - 12px);
+          background: url(../images/sprite.png) -63px 0 no-repeat;
+        }
+      }
+
+      p {
+        margin-top: 16px;
+      }
+    }
+
+    &:hover {
+      box-shadow: none;
+      color: #fff;
+
+      @include gradient-horizontal($color-end, $color-start);
+
+      .hide-content {
+        display: block;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .photo {
+        opacity: 0;
+        display: none;
+      }
+
+      .project-info__sizes {
+
+        > div {
+
+          &.frame {
+              
+            &:before {
+              background-position: -38px -32px;
+            }
+          }
+
+          &.square {
+            
+            &:before {
+              background-position: 0 -32px;
+            }
+          }
+
+          &.floors {
+            
+            &:before {
+              background-position: -74px -31px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-info {
+    padding: 34px 34px 45px;
+    
+    @include flexbox();
+    justify-content: space-between;
+
+    &__main {
+      @include flexbox();
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: inherit;
+      
+      p {
+        font-size: 24px;
+        color: inherit;
+        font-weight: 700;
+      }
+    }
+
+    &__sizes {
+
+      > div {
+        position: relative;
+        padding-left: 42px;
+        margin-bottom: 15px;
+
+        &:before {
+          position: absolute;
+          display: block;
+          content: '';
+          width: 27px;
+          height: 25px;
+          background: url(../images/build_sprite.png) no-repeat;
+          left: 0;
+        }
+
+        &.frame {
+          
+          &:before {
+            background-position: -38px top;
+          }
+        }
+
+        &.square {
+          
+          &:before {
+            background-position: 0 top;
+          }
+        }
+
+        &.floors {
+          margin-bottom: 0;
+          
+          &:before {
+            height: 27px;
+            background-position: -74px top;
+          }
+        }
+      }
+
+      p {
+        color: inherit;
+        font-size: 14px;
+      }
+    }
+  }
+}

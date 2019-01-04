@@ -1,0 +1,32 @@
+ @mixin orange-decor-block($bg-grad1,$bg-grad2,$border-grad1,$border-grad2) {
+  position: absolute;
+  display: block;
+  height: 90%;
+  width: 200px;
+  left: 0;
+  bottom: 0;
+  opacity: .14;
+  
+  @include transform(translate3d(-100%, 0, 0));
+  @include gradient-vertical($bg-grad1, $bg-grad2);
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    height: calc(100% + 20px);
+    width: 1px;
+    bottom: 0;
+  
+    @include gradient-vertical($border-grad1, $border-grad2);
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}

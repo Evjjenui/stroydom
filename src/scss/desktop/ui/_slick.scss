@@ -1,0 +1,151 @@
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    outline: none;
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-dots {
+    text-align: center;
+    margin-top: 65px;
+    display: flex !important;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 8px;
+        width: 20px;
+        height: 20px;
+    }
+
+    button {
+        outline: none;
+        border: none;
+        background: none;
+        color: transparent;
+        cursor: pointer;
+        font-size: 0;
+        line-height: 0;
+        width: 10px;
+        height: 10px;
+        border: none;
+        background-color: #333955;
+        
+        @include transition(linear .35s);
+        @include border-radius(50%);
+
+        &:hover {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .slick-active {
+
+        button {
+            width: 20px;
+            height: 20px;
+            background-color: #FFD81B;
+            
+            &:hover {
+                background-color: #FFD81B;
+            }
+        }
+    }
+}

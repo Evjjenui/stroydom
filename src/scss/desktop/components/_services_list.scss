@@ -1,0 +1,157 @@
+.component-popular__services {
+  background-color: #f0f4f9;
+  padding: 100px 0 68px;
+  margin-bottom: 0;
+
+  .services-content {
+    width: 100%;
+    @include flexbox();
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.services-item {
+  background-color: #fff;
+  padding: 60px 38px 0 38px;
+  min-height: 280px;
+  margin-bottom: 32px;
+  text-decoration: none;
+  color: #221f1f;
+  width: calc(33.3333% - 22px);
+  background-size: cover;
+  background-position: left top;
+  
+  @include transition(.3s all linear);
+  @include border-radius(5px);
+  @include box-shadow(0 14px 35px rgba(#000, .11));
+
+  &:hover {
+    background: #66a9ec !important;
+    background: -moz-linear-gradient(61deg, #66a9ec 0%, #17559e 100%) !important;
+    background: -webkit-linear-gradient(61deg, #66a9ec 0%,#17559e 100%) !important;
+    background: linear-gradient(61deg, #66a9ec 0%,#17559e 100%) !important;
+
+    .services-item__title {
+      color: #fff;
+
+      &:before {
+        background: #fff;
+      }
+    }
+  }
+
+  &_1 {
+    
+    .services-item__icon {
+      background-position: 0 -73px;
+    }
+
+    &:hover {
+    
+      .services-item__icon {
+        background-position: -63px -73px;
+      }
+    }
+  }
+
+  &_2 {
+    
+    .services-item__icon {
+      background-position: 0 -137px;
+    }
+
+    &:hover {
+
+      .services-item__icon {
+        background-position: -63px -137px;
+      }
+    }
+  }
+
+  &_3 {
+    
+    .services-item__icon {
+      background-position: 0 -192px;
+    }
+
+    &:hover {
+      
+      .services-item__icon {
+        background-position: -63px -192px;
+      }
+    }
+  }
+
+  &_4 {
+    
+    .services-item__icon {
+      background-position: 0 bottom;
+    }
+
+    &:hover {
+      
+      .services-item__icon {
+        background-position: -63px bottom;
+      }
+    }
+  }
+
+  &_5 {
+    
+    .services-item__icon {
+      background-position: -133px -73px;
+    }
+
+    &:hover {
+      
+      .services-item__icon {
+        background-position: -200px -73px;
+      }
+    }
+  }
+
+  &_6 {
+    
+    .services-item__icon {
+      background-position: -133px -135px;
+      width: 58px;
+    }
+
+    &:hover {
+      
+      .services-item__icon {
+        background-position: -200px -135px;
+      }
+    }
+  }
+
+  &__icon {
+    width: 53px;
+    height: 53px;
+    display: inline-block;
+    vertical-align: top;
+    background: url(../images/build_sprite.png) no-repeat;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 32px;
+    padding-top: 35px;
+    display: block;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 30px;
+      height: 1px;
+      top: 0;
+      left: 0;
+
+      @include gradient-horizontal();
+    }
+  }
+}

@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  include ../base/_head
+  body
+    
+    .wrapper
+      block header
+        include ../base/_header
+      
+      .container
+        block container
+
+          block content
+
+    include ../base/_footer
+
+  script(src="vendor/js/jquery-1.11.3.min.js")
+  script(src="vendor/js/jquery.steps.min.js")
+  script(src="vendor/js/jquery.fancybox.min.js")
+  script(src="assets/js/map.js?ver=1")
+  script(src="assets/js/main.js?ver=1")
