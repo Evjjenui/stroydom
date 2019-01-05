@@ -2627,6 +2627,10 @@ ol {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left bottom; }
+    .types-item:nth-child(1) {
+      background-image: url(../images/type_1.jpg); }
+    .types-item:nth-child(2) {
+      background-image: url(../images/type_2.jpg); }
     .types-item p {
       color: #fff;
       position: relative;
@@ -3292,6 +3296,8 @@ h2 {
           width: 41%; }
           .prices-form__subitem.size label {
             width: 170px; }
+  .projects-catalogue .content-title {
+    margin-top: 30px; }
   .projects-filter {
     width: 100%; }
     .projects-filter form {
@@ -3309,7 +3315,15 @@ h2 {
       .projects-filter__item:nth-child(1), .projects-filter__item:nth-child(2) {
         width: calc(50% - 10px); }
   .types {
-    margin: 40px 0; } }
+    margin: 40px 0;
+    justify-content: space-around; }
+    .types-item {
+      min-height: 229px;
+      max-width: 354px; }
+      .types-item:nth-child(1) {
+        background-image: url(../images/type_1_tablet.jpg); }
+      .types-item:nth-child(2) {
+        background-image: url(../images/type_2_tablet.jpg); } }
 
 @media screen and (max-width: 640px) {
   .mob-hide {

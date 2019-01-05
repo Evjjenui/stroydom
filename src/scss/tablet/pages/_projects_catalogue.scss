@@ -1,3 +1,10 @@
+.projects-catalogue {
+  
+  .content-title {
+    margin-top: 30px;
+  }
+}
+
 .projects-filter {
   width: 100%;
 
@@ -22,4 +29,18 @@
 
 .types {
   margin: 40px 0;
+  justify-content: space-around;
+
+  &-item {
+    min-height: 229px;
+    max-width: 354px;
+
+    &:nth-child(1) {
+      background-image: url(../images/type_1_tablet.jpg)
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/type_2_tablet.jpg)
+    }
+  }
 }

@@ -84,6 +84,14 @@
     background-repeat: no-repeat;
     background-position: left bottom;
 
+    &:nth-child(1) {
+      background-image: url(../images/type_1.jpg)
+    }
+
+    &:nth-child(2) {
+      background-image: url(../images/type_2.jpg)
+    }
+
     p {
       color: #fff;
       position: relative;
