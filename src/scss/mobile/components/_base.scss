@@ -1,0 +1,36 @@
+.component {
+  margin: 30px 0;
+}
+
+.show-all {
+  top: 0;
+  right: auto;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+}
+
+.video-block {
+
+  iframe {
+    max-width: 100%;
+    max-height: auto;
+  }
+}
+
+.component__title {
+  text-align: center;
+  width: 100%;
+
+  h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}

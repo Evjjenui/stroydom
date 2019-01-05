@@ -1,0 +1,40 @@
+.component-inro {
+  margin: 0;
+
+  .title {
+    text-align: center;
+    width: 100%;
+
+    h1 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .video {
+    display: none;
+  }
+
+  &__info {
+    background-size: contain;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 210px;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    .guarantee {
+      display: none;
+    }
+  }
+}

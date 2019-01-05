@@ -1,0 +1,30 @@
+.footer {
+  text-align: center;
+
+  .content-wrapper {
+    padding: 0 20px;
+  }
+
+  &__info,
+  &__navigation {
+    display: none;
+  }
+
+  &__contacts {
+    max-width: 100%;
+
+    .contacts-block {
+      margin: 0;
+
+      .call-me {
+        display: inline-block;
+        vertical-align: top;
+
+        &:after {
+          background-size: 200px;
+          background-position: -38px -19px;
+        }
+      }
+    }
+  }
+}

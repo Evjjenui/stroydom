@@ -1,0 +1,44 @@
+.contacts {
+  padding: 45px 0 0 0;
+
+  .content-title {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  &__map {
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+  }
+
+  &__info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-text {
+      vertical-align: middle;
+      max-width: 80%;
+    }
+
+    &-item {
+      width: 100%;
+      margin-bottom: 50px;
+
+      .icon {
+        width: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+  }
+}

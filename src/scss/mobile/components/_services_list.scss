@@ -1,0 +1,12 @@
+.component-popular__services {
+  padding: 50px 0 30px;
+  margin-bottom: 0;
+}
+
+.services-item {
+  width: 100%;
+
+  &:hover {
+    background-color: none !important; 
+  }
+}

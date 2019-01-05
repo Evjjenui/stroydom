@@ -1,0 +1,21 @@
+.accordion {
+
+  &-item {
+    margin: 0 20px 22px;
+
+    &.walls {
+      
+      .accordion-item__title {
+        background-position: 0 -34px;
+      }
+    }
+
+    &__title {
+
+      span {
+        padding-right: 40px;
+        line-height: 20px;
+      }
+    }
+  }
+}

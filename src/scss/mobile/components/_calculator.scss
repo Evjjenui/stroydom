@@ -1,0 +1,137 @@
+.component-doubled {
+  overflow: hidden;
+  
+  .content-wrapper {
+    padding: 0;
+  }
+
+  &__content {
+    flex-wrap: wrap;
+    border-width: 10px 0 10px 0;
+
+    &:before {
+      border-radius: 0;
+    }
+  }
+
+  &__info {
+    padding: 40px 20px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f4f9;
+
+    h2 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .actions.clearfix {
+    position: absolute;
+    left: 20px;
+    bottom: 130px;
+    width: calc(100% - 40px);
+    max-width: 335px;
+
+    li:nth-child(2) a {
+      width:  100%;
+    }
+  }
+}
+
+.component-doubled__forms {
+  width: 100%;
+  height: auto;
+
+  &.wizard .content {
+    flex-wrap: wrap;
+  }
+
+  .step {
+    padding: 40px 20px 240px;
+    box-shadow: none;
+  }
+  
+  .step-form__item .radiobuttons {
+    width: 120px;
+  }
+}
+
+.component-calculator__forms {
+
+  &_controls {
+    width: auto;
+    padding-bottom: 0;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+  }
+  
+  &_step5.step {
+    padding-bottom: 50px;
+
+    input[type="text"] {
+      width: 100%;
+      margin: 0;
+    }
+
+    .step-button {
+      width: 100%;
+    }
+  }
+
+  &_step2 {
+
+    .step-form__item {
+
+      > label {
+        width: 192px;
+      }
+    }
+  }
+}
+
+.steps.clearfix {
+  right: auto;
+  top: auto;
+  left: 20px;
+  bottom: 33px;
+}
+
+.steps.clearfix,
+.steps-dots {
+
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+
+    a {
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      background-color: #f0f4f9;
+      cursor: pointer;
+
+      @include border-radius(50%);
+    }
+
+    &.last {
+      display: none;
+    }
+
+    &.active,
+    &.current {
+
+      a {
+        background-color: #1758a5;
+      }
+    }
+  }
+}

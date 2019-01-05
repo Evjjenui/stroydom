@@ -1,0 +1,49 @@
+.project-page {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+
+  .content-accordion {
+    margin: 40px 0 0;
+  }
+
+  .content-title {
+    margin-top: 30px;
+  }
+
+  &__info {
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 0  20px;
+
+    &-item {
+      margin: 20px 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.project-visual {
+  width: 100%;
+
+  @include flexbox();
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__photo {
+    width: 100%;
+    min-width: 100%;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__bar {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+}

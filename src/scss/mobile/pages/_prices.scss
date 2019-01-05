@@ -1,0 +1,105 @@
+.prices {
+  margin-top: 0;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+
+  .content-title {
+    padding: 0 20px;
+  }
+
+  &-table {
+
+    &__cell {
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        padding-right: 20px;
+      }
+
+      &:nth-child(2) {
+        width: 40%;
+      }
+    }
+
+    &__body {
+
+      .prices-table__row {
+
+        &:nth-child(odd) {
+          background-color: #f8f8f8;
+        }
+      }
+    }
+
+    &__row {
+      padding: 15px 0 15px 20px;
+      
+      @include flexbox();
+    }
+  }
+
+  &-form {
+    width: 100%;
+
+    &__item {
+      padding-bottom: 20px;
+      margin-top: 30px;
+      border: none;
+      
+      &-title {
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+          max-width: 85%;
+          line-height: 28px;
+        }
+      }
+
+      &.floors,
+      &.roof,
+      &.material {
+
+        .radiobuttons {
+          background-color: transparent;
+          flex-wrap: wrap;
+
+          label {
+            margin-bottom: 10px;
+            background-color: #f0f4f9;
+
+            @include border-radius(5px);
+          }
+        }
+      }
+
+      &.total {
+        padding: 0;
+        background: none;
+        text-align: left;
+      }
+    }
+ 
+    &__subitem {
+      width: 100% !important;
+      margin-bottom: 15px;
+
+      &.size {
+
+        label {
+          width: 55%;
+        }
+      }
+
+      strong {
+        margin-bottom: 10px;
+      }
+
+      .radiobuttons {
+        width: 100%;
+      }
+    }
+  }
+}
