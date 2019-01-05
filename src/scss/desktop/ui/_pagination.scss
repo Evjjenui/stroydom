@@ -1,0 +1,95 @@
+.pagination {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+
+  .prev,
+  .next {
+    width: 32px;
+    height: 23px;
+
+
+    a {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 23px;
+        background-image: url(../images/sprite.png);
+      }
+    }
+  }
+
+  .prev {
+
+    a {
+
+      &:before {
+        background-position: 0 -170px;
+
+        @include transform(rotate(-180deg));
+      }
+    }
+  }
+
+  .next {
+
+    a {
+
+      &:before {
+        background-position: 0 -170px;
+      }
+    }
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin: 0 6px;
+    line-height: 42px;
+
+    a,
+    span {
+      text-decoration: none;
+      color: #221f1f;
+      font-size: 16px;
+      font-weight: 700;
+      display: block;
+      height: 100%;
+      width: 100%;
+      
+      @include border-radius(5px);
+    }
+
+    &:hover {
+
+      a {
+        color: #fff;
+
+        background: #66a9ec;
+        background: -moz-linear-gradient(61deg, #66a9ec 0%, #17559e 100%);
+        background: -webkit-linear-gradient(61deg, #66a9ec 0%,#17559e 100%);
+        background: linear-gradient(61deg, #66a9ec 0%,#17559e 100%);
+      }
+    }
+
+    &.current {
+
+      span {
+        color: #fff;
+
+        background: #66a9ec;
+        background: -moz-linear-gradient(61deg, #66a9ec 0%, #17559e 100%);
+        background: -webkit-linear-gradient(61deg, #66a9ec 0%,#17559e 100%);
+        background: linear-gradient(61deg, #66a9ec 0%,#17559e 100%);
+      }
+    }
+  }
+}

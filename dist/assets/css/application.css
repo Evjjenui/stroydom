@@ -1051,6 +1051,66 @@ select {
 .hidden-title {
   display: none; }
 
+.pagination {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px; }
+  .pagination .prev,
+  .pagination .next {
+    width: 32px;
+    height: 23px; }
+    .pagination .prev a,
+    .pagination .next a {
+      position: relative; }
+      .pagination .prev a:before,
+      .pagination .next a:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 23px;
+        background-image: url(../images/sprite.png); }
+  .pagination .prev a:before {
+    background-position: 0 -170px;
+    transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg); }
+  .pagination .next a:before {
+    background-position: 0 -170px; }
+  .pagination li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin: 0 6px;
+    line-height: 42px; }
+    .pagination li a,
+    .pagination li span {
+      text-decoration: none;
+      color: #221f1f;
+      font-size: 16px;
+      font-weight: 700;
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px; }
+    .pagination li:hover a {
+      color: #fff;
+      background: #66a9ec;
+      background: -moz-linear-gradient(61deg, #66a9ec 0%, #17559e 100%);
+      background: -webkit-linear-gradient(61deg, #66a9ec 0%, #17559e 100%);
+      background: linear-gradient(61deg, #66a9ec 0%, #17559e 100%); }
+    .pagination li.current span {
+      color: #fff;
+      background: #66a9ec;
+      background: -moz-linear-gradient(61deg, #66a9ec 0%, #17559e 100%);
+      background: -webkit-linear-gradient(61deg, #66a9ec 0%, #17559e 100%);
+      background: linear-gradient(61deg, #66a9ec 0%, #17559e 100%); }
+
 .header {
   padding: 33px 0 40px;
   background-color: #fff;
@@ -2436,6 +2496,20 @@ ol {
         background-image: url(../images/build_sprite.png);
         background-size: 190px;
         background-position: -84px -46px; }
+      .prices-form__item.total {
+        padding: 0 0 0 65%;
+        overflow: hidden;
+        text-align: right;
+        background: url(../images/looong_arrow.png) left center no-repeat; }
+        .prices-form__item.total p {
+          font-size: 24px;
+          line-height: 32px; }
+        .prices-form__item.total span {
+          display: block;
+          width: 100%;
+          font-size: 36px;
+          line-height: 40px;
+          font-weight: 700; }
     .prices-form__subitem {
       width: 30%;
       display: inline-block;
@@ -2646,7 +2720,7 @@ h2 {
   margin-top: 80px;
   width: 100%; }
 
-@media (max-width: 1024px) and (min-width: 640px) {
+@media (max-width: 1150px) and (min-width: 640px) {
   .tablet-hide {
     display: block; }
   .content-wrapper {
@@ -3206,6 +3280,9 @@ h2 {
             font-weight: 700;
             display: inline-block;
             vertical-align: middle; }
+        .prices-form__item.total {
+          padding-left: 45%;
+          background-position: -470px center; }
       .prices-form__subitem {
         width: 26%;
         margin-right: 20px; }

@@ -73,6 +73,11 @@
           vertical-align: middle;
         }
       }
+
+      &.total {
+        padding-left: 45%;
+        background-position: -470px center;
+      }
     }
 
     &__subitem {
