@@ -1508,6 +1508,24 @@ ol {
       -moz-transform: rotate(180deg);
       -webkit-transform: rotate(180deg); }
 
+.component-about {
+  background-color: #f0f4f9;
+  overflow: hidden; }
+  .component-about .content-wrapper {
+    padding: 100px 0 100px; }
+  .component-about-text {
+    width: 46%; }
+    .component-about-text p {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 15px 0; }
+  .component-about .component-title {
+    margin-bottom: 25px; }
+  .component-about-image {
+    position: absolute;
+    right: -100px;
+    bottom: -77px; }
+
 .component-inro {
   margin: 0; }
   .component-inro .content-wrapper {
@@ -1820,8 +1838,7 @@ ol {
   text-align: center; }
   .advantage-item__icon {
     margin-bottom: 16px;
-    min-height: 33px;
-    text-align: left; }
+    min-height: 33px; }
     .advantage-item__icon img {
       display: inline-block;
       vertical-align: top; }
@@ -2940,6 +2957,23 @@ h2 {
   .video-block iframe {
     max-width: 100%;
     max-height: 450px; }
+  .component-about .content-wrapper {
+    padding: 100px 0 85px 20px; }
+  .component-about-text {
+    width: 74%; }
+    .component-about-text p {
+      width: 80%;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 15px 0; }
+  .component-about .component-title {
+    margin-bottom: 25px; }
+  .component-about-image {
+    position: absolute;
+    right: -255px;
+    bottom: -64px; }
+    .component-about-image img {
+      width: 580px; }
   .component-inro {
     margin: 0; }
     .component-inro .title h1 {
@@ -3770,6 +3804,7 @@ h2 {
     .steps-dots li.active a,
     .steps-dots li.current a {
       background-color: #1758a5; }
+  .component-about,
   .component-map {
     display: none; }
   .component-popular__services {

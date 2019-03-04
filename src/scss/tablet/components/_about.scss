@@ -1,0 +1,31 @@
+.component-about {
+
+  .content-wrapper {
+    padding: 100px 0 85px 20px;
+  }
+
+  &-text {
+    width: 74%;
+
+    p {
+      width: 80%;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 15px 0;
+    }
+  }
+
+  .component-title {
+    margin-bottom: 25px;
+  }
+
+  &-image {
+    position: absolute;
+    right: -255px;
+    bottom: -64px;
+
+    img {
+      width: 580px;
+    }
+  }
+}
