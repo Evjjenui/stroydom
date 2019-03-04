@@ -26,6 +26,7 @@
     overflow: hidden;
     color: #221f1f;
     margin-right: 30px;
+    text-decoration: none;
 
     @include border-radius(6px);
     @include box-shadow(0 14px 35px rgba(#000000, .11));
@@ -43,6 +44,7 @@
 
       img {
         width: 100%;
+        max-height: 100%;
       }
     }
 
@@ -52,7 +54,7 @@
       height: 230px;
       padding: 60px 34px 0;
 
-      a {
+      .link {
         color: inherit;
         font-size: 24px;
         line-height: 26px;
@@ -100,7 +102,7 @@
 
       .project-info__sizes {
 
-        > div {
+        > span {
 
           &.frame {
               
@@ -148,10 +150,11 @@
 
     &__sizes {
 
-      > div {
+      > span {
         position: relative;
         padding-left: 42px;
         margin-bottom: 15px;
+        display: block;
 
         &:before {
           position: absolute;

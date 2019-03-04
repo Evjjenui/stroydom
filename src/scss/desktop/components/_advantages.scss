@@ -21,5 +21,11 @@
   &__icon {
     margin-bottom: 16px;
     min-height: 33px;
+    text-align: left;
+
+    img {
+      display: inline-block;
+      vertical-align: top;
+    }
   }
 }

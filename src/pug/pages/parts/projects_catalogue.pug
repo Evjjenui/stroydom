@@ -20,19 +20,9 @@ block container
         .content-title
           h1
             | Каталог проектов
-
-        .types
-          .types-item
-            p
-              | Дома из газобетона,
-              br
-              | Теплой керамики
-          .types-item
-            p
-              | Каркасные
-              br
-              | дома
-
+          h3.sub-title
+            | Подзаголовок
+            
         .projects-filter
           form
             -for (i = 0; i < 4; i ++)
@@ -47,22 +37,22 @@ block container
     
         .projects-block
           - for (i = 0; i < 11; i++)
-            .project-item
-              .photo
+            a.project-item(href="project.html")
+              span.photo
                 img(src="assets/images/house_photo.jpg", alt="")
-              .hide-content
-                a(href="project.html") Подробнее
+              span.hide-content
+                span.link Подробнее
                 p Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой
-              .project-info
-                .project-info__main
+              span.project-info
+                span.project-info__main
                   p Кельн
                   p 30 000 ₽
-                .project-info__sizes
-                  .square
+                span.project-info__sizes
+                  span.square
                     p 170 м2
-                  .frame
+                  span.frame
                     p 170 м2
-                  .floors
+                  span.floors
                     p 170 м2
         
         include ../../components/_pagination

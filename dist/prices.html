@@ -66,6 +66,7 @@
             <div class="content-wrapper">
               <div class="content-title">
                 <h1>Цены</h1>
+                <h3 class="sub-title">Подзаголовок</h3>
               </div>
               <div class="prices-content">
                 <div class="prices-table">
@@ -242,9 +243,23 @@
                 </div>
               </div>
             </div>
+            <div class="prices-form__item fundament">
+              <div class="prices-form__item-title">
+                <div class="icon"></div><span>Фундамент</span>
+              </div>
+              <div class="prices-form__item-content">
+                <div class="radiobuttons">
+                  <input id="fundament1" type="radio" name="fundament" checked="checked">
+                  <label for="fundament1"><span>Монолитная плита 300 мм</span></label>
+                  <input id="fundament2" type="radio" name="fundament">
+                  <label for="fundament2"><span>Забивные ж/б сваи 150х150мм<br>(неактивно для дома из газобетона и Теплая керамика)</span></label>
+                </div>
+              </div>
+            </div>
             <div class="prices-form__item total">
               <div class="total-price">
-                <p>Стоимость вашего дома:  </p><span>5 495 600 рублей</span>
+                <p>Стоимость работ с материалами: <span>5 495 600 рублей</span></p>
+                <p>Стоимость работ без материалов: <span>5 495 600 рублей</span></p>
               </div>
             </div>
           </div>
@@ -265,6 +280,10 @@
                     </div>
                     <div class="step-form__item">
                       <input type="text" placeholder="Ваш телефон">
+                    </div>
+                    <div class="step-form__item uploader">
+                      <input id="load-file" type="file">
+                      <label for="load-file">Прикрепить файл</label>
                     </div>
                   </div><a class="step-button" href="javascript:void(0)">Отправить заявку</a>
                 </div>
@@ -307,6 +326,7 @@
   <script src="vendor/js/jquery-1.11.3.min.js"></script>
   <script src="vendor/js/jquery.steps.min.js"></script>
   <script src="vendor/js/jquery.fancybox.min.js"></script>
+  <script src="vendor/js/slick.min.js"></script>
   <script src="assets/js/map.js?ver=1"></script>
   <script src="assets/js/main.js?ver=1"></script>
 </html>

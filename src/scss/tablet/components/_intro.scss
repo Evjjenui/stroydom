@@ -4,14 +4,12 @@
   .title {
 
     h1 {
-      font-size: 48px;
-      line-height: 60px;
+      font-size: 36px;
+      line-height: 46px;
     }
 
     &:after {
-      right: 35px;
-      width: 81px;
-      background-position: -143px bottom;
+      display: none;
     }
   }
 

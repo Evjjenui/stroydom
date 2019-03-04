@@ -1,5 +1,63 @@
-initMenu = ->
-  
+initCarousel = ->
+  $('.component-advantages .content-wrapper').slick(
+    responsive: [
+      {
+        breakpoint: 1920
+        settings: "unslick"
+      }
+      {
+        breakpoint: 767
+        settings:
+          dots: true
+          arrows: false
+          infinite: true
+          speed: 600
+          slidesToShow: 1
+          slidesToScroll: 1
+      }
+    ]
+  )
+
+  $('.projects-block').slick(
+     responsive: [
+      {
+        breakpoint: 1920
+        settings: "unslick"
+      }
+      {
+        breakpoint: 767
+        settings:
+          dots: true
+          arrows: false
+          infinite: true
+          speed: 600
+          slidesToShow: 1
+          slidesToScroll: 1
+      }
+    ]
+  )
+
+  $('.works-grid').slick(
+     responsive: [
+      {
+        breakpoint: 1920
+        settings: "unslick"
+      }
+      {
+        breakpoint: 767
+        settings:
+          dots: true
+          arrows: false
+          infinite: true
+          speed: 600
+          slidesToScroll: 1
+          rows: 2
+          slidesPerRow: 1
+      }
+    ]
+  )
+
+initMenu = ->  
   $('.menu-btn').on 'click', ->
     $('body').toggleClass('menu-opened')
 
@@ -54,6 +112,7 @@ initSteps = ->
   )
 
 $ ->
+  initCarousel()
   initFancyBox()
   initMenu()
   initVideoSHow()

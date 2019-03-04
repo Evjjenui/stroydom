@@ -31,10 +31,11 @@
 
     .button {
       width: 100%;
-    }
 
-    .guarantee {
-      display: none;
+      &-cab {
+        width: 100%;
+        margin-bottom: 15px;
+      }
     }
   }
 }

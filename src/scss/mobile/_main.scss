@@ -7,3 +7,17 @@
   @import "components/main";
   @import "pages/main";
 }
+
+
+@media screen and (max-width: 380px) {
+  .project {
+
+    &-item {
+
+      .photo {
+        display: block;
+        height: 190px;
+      }
+    }
+  }
+}

@@ -3,34 +3,19 @@
   margin: 0 -20px;
 }
 
-.projects-filter {
-  padding: 0 20px;
+.projects {
 
-  &__item {
-    width: 100%;
-    margin: 0 0 15px;
+  &-block {
+    padding: 0 10px;
   }
-}
 
-.types {
-  margin: 40px 0 20px;
-  flex-wrap: wrap;
+  &-filter {
+    padding: 0 20px;
+    margin-bottom: 60px;
 
-  &-item {
-    min-height: 229px;
-    max-height: 229px;
-    max-width: 100%;
-    width: 100%;
-    padding-right: 60%;
-    background-size: cover;
-    margin-bottom: 20px;
-
-    &:nth-child(1) {
-      background-image: url(../images/type_1_tablet.jpg)
-    }
-
-    &:nth-child(2) {
-      background-image: url(../images/type_2_tablet.jpg)
+    &__item {
+      width: 100%;
+      margin: 0 0 15px;
     }
   }
 }

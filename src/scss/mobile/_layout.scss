@@ -16,7 +16,7 @@
 .content-title {
   margin-top: 50px;
   text-align: center;
-  padding: 0 20%;
+  padding: 0 10%;
 
   h1 {
     font-size: 30px;
@@ -31,16 +31,4 @@ h1 {
 
 .breadcrumbs {
   display: none;
-}
-
-.component.component-video {
-  margin: 0;
-  
-  .content-wrapper {
-    padding: 0;
-
-    iframe {
-      height: auto;
-    }
-  }
 }

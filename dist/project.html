@@ -85,44 +85,45 @@
                 </div>
               </div>
               <div class="project-page__info">
-                <div class="project-page__info-item"><span>Площадь: </span>
+                <div class="project-page__info-item"><span>Строительная<br>площадь: </span>
                   <p>170 м2</p>
                 </div>
-                <div class="project-page__info-item"><span>Высота 1-этажа:</span>
+                <div class="project-page__info-item"><span>Высота<br>1-этажа:</span>
                   <p>3 метра</p>
                 </div>
-                <div class="project-page__info-item"><span>Высота 2-этажа:</span>
+                <div class="project-page__info-item"><span>Высота<br>2-этажа:</span>
                   <p>1,7-3 метра</p>
                 </div>
-                <div class="project-page__info-item project-page__info-item_price"><span>Стоимость:</span>
-                  <p>300 000 ₽</p>
+                <div class="project-page__info-item project-page__info-item_price">
+                  <p>Стоимость работ с материалами:<span>9 999 999 руб.</span></p>
+                  <p>Стоимость работ без материалов:<span>300 000 руб.</span></p>
                 </div>
                 <p>Обработка пиломатериалов для кровли огне- биозащитой; монтаж стропильной системы из доски камерной сушки 50х200 мм; монтаж пароизоляции ИЗОСПАН B; утепление кровли 200мм Rockwool Лайт Баттс; монтаж кровельной мембраны Tyvek Soft; монтаж контробрешетки и обрешетки под металлочерепицу; монтаж металлочерепицы</p>
               </div>
               <div class="content-accordion">
                 <div class="accordion-item foundation">
-                  <div class="accordion-item__title"><span>Фундамент</span></div>
+                  <div class="accordion-item__title"><span>Фундамент<b>– монолитная плита 300 мм V</b></span></div>
                   <div class="accordion-item__content" style="display: none;">
                     <p>Монолитная плита 300мм * с использованием товарного бетона B22,5. (вынос осей на местность; разработка котлована мех. способом и ручное выравнивание дна котлована; укладка геотекстиля Geo Pro 200; подушка из намывного песка 300мм с послойным трамбованием виброплитой; монтаж опалубки; монтаж арматурного каркаса; укладка бетона; уход за бетоном)</p>
                     <p>* Тип и сечение фундамента определяются на основании геологических изысканий места застройки и расчета фундамента. Итоговая стоимость может отличаться в зависимости от характеристик фундамента.</p>
                   </div>
                 </div>
                 <div class="accordion-item walls">
-                  <div class="accordion-item__title"><span>Несущие стены и перегородки</span></div>
+                  <div class="accordion-item__title"><span>Несущие стены и перегородки<b> – газобетон ЛСР AEROC</b></span></div>
                   <div class="accordion-item__content" style="display: none;">
                     <p>Несущие стены из автоклавного газобетона D500 толщиной 400мм, перегородки — 300мм и 150мм.</p>
                     <p>(гидроизоляция по фундаменту;  кладка газобетонных блоков на клей; армирование кладки; монолитные ж/б перемычки; армопояса под межэтажное перекрытие и мауэрлат)</p>
                   </div>
                 </div>
                 <div class="accordion-item floors">
-                  <div class="accordion-item__title"><span>Межэтажное перекрытие</span></div>
+                  <div class="accordion-item__title"><span>Межэтажное перекрытие<b> – плиты перекрытия 220 мм</b></span></div>
                   <div class="accordion-item__content" style="display: none;">
                     <p>Монолитное ж/б перекрытие 150мм с использованием товарного бетона B25.</p>
                     <p>(монтаж опалубки; монтаж арматурного каркаса; укладка бетона; уход за бетоном)</p>
                   </div>
                 </div>
                 <div class="accordion-item roof">
-                  <div class="accordion-item__title"><span>Кровля</span></div>
+                  <div class="accordion-item__title"><span>Кровля<b> – металлочерепица Grand Line 0,5мм Satin</b></span></div>
                   <div class="accordion-item__content" style="display: none;">
                     <p>Металлочерепица RUUKKI Monterrey Standart (Финляндия), покрытие — полиэстер (PE) 25мкм</p>
                     <p>(обработка пиломатериалов для кровли огне- биозащитой; монтаж стропильной системы из доски камерной сушки 50х200 мм; монтаж пароизоляции ИЗОСПАН B; утепление кровли 200мм Rockwool Лайт Баттс; монтаж кровельной мембраны Tyvek Soft; монтаж контробрешетки и обрешетки под металлочерепицу; монтаж металлочерепицы)</p>
@@ -155,6 +156,10 @@
                     <div class="step-form__item">
                       <input type="text" placeholder="Ваш телефон">
                     </div>
+                    <div class="step-form__item uploader">
+                      <input id="load-file" type="file">
+                      <label for="load-file">Прикрепить файл</label>
+                    </div>
                   </div><a class="step-button" href="javascript:void(0)">Отправить заявку</a>
                 </div>
               </div>
@@ -166,76 +171,25 @@
             <div class="component__title">
               <h1>Популярные<br>проекты</h1>
             </div>
-            <div class="projects-block">
-              <div class="project-item">
-                <div class="photo"><img src="assets/images/house_photo.jpg" alt=""></div>
-                <div class="hide-content"><a href="project.html">Подробнее</a>
-                  <p>Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой</p>
-                </div>
-                <div class="project-info">
-                  <div class="project-info__main">
+            <div class="projects-block"><a class="project-item" href="project.html"><span class="photo"><img src="assets/images/house_photo.jpg" alt=""></span><span class="hide-content"><span class="link">Подробнее</span>
+                  <p>Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой</p></span><span class="project-info"><span class="project-info__main">
                     <p>Кельн</p>
-                    <p>30 000 ₽</p>
-                  </div>
-                  <div class="project-info__sizes">
-                    <div class="square">
-                      <p>170 м2</p>
-                    </div>
-                    <div class="frame">
-                      <p>170 м2</p>
-                    </div>
-                    <div class="floors">
-                      <p>170 м2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="project-item">
-                <div class="photo"><img src="assets/images/house_photo.jpg" alt=""></div>
-                <div class="hide-content"><a href="project.html">Подробнее</a>
-                  <p>Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой</p>
-                </div>
-                <div class="project-info">
-                  <div class="project-info__main">
+                    <p>30 000 ₽</p></span><span class="project-info__sizes"><span class="square">
+                      <p>170 м2</p></span><span class="frame">
+                      <p>170 м2</p></span><span class="floors">
+                      <p>170 м2</p></span></span></span></a><a class="project-item" href="project.html"><span class="photo"><img src="assets/images/house_photo.jpg" alt=""></span><span class="hide-content"><span class="link">Подробнее</span>
+                  <p>Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой</p></span><span class="project-info"><span class="project-info__main">
                     <p>Кельн</p>
-                    <p>30 000 ₽</p>
-                  </div>
-                  <div class="project-info__sizes">
-                    <div class="square">
-                      <p>170 м2</p>
-                    </div>
-                    <div class="frame">
-                      <p>170 м2</p>
-                    </div>
-                    <div class="floors">
-                      <p>170 м2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="project-item">
-                <div class="photo"><img src="assets/images/house_photo.jpg" alt=""></div>
-                <div class="hide-content"><a href="project.html">Подробнее</a>
-                  <p>Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой</p>
-                </div>
-                <div class="project-info">
-                  <div class="project-info__main">
+                    <p>30 000 ₽</p></span><span class="project-info__sizes"><span class="square">
+                      <p>170 м2</p></span><span class="frame">
+                      <p>170 м2</p></span><span class="floors">
+                      <p>170 м2</p></span></span></span></a><a class="project-item" href="project.html"><span class="photo"><img src="assets/images/house_photo.jpg" alt=""></span><span class="hide-content"><span class="link">Подробнее</span>
+                  <p>Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой</p></span><span class="project-info"><span class="project-info__main">
                     <p>Кельн</p>
-                    <p>30 000 ₽</p>
-                  </div>
-                  <div class="project-info__sizes">
-                    <div class="square">
-                      <p>170 м2</p>
-                    </div>
-                    <div class="frame">
-                      <p>170 м2</p>
-                    </div>
-                    <div class="floors">
-                      <p>170 м2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    <p>30 000 ₽</p></span><span class="project-info__sizes"><span class="square">
+                      <p>170 м2</p></span><span class="frame">
+                      <p>170 м2</p></span><span class="floors">
+                      <p>170 м2</p></span></span></span></a>
             </div><span class="show-all"><a href="./projects.html">Посмотреть<br>все проекты</a></span>
           </div>
         </div>
@@ -274,6 +228,7 @@
   <script src="vendor/js/jquery-1.11.3.min.js"></script>
   <script src="vendor/js/jquery.steps.min.js"></script>
   <script src="vendor/js/jquery.fancybox.min.js"></script>
+  <script src="vendor/js/slick.min.js"></script>
   <script src="assets/js/map.js?ver=1"></script>
   <script src="assets/js/main.js?ver=1"></script>
 </html>

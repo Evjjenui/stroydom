@@ -1,11 +1,11 @@
 .component-works {
   
-  .content-wrapper {
-    padding: 0;
-  }
-
   .show-all {
     margin-top: 25px;
+  }
+
+  .content-wrapper {
+    padding: 0;
   }
 }
 
@@ -16,11 +16,21 @@
   @include flexbox();
   justify-content: space-between;
   flex-wrap: wrap;
+
+  .slick-slide {
+    margin: 0 10px;
+
+    > div:first-child {
+      margin-bottom: 25px;
+    }
+  }
   
 
   &__item {
     width: 100%;
-    margin-bottom: 0;
+    overflow: hidden;
+
+    @include border-radius(5px);
 
     .image {
       border-radius: 0;

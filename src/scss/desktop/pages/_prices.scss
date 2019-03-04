@@ -62,7 +62,7 @@
 
     &__item {
       padding-bottom: 60px;
-      margin-top: 50px;
+      margin-top: 30px;
       border-bottom: 1px solid #e7e6e6;
 
       &:last-child {
@@ -126,22 +126,29 @@
         }
       }
 
+      &.fundament {
+        border: none;
+
+        .icon {
+          background-image: url(../images/build_sprite.png);
+          background-size: 300px;
+          background-position: -135px -198px;
+        }
+      }
+
       &.total {
-        padding: 0 0 0 65%;
         overflow: hidden;
         text-align: right;
-        background: url(../images/looong_arrow.png) left center no-repeat;
+        margin-top: 0;
 
         p {
-          font-size: 24px;
-          line-height: 32px;
+          font-size: 16px;
+          line-height: 30px;
         }
 
         span {
-          display: block;
-          width: 100%;
-          font-size: 36px;
-          line-height: 40px;
+          font-size: 24px;
+          line-height: 30px;
           font-weight: 700;
         }
       }

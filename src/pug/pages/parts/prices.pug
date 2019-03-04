@@ -19,6 +19,8 @@ block container
         .content-title
           h1
             | Цены
+          h3.sub-title
+            | Подзаголовок
         .prices-content
           .prices-table
             .prices-table__head
@@ -167,10 +169,28 @@ block container
             label(for="roof3")
               span Керамическая черепица
       
+      .prices-form__item.fundament
+        .prices-form__item-title
+          .icon
+          span Фундамент
+        .prices-form__item-content
+          .radiobuttons
+            input#fundament1(type="radio" name="fundament" checked="checked")
+            label(for="fundament1")
+              span Монолитная плита 300 мм
+            input#fundament2(type="radio" name="fundament")
+            label(for="fundament2")
+              span
+                | Забивные ж/б сваи 150х150мм
+                br
+                | (неактивно для дома из газобетона и Теплая керамика)
+      
       .prices-form__item.total
         .total-price
-          p Стоимость вашего дома:  
-          span 5 495 600 рублей
+          p Стоимость работ с материалами: 
+            span 5 495 600 рублей
+          p Стоимость работ без материалов: 
+            span 5 495 600 рублей
 
 
 

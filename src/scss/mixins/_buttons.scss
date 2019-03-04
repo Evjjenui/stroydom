@@ -38,6 +38,11 @@
 
   // button bg
 
+  @if $button-bg == "blue-border" {
+    border: 3px solid #1758a5;
+    color: #221e1f;
+  }
+
   @if $button-bg == "blue" {
     color: #fff;
     text-align: center;

@@ -21,18 +21,18 @@
       position: absolute;
       display: block;
       content: '';
-      width: 224px;
+      width: 167px;
       height: 31px;
       background-image: url(../images/sprite.png);
-      background-position: 0 bottom;
-      background-repeat: no-repeat; 
-      right: 0;
+      background-position: -57px bottom;
+      background-repeat: no-repeat;
+      right: 20px;
       top: calc(50% - 15px);
     }
 
     h1 {
-      font-size: 72px;
-      line-height: 74px;
+      font-size: 48px;
+      line-height: 52px;
       font-weight: 900;
     }
   }
@@ -67,13 +67,34 @@
       font-size: 16px;
       line-height: 24px;
       color: #666666;
-      margin-bottom: 29px;
+      margin-bottom: 33px;
     }
      
     .button {
       width: 280px;
 
       @include button("big", "blue");
+
+      &-cab {
+        width: 280px;
+        margin: 50px 0 130px;
+
+        @include border-radius(5px);
+        @include button("big", "blue-border");
+        display: block;
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 26px;
+          height: 29px;
+          position: absolute;
+          left: 22px;
+          top: 14px;
+          background: url(../images/cab_icon.png) no-repeat;
+        }
+      }
     }
 
     .guarantee {

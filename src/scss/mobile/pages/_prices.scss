@@ -58,8 +58,24 @@
         }
       }
 
+      &.fundament {
+        
+        .radiobuttons {
+
+          label[for="fundament2"] {
+
+            span {
+              line-height: 14px;
+              font-size: 12px;
+              padding: 0 10px;
+            }
+          }
+        }
+      }
+
       &.floors,
       &.roof,
+      &.fundament,
       &.material {
 
         .radiobuttons {

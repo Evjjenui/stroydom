@@ -1,8 +1,26 @@
 .component-doubled {
   overflow: hidden;
+  background-color: #fff;
   
   .content-wrapper {
     padding: 0;
+  }
+
+  &.component-calculator {
+
+    .component-doubled__info {
+      padding: 40px 20px 0;
+
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+
+      .icon,
+      p {
+        display: none;
+      }
+    }
   }
 
   &__content {
@@ -15,15 +33,15 @@
   }
 
   &__info {
-    padding: 40px 20px;
+    padding: 40px 20px 0;
     width: 100%;
     height: auto;
     background-color: #fff;
-    border-bottom: 1px solid #f0f4f9;
 
     h2 {
       font-size: 30px;
       line-height: 36px;
+      margin-bottom: 0;
     }
   }
 
@@ -51,6 +69,15 @@
   .step {
     padding: 40px 20px 240px;
     box-shadow: none;
+
+    &-button:before {
+      right: 18px;
+    }
+
+    &-title {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
   
   .step-form__item .radiobuttons {
