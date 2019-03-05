@@ -1,0 +1,76 @@
+.component-steps {
+  background-color: #f0f4f9;
+  padding: 90px 0;
+
+  .component__title {
+    margin-bottom: 45px;
+  }
+}
+
+.component-steps-content {
+  @include flexbox();
+  justify-content: space-between;
+}
+
+.component-item_step {
+  background-color: #fff;
+  width: 31%;
+  padding: 85px 0 21px;
+  position: relative;
+  
+  @include border-radius(5px);
+  @include box-shadow(0 14px 35px rgba(#000000, .11));
+  
+  .step-count {
+    padding-left: 40px;
+    width: 125px;
+    position: absolute;
+    top: 22px;
+    left: 0;
+
+    @include gradient-horizontal();
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 0;
+      height: 0;
+      right: 0;
+      top: 0;
+      border-style: solid;
+      border-width: 20px 12px 20px 0;
+      border-color: transparent #fff transparent transparent;
+    }
+
+    span {
+      color: #fff;
+      font-size :16px;
+      font-weight: bold;
+      line-height: 40px;
+    }
+  }
+  
+  .item_step {
+
+    &-title {
+      padding: 0 40px;
+
+      p {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &-description {
+      margin-top: 20px;
+      padding: 0 40px;
+
+      p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}

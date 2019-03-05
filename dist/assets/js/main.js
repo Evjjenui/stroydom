@@ -21,7 +21,7 @@
         }
       ]
     });
-    $('.projects-block').slick({
+    $('.component-popular__projects .projects-block').slick({
       responsive: [
         {
           breakpoint: 1920,
@@ -40,7 +40,7 @@
         }
       ]
     });
-    return $('.works-grid').slick({
+    $('.works-grid').slick({
       responsive: [
         {
           breakpoint: 1920,
@@ -56,6 +56,26 @@
             slidesToScroll: 1,
             rows: 2,
             slidesPerRow: 1
+          }
+        }
+      ]
+    });
+    return $('.component-steps__work .component-steps-content').slick({
+      responsive: [
+        {
+          breakpoint: 1920,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 600,
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            adaptiveHeight: true
           }
         }
       ]

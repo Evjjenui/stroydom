@@ -1,0 +1,22 @@
+extends ../_layout
+
+block header
+  include ../../base/_header_inner
+
+
+block container
+  .content-wrapper
+    .breadcrumbs
+      ul
+        li
+          a(href="./index.html") Главная
+        li
+          b /
+        li
+          span Проектирование
+
+  include ../../components/_our_works_minified
+  include ../../components/_work_steps
+  include ../../components/_payment_steps
+  include ../../components/_order
+  include ../../components/_popular_projects

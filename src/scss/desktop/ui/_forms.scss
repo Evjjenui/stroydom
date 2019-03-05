@@ -123,9 +123,10 @@
   &__sub-item {
     display: inline-block;
     vertical-align: middle;
+    min-width: 40px;
 
     &:nth-child(2) {
-      margin: 0 50px 0 6px;
+      margin: 0 40px 0 6px;
     }
   }
 }

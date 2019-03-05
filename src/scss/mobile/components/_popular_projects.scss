@@ -10,6 +10,28 @@
   .show-all {
     top: 0;
   }
+
+  .project {
+
+    &s-block {
+      margin-bottom: 20px;
+
+      .slick-list {
+        padding-bottom: 20px;
+      }
+    }
+
+    &-item {
+      margin: 0 10px 5px;
+
+      @include box-shadow(0 10px 15px rgba(#000, .11));
+
+      .hide-content {
+        height: 190px;
+        padding: 30px 25px 0;
+      }
+    }
+  }
 }
 
 .project {
@@ -20,11 +42,9 @@
 
   &-item {
     width: 100%;
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
 
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
+    @include box-shadow(0 10px 15px rgba(#000, .11));
 
     .photo {
       display: block;
@@ -40,8 +60,8 @@
     .hide-content {
       display: none;
       color: #fff;
-      height: 230px;
-      padding: 60px 34px 0;
+      height: 190px;
+      padding: 30px 25px 0;
 
       a {
         color: inherit;

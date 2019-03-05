@@ -10,6 +10,24 @@
 
     @include flexbox();
     justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .interactive-map {
+    width: 100%;
+    margin-top: 60px;
+
+    iframe {
+      border: none;
+    }
+
+    > span {
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: 900;
+      display: block;
+      margin-bottom: 60px;
+    }
   }
 
   &__map {

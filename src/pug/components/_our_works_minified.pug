@@ -1,0 +1,11 @@
+.component.component-works.component-works__minified
+  .content-wrapper
+    .component__title
+      h1 Наши работы
+    .objects-block
+      -for (i = 0; i < 3; i++)
+        a.object-item(href="./object.html")
+          span.photo
+            img(src="assets/images/house_photo.jpg", alt="")
+          span.object-info
+            p Коттеджный поселок «Новый Петербург»

@@ -1,0 +1,67 @@
+.component-why {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 15px 0 10px;
+
+  &_content {
+    @include flexbox();
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  &_item {
+    width: 33.33333%;
+    padding-right: 100px;
+    margin: 35px 0;
+
+    .icon {
+      background: url(../images/why_sprite.png) no-repeat;
+      width: 58px;
+      height: 53px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 21px;
+    }
+
+    &__selection {
+
+      .icon {
+        background-position: left top;
+      }
+    }
+
+    &__consult {
+
+      .icon {
+        background-position: left -54px;
+      }
+    }
+
+    &__control {
+      padding-right: 0;
+
+      .icon {
+        background-position: left -108px;
+      }
+    }
+
+    &__materials {
+
+      .icon {
+        background-position: left -162px;
+      }
+    }
+
+    &__payment-safe {
+
+      .icon {
+        background-position: left -224px;
+      }
+    }
+
+  }
+}

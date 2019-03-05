@@ -1,21 +1,22 @@
 .projects-catalogue {
   width: calc(100% + 40px);
   margin: 0 -20px;
-}
+  
+  .projects {
 
-.projects {
+    &-block {
+      padding: 0 10px;
+    }
 
-  &-block {
-    padding: 0 10px;
-  }
+    &-filter {
+      padding: 0 20px;
+      margin-bottom: 60px;
 
-  &-filter {
-    padding: 0 20px;
-    margin-bottom: 60px;
-
-    &__item {
-      width: 100%;
-      margin: 0 0 15px;
+      &__item {
+        width: 100%;
+        margin: 0 0 15px;
+      }
     }
   }
 }
+
