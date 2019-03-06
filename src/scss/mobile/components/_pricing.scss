@@ -1,0 +1,16 @@
+.component-pricing {
+  padding: 0;
+
+  &_item {
+    width: 100%;
+    margin: 15px 0;
+    padding: 35px 20px 85px;
+  }
+
+  .min-price {
+    
+    br {
+      display: none;
+    }
+  }
+}

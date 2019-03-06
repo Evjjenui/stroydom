@@ -1844,6 +1844,68 @@ ol {
       display: inline-block;
       vertical-align: top; }
 
+.component-our-advantages {
+  width: 100%;
+  padding: 80px 0;
+  margin: 0;
+  background-color: #f0f4f9; }
+  .component-our-advantages .content-wrapper {
+    justify-content: space-between; }
+
+.our-advantages_slider {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between; }
+
+.our-advantages_item {
+  padding: 30px 40px;
+  margin: 0 0 35px;
+  min-height: 256px;
+  background-color: #fff;
+  width: calc(25% - 15px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  .our-advantages_item:last-child {
+    margin-right: 0; }
+
+.our-advantages_text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px; }
+
+.our-advantages_icon {
+  margin-bottom: 18px; }
+
+.our-advantages_description {
+  padding: 20px 40px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  .our-advantages_description .image {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 70px; }
+  .our-advantages_description_text {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 290px); }
+    .our-advantages_description_text p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: normal; }
+
 .component-text {
   margin: 30px 0; }
 
@@ -2621,6 +2683,52 @@ ol {
       font-size: 14px;
       line-height: 24px; }
 
+.component-pricing {
+  width: 100%;
+  padding: 80px 0;
+  margin: 0; }
+  .component-pricing-content {
+    width: 100%;
+    margin-top: 40px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .component-pricing_item {
+    padding: 35px 40px 85px;
+    min-height: 570px;
+    background-color: #fff;
+    width: calc(50% - 10px);
+    position: relative;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; }
+  .component-pricing .min-price {
+    position: absolute;
+    bottom: 35px; }
+  .component-pricing_icon {
+    margin-bottom: 18px; }
+  .component-pricing .deadline, .component-pricing_title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 22px; }
+    .component-pricing .deadline span, .component-pricing_title span {
+      font-weight: normal;
+      padding-left: 5px; }
+  .component-pricing_text {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal; }
+  .component-pricing .deadline {
+    margin: 22px 0 0;
+    font-size: 14px; }
+
 .contacts {
   padding: 55px 0 80px; }
   .contacts .content-title {
@@ -3164,6 +3272,17 @@ h2 {
     margin: 0 0 40px; }
     .component-advantages .content-wrapper {
       padding: 0 10px; }
+  .component-our-advantages {
+    margin: 0; }
+  .our-advantages_slider {
+    flex-wrap: wrap; }
+  .our-advantages_item {
+    margin: 0 0 20px;
+    width: calc(50% - 10px); }
+    .our-advantages_item:nth-child(2) {
+      margin-right: 0; }
+  .our-advantages_description {
+    margin-top: 15px; }
   .component-text {
     margin: 30px 0; }
   .works-grid {
@@ -3346,6 +3465,8 @@ h2 {
       padding-right: 80px; }
     .component-why_item:nth-child(2n) {
       padding-right: 20px; }
+  .component-pricing .min-price br {
+    display: none; }
   .logo {
     position: relative;
     z-index: 101; }
@@ -3812,6 +3933,30 @@ h2 {
     .component-advantages .content-wrapper {
       padding: 0 10px;
       justify-content: center; }
+  .component-our-advantages {
+    margin: 0; }
+    .component-our-advantages .slick-track {
+      padding-bottom: 20px; }
+  .our-advantages_slider {
+    display: block;
+    width: 100%; }
+  .our-advantages_item {
+    margin: 0 10px;
+    width: 100%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11); }
+  .our-advantages_description {
+    margin: 30px 10px 0;
+    padding: 20px; }
+    .our-advantages_description .image {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      text-align: center; }
+    .our-advantages_description_text {
+      width: 100%;
+      display: block; }
   .component-text {
     margin: 30px 0; }
   .component-works .show-all {
@@ -4106,6 +4251,14 @@ h2 {
       padding: 0 20px; }
     .component-steps__work .component-item_step .item_step-description {
       padding: 0 20px; }
+  .component-pricing {
+    padding: 0; }
+    .component-pricing_item {
+      width: 100%;
+      margin: 15px 0;
+      padding: 35px 20px 85px; }
+    .component-pricing .min-price br {
+      display: none; }
   .logo {
     position: relative;
     z-index: 101; }

@@ -1,0 +1,70 @@
+.component-our-advantages {
+  width: 100%;
+  padding: 80px 0;
+  margin: 0;
+  background-color: #f0f4f9;
+
+  .content-wrapper {
+    justify-content: space-between;
+  }
+}
+
+.our-advantages {
+
+  &_slider {
+    @include flexbox();
+    justify-content: space-between;
+  }
+
+  &_item {
+    padding: 30px 40px;
+    margin: 0 0 35px;
+    min-height: 256px;
+    background-color: #fff;
+    width: calc(25% - 15px);
+
+    @include box-shadow(0 14px 35px rgba(#000000, .11));
+    @include border-radius(5px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &_text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &_icon {
+    margin-bottom: 18px;
+  }
+
+  &_description {
+    padding: 20px 40px;
+    background-color: #fff;
+    width: 100%;
+
+    @include box-shadow(0 14px 35px rgba(#000000, .11));
+    @include border-radius(5px);
+
+    .image {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 70px;
+    }
+
+    &_text {
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 290px);
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: normal;
+      }
+    }
+  }
+}

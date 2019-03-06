@@ -1,0 +1,57 @@
+.component-pricing {
+  width: 100%;
+  padding: 80px 0;
+  margin: 0;
+
+  &-content {
+    width: 100%;
+    margin-top: 40px;
+    
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    padding: 35px 40px 85px;
+    min-height: 570px;
+    background-color: #fff;
+    width: calc(50% - 10px);
+    position: relative;
+
+    @include box-shadow(0 14px 35px rgba(#000000, .11));
+    @include border-radius(5px);
+  }
+
+  .min-price {
+    position: absolute;
+    bottom: 35px
+  }
+
+  &_icon {
+    margin-bottom: 18px;
+  }
+
+  .deadline,
+  &_title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 22px;
+
+    span {
+      font-weight: normal;
+      padding-left: 5px;
+    }
+  }
+
+  &_text {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+  }
+
+  .deadline {
+    margin: 22px 0 0;
+    font-size: 14px;
+  }
+}

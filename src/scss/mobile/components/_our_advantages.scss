@@ -1,0 +1,39 @@
+.component-our-advantages {
+  margin: 0;
+
+  .slick-track {
+    padding-bottom: 20px;
+  }
+}
+
+.our-advantages {
+
+  &_slider {
+    display: block;
+    width: 100%;
+  }
+
+  &_item {
+    margin: 0 10px;
+    width: 100%;
+
+    @include box-shadow(0 10px 15px rgba(#000, .11));
+  }
+
+  &_description {
+    margin: 30px 10px 0;
+    padding: 20px;
+
+    .image {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    &_text {
+      width: 100%;
+      display: block;
+    }
+  }
+}

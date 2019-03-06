@@ -1,0 +1,23 @@
+.component-our-advantages {
+  margin: 0;
+}
+
+.our-advantages {
+
+  &_slider {
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    margin: 0 0 20px;
+    width: calc(50% - 10px);
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+
+  &_description {
+    margin-top: 15px;
+  }
+}

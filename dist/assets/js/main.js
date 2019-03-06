@@ -60,7 +60,7 @@
         }
       ]
     });
-    return $('.component-steps__work .component-steps-content').slick({
+    $('.component-steps__work .component-steps-content').slick({
       responsive: [
         {
           breakpoint: 1920,
@@ -76,6 +76,25 @@
             slidesToScroll: 1,
             slidesToShow: 1,
             adaptiveHeight: true
+          }
+        }
+      ]
+    });
+    return $('.our-advantages_slider').slick({
+      responsive: [
+        {
+          breakpoint: 1920,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 600,
+            slidesToScroll: 1,
+            slidesToShow: 1
           }
         }
       ]
