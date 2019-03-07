@@ -1,0 +1,44 @@
+.engineering {
+
+  &-top {
+
+    .image {
+      right: -400px;
+      bottom: 0;
+
+      &:before {
+        width: 447px;
+        height: 447px;
+        bottom: -40px;
+        left: 40px;
+      }
+
+      &:after {
+        width: 644px;
+        height: 644px;
+        bottom: -140px;
+        left: -70px;
+      }
+    }
+
+    .content-wrapper {
+      padding: 100px 28px 70px;
+    }
+  }
+
+  &-promo {
+
+    h2,
+    h3 {
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 325px;
+      margin-top: 30px;
+    }
+  }
+}

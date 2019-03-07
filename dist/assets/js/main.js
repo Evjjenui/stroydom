@@ -5,7 +5,7 @@
     $('.component-advantages .content-wrapper').slick({
       responsive: [
         {
-          breakpoint: 1920,
+          breakpoint: 2560,
           settings: "unslick"
         },
         {
@@ -24,7 +24,7 @@
     $('.component-popular__projects .projects-block').slick({
       responsive: [
         {
-          breakpoint: 1920,
+          breakpoint: 2560,
           settings: "unslick"
         },
         {
@@ -43,7 +43,7 @@
     $('.works-grid').slick({
       responsive: [
         {
-          breakpoint: 1920,
+          breakpoint: 2560,
           settings: "unslick"
         },
         {
@@ -63,7 +63,7 @@
     $('.component-steps__work .component-steps-content').slick({
       responsive: [
         {
-          breakpoint: 1920,
+          breakpoint: 2560,
           settings: "unslick"
         },
         {
@@ -83,7 +83,7 @@
     return $('.our-advantages_slider').slick({
       responsive: [
         {
-          breakpoint: 1920,
+          breakpoint: 2560,
           settings: "unslick"
         },
         {
@@ -137,7 +137,11 @@
       arrows: true,
       infobar: false,
       toolbar: false,
-      transitionEffect: "fade"
+      transitionEffect: "fade",
+      thumbs: {
+        autoStart: true,
+        axis: 'x'
+      }
     });
   };
 

@@ -1,0 +1,70 @@
+.component-cabinet_description {
+  background: url(../images/cabinet_bg.jpg) left top no-repeat;
+  background-size: cover;
+  padding: 70px 0;
+  margin: 0;
+}
+
+.cabinet_description {
+
+  &-sub-info {
+    max-width: 295px;
+    width: 100%;
+
+    .project-progress {
+      margin-top: 90px;
+
+      span {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        display: block;
+      }
+    }
+
+    .project-info-download {
+
+      a {
+        background: url(../images/download_icon.png) left center no-repeat;
+        background-size: 46px;
+        text-decoration: none;
+        color: #1758a5;
+        font-size: 18px;
+        line-height: 20px;
+        padding-left: 72px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 70px;
+        position: relative;
+        left: -72px;
+
+        span {
+          text-decoration: underline;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &-info {
+    width: calc(100% - 300px);
+
+    &_text {
+      margin-top: 30px;
+
+      p {
+        font-size: 14px;
+        line-height: 32px;
+      }
+
+      span {
+        font-weight: bold;
+        padding-right: 6px;
+      }
+
+      &_item {
+        margin: 14px 0;
+      }
+    }
+  }
+}

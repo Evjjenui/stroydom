@@ -8,6 +8,14 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  &-title {
+    color: #333333;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
   
   .contacts-block {
     margin-left: 128px;
@@ -163,5 +171,52 @@
     border-bottom: 2px dotted #1e63b0;
     text-decoration: none;
     padding-bottom: 3px;
+  }
+}
+
+.cab-links {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  a {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #221e1f;
+    border-bottom: 2px dotted #1e63b0;
+    text-decoration: none;
+    padding-bottom: 3px;
+  }
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 32px;
+    height: 23px;
+    top: -1px;
+    background-image: url(../images/sprite.png);
+    background-position: -63px -30px;
+    background-repeat: no-repeat;
+  }
+
+  &.back-to {
+    padding-left: 40px;
+    margin-right: 55px;
+
+    &:after {
+      left: 0;
+    }
+  }
+
+  &.quit {
+    padding-right: 40px;
+    margin-left: 55px;
+
+    &:after {
+      right: 0;
+      transform: rotate(180deg);
+    }
   }
 }

@@ -2,7 +2,7 @@ initCarousel = ->
   $('.component-advantages .content-wrapper').slick(
     responsive: [
       {
-        breakpoint: 1920
+        breakpoint: 2560
         settings: "unslick"
       }
       {
@@ -21,7 +21,7 @@ initCarousel = ->
   $('.component-popular__projects .projects-block').slick(
      responsive: [
       {
-        breakpoint: 1920
+        breakpoint: 2560
         settings: "unslick"
       }
       {
@@ -40,7 +40,7 @@ initCarousel = ->
   $('.works-grid').slick(
      responsive: [
       {
-        breakpoint: 1920
+        breakpoint: 2560
         settings: "unslick"
       }
       {
@@ -60,7 +60,7 @@ initCarousel = ->
   $('.component-steps__work .component-steps-content').slick(
      responsive: [
       {
-        breakpoint: 1920
+        breakpoint: 2560
         settings: "unslick"
       }
       {
@@ -80,7 +80,7 @@ initCarousel = ->
   $('.our-advantages_slider').slick(
      responsive: [
       {
-        breakpoint: 1920
+        breakpoint: 2560
         settings: "unslick"
       }
       {
@@ -128,6 +128,10 @@ initFancyBox = ->
     infobar: false
     toolbar: false
     transitionEffect: "fade"
+    thumbs : {
+      autoStart : true
+      axis      : 'x'
+    }
   )
 
 initSteps = ->
