@@ -1,5 +1,5 @@
 (function() {
-  var initAccordion, initCarousel, initFancyBox, initMenu, initSteps, initVideoSHow;
+  var initAccordion, initCarousel, initFancyBox, initMenu, initProgress, initSteps, initVideoSHow;
 
   initCarousel = function() {
     $('.component-advantages .content-wrapper').slick({
@@ -133,7 +133,7 @@
   };
 
   initFancyBox = function() {
-    return $(".video > a, .project-visual__item a, .gallery-item a").fancybox({
+    return $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a").fancybox({
       arrows: true,
       infobar: false,
       toolbar: false,
@@ -166,13 +166,22 @@
     });
   };
 
+  initProgress = function() {
+    var progressValue;
+    progressValue = $('.project-progress').attr('data-progress');
+    $('.percentage').css("left", progressValue + "%");
+    $('.percentage span').text(progressValue);
+    return $('.circle').css("left", progressValue + "%");
+  };
+
   $(function() {
     initCarousel();
     initFancyBox();
     initMenu();
     initVideoSHow();
     initAccordion();
-    return initSteps();
+    initSteps();
+    return initProgress();
   });
 
 }).call(this);

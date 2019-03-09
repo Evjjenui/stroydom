@@ -1,0 +1,16 @@
+.component-cabinet_description {
+  margin: 0;
+}
+
+.cabinet_description {
+
+  &-sub-info {
+
+    .project-info-download {
+
+      a {
+        left: -14px;
+      }
+    }
+  }
+}

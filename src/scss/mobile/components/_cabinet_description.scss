@@ -1,0 +1,45 @@
+.component-cabinet_description {
+  padding: 55px 0;
+  margin: 0;
+
+  .component__title {
+    text-align: left;
+  }
+}
+
+.cabinet_description {
+
+  &-info_text {
+    margin-top: 15px;
+  }
+
+  &-sub-info {
+    max-width: 100%;
+
+    .image {
+      margin-top: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .project-progress {
+      margin-top: 60px;
+      padding: 0 10px;
+    }
+
+    .project-info-download {
+
+      a {
+        left: 0;
+      }
+    }
+  }
+
+  &-info {
+    width: 100%;
+
+    padding: 0 10px;
+  }
+}

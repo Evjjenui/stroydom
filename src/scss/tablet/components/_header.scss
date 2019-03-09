@@ -1,13 +1,42 @@
+.header {
+  padding: 40px 0;
+
+  &__cabinet {
+    
+    .menu-btn {
+      display: none;
+    }
+  }
+
+  &-title {
+    font-size: 16px;
+  }
+
+  &__navigation-block {
+    position: static;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+  }
+}
+
 .logo {
   position: relative;
   z-index: 101;
 }
 
-.header {
-  padding: 40px 0;
-}
-
 .contacts-block {
   display: block;
   margin-right: 100px;
+}
+
+.cab-links {
+
+  &.back-to {
+    margin-right: 15px;
+  }
+
+  &.quit {
+    margin-left: 15px;
+  }
 }

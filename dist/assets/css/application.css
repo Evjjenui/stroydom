@@ -1316,6 +1316,8 @@ select {
   .header__navigation-block > div {
     display: inline-block;
     vertical-align: middle; }
+  .header__navigation-menu .header-title {
+    display: none; }
   .header__navigation-menu > ul {
     display: -webkit-box;
     display: -moz-box;
@@ -1415,14 +1417,14 @@ select {
 .cab-links {
   position: relative;
   display: inline-block;
-  vertical-align: middle; }
-  .cab-links a {
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 500;
-    color: #221e1f;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #221e1f;
+  text-decoration: none; }
+  .cab-links span {
     border-bottom: 2px dotted #1e63b0;
-    text-decoration: none;
     padding-bottom: 3px; }
   .cab-links:after {
     position: absolute;
@@ -1543,6 +1545,9 @@ ol {
   display: inline-block;
   vertical-align: top;
   width: 100%; }
+  .component__title h2 {
+    font-size: 36px;
+    line-height: 42px; }
 
 .content-wrapper {
   position: relative; }
@@ -2858,10 +2863,11 @@ ol {
 
 .cabinet_description-sub-info {
   max-width: 295px;
-  width: 100%; }
+  width: 100%;
+  margin-left: auto; }
   .cabinet_description-sub-info .project-progress {
     margin-top: 90px; }
-    .cabinet_description-sub-info .project-progress span {
+    .cabinet_description-sub-info .project-progress > span {
       font-weight: bold;
       font-size: 16px;
       line-height: 22px;
@@ -2884,9 +2890,9 @@ ol {
       display: inline-block; }
 
 .cabinet_description-info {
-  width: calc(100% - 300px); }
+  width: calc(100% - 320px); }
   .cabinet_description-info_text {
-    margin-top: 30px; }
+    margin-top: -50px; }
     .cabinet_description-info_text p {
       font-size: 14px;
       line-height: 32px; }
@@ -2895,6 +2901,86 @@ ol {
       padding-right: 6px; }
     .cabinet_description-info_text_item {
       margin: 14px 0; }
+
+.progress-line {
+  width: 100%;
+  max-width: 280px;
+  position: relative;
+  padding: 32px 0 30px; }
+  .progress-line .percentage {
+    position: absolute;
+    font-weight: bold;
+    color: #1758a5;
+    font-size: 14px;
+    top: 0;
+    left: 0; }
+  .progress-line .circle {
+    height: 26px;
+    width: 26px;
+    background-color: #fff;
+    border: 3px solid #1758a5;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%; }
+  .progress-line .line {
+    height: 3px;
+    background-color: #d7d7d7;
+    width: 100%;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px; }
+  .progress-line .zero,
+  .progress-line .hundred {
+    font-size: 14px;
+    line-height: 18px;
+    position: absolute;
+    bottom: 0; }
+  .progress-line .zero {
+    left: 0; }
+  .progress-line .hundred {
+    right: 0; }
+
+.build-preview_item {
+  width: 100%;
+  display: block;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  border-bottom: 1px solid #e7e6e6; }
+  .build-preview_item:last-child {
+    border: none; }
+  .build-preview_item .date {
+    background: #f0f4f9;
+    font-size: 12px;
+    line-height: 24px;
+    height: 24px;
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 26px 0 12px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; }
+  .build-preview_item > span {
+    display: block;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold; }
+  .build-preview_item p {
+    font-size: 14px;
+    line-height: 18px; }
+  .build-preview_item .build-gallery {
+    margin-top: 30px; }
+    .build-preview_item .build-gallery_item {
+      margin-right: 12px;
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px; }
 
 .contacts {
   padding: 55px 0 80px; }
@@ -3349,6 +3435,15 @@ h2 {
     margin-bottom: 20px; }
   .component {
     margin: 30px 0; }
+    .component__title h1 {
+      font-size: 36px;
+      line-height: 42px; }
+    .component__title h2 {
+      font-size: 36px;
+      line-height: 42px; }
+  .sub-title {
+    font-size: 18px;
+    line-height: 24px; }
   .show-all {
     right: 20px; }
   .video-block iframe {
@@ -3665,28 +3760,10 @@ h2 {
     line-height: 24px;
     max-width: 325px;
     margin-top: 30px; }
-  .logo {
-    position: relative;
-    z-index: 101; }
-  .header {
-    padding: 40px 0; }
-  .contacts-block {
-    display: block;
-    margin-right: 100px; }
-  .footer .content-wrapper {
-    padding: 0 20px; }
-  .footer__navigation {
-    max-width: 140px; }
-    .footer__navigation li {
-      width: 100%;
-      padding: 8px 0; }
-  .footer__contacts {
-    max-width: 210px; }
-    .footer__contacts .contacts-block {
-      margin: 0; }
-      .footer__contacts .contacts-block .call-me:after {
-        background-size: 200px;
-        background-position: -38px -19px; }
+  .component-cabinet_description {
+    margin: 0; }
+  .cabinet_description-sub-info .project-info-download a {
+    left: -14px; }
   .menu-opened {
     overflow: hidden;
     position: fixed;
@@ -3766,6 +3843,41 @@ h2 {
         padding: 10px 0; }
         .header__navigation-menu > ul > li:hover:before, .header__navigation-menu > ul > li.current:before {
           display: none; }
+  .header {
+    padding: 40px 0; }
+    .header__cabinet .menu-btn {
+      display: none; }
+    .header-title {
+      font-size: 16px; }
+    .header__navigation-block {
+      position: static;
+      height: auto;
+      width: auto;
+      padding-top: 0; }
+  .logo {
+    position: relative;
+    z-index: 101; }
+  .contacts-block {
+    display: block;
+    margin-right: 100px; }
+  .cab-links.back-to {
+    margin-right: 15px; }
+  .cab-links.quit {
+    margin-left: 15px; }
+  .footer .content-wrapper {
+    padding: 0 20px; }
+  .footer__navigation {
+    max-width: 140px; }
+    .footer__navigation li {
+      width: 100%;
+      padding: 8px 0; }
+  .footer__contacts {
+    max-width: 210px; }
+    .footer__contacts .contacts-block {
+      margin: 0; }
+      .footer__contacts .contacts-block .call-me:after {
+        background-size: 200px;
+        background-position: -38px -19px; }
   .contacts {
     padding: 45px 0 0 0; }
     .contacts .content-title {
@@ -4022,6 +4134,12 @@ h2 {
     margin: 30px 0; }
     .component .content-wrapper {
       padding: 0 10px; }
+    .component__title h1 {
+      font-size: 24px;
+      line-height: 32px; }
+    .component .sub-title {
+      font-size: 16px;
+      line-height: 24px; }
   .show-all {
     top: 0;
     right: auto;
@@ -4486,11 +4604,55 @@ h2 {
   .engineering-promo p {
     max-width: 100%;
     margin-top: 20px; }
+  .component-cabinet_description {
+    padding: 55px 0;
+    margin: 0; }
+    .component-cabinet_description .component__title {
+      text-align: left; }
+  .cabinet_description-info_text {
+    margin-top: 15px; }
+  .cabinet_description-sub-info {
+    max-width: 100%; }
+    .cabinet_description-sub-info .image {
+      margin-top: 30px; }
+      .cabinet_description-sub-info .image img {
+        width: 100%; }
+    .cabinet_description-sub-info .project-progress {
+      margin-top: 60px;
+      padding: 0 10px; }
+    .cabinet_description-sub-info .project-info-download a {
+      left: 0; }
+  .cabinet_description-info {
+    width: 100%;
+    padding: 0 10px; }
+  .component-build-preview .component__title {
+    padding: 0 10px;
+    text-align: left; }
+  .build-preview_item {
+    padding: 0 10px; }
+    .build-preview_item .build-gallery_item {
+      width: calc(50% - 5px);
+      margin: 0 10px 10px 0; }
+      .build-preview_item .build-gallery_item img {
+        display: block; }
+      .build-preview_item .build-gallery_item:nth-child(2n) {
+        margin-right: 0; }
   .logo {
     position: relative;
     z-index: 101; }
   .header {
     padding: 20px 0; }
+    .header-title {
+      display: none; }
+    .header__navigation-menu .header-title {
+      display: block;
+      margin-bottom: 30px; }
+    .header .cab-links {
+      margin: 0;
+      padding: 10px 0;
+      display: block; }
+      .header .cab-links:after {
+        display: none; }
   .footer {
     text-align: center;
     box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.05);
@@ -4534,7 +4696,7 @@ h2 {
     margin-left: 0;
     width: 25px;
     position: absolute;
-    top: 19px;
+    top: 14px;
     right: 20px;
     z-index: 101; }
     .menu-btn span {

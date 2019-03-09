@@ -11,12 +11,14 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="header inner">
+      <div class="header inner header__cabinet">
         <div class="content-wrapper">
           <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></div>
           <div class="header-title">Личный Кабинет</div>
           <div class="header__navigation-block">
-            <div class="header__navigation-menu"><span class="back-to cab-links"><a href="index.html">Вернуться на сайт</a></span><span class="quit cab-links"><a href="index.html">Выход</a></span></div>
+            <div class="header__navigation-menu">
+              <div class="header-title">Личный Кабинет</div><a class="back-to cab-links" href="index.html"><span>Вернуться на сайт</span></a><a class="quit cab-links" href="index.html"><span>Выход</span></a>
+            </div>
           </div>
           <div class="menu-btn desk-hide"><span></span><span></span><span></span></div>
         </div>
@@ -29,6 +31,11 @@
                 <h1>Новое Минулово</h1>
                 <h3 class="sub-title">Строительство инд. жилого дома</h3>
               </div>
+            </div>
+            <div class="cabinet_description-sub-info">
+              <div class="image"><img src="./assets/images/cabinet_project_preview.jpg" alt=""></div>
+            </div>
+            <div class="cabinet_description-info">
               <div class="cabinet_description-info_text">
                 <div class="cabinet_description-info_text_item">
                   <p> <span>Адрес объекта:</span>Кленовая улица д 90</p>
@@ -48,9 +55,41 @@
               </div>
             </div>
             <div class="cabinet_description-sub-info">
-              <div class="image"><img src="./assets/images/cabinet_project_preview.jpg" alt=""></div>
-              <div class="project-progress"><span>Проект завершен на:</span></div>
+              <div class="project-progress" data-progress="30"><span>Проект завершен на:</span>
+                <div class="progress-line">
+                  <div class="percentage"><span>0</span>%</div>
+                  <div class="circle"></div>
+                  <div class="line"></div>
+                  <div class="zero">0</div>
+                  <div class="hundred">100</div>
+                </div>
+              </div>
               <div class="project-info-download"><a href="#"> <span>Скачать файлы<br>по вашему проекту</span></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="component component-build-preview">
+          <div class="content-wrapper">
+            <div class="component__title">
+              <h2>Ход строительства</h2>
+            </div>
+            <div class="build-preview_item"><span>Кладка стен</span>
+              <div class="date">07.02.2019</div>
+              <p>Подняли блоки на 2 этаж, кладка выполнена на 50%</p>
+              <div class="build-gallery"><a class="build-gallery_item" href="#gallery1_1" data-fancybox="gallery1"><img src="assets/images/build_preview.png" alt=""></a><a class="build-gallery_item" href="#gallery1_2" data-fancybox="gallery1"><img src="assets/images/build_preview.png" alt=""></a><a class="build-gallery_item" href="#gallery1_3" data-fancybox="gallery1"><img src="assets/images/build_preview.png" alt=""></a>
+                <div id="gallery1_1" style="display: none;"><img src="assets/images/build_preview.png" alt=""></div>
+                <div id="gallery1_2" style="display: none;"><img src="assets/images/build_preview.png" alt=""></div>
+                <div id="gallery1_3" style="display: none;"><img src="assets/images/build_preview.png" alt=""></div>
+              </div>
+            </div>
+            <div class="build-preview_item"><span>Благоустройство (окончание работ)</span>
+              <div class="date">07.02.2019</div>
+              <p>Работы выполнены можно приезжать на приемку</p>
+              <div class="build-gallery"><a class="build-gallery_item" href="#gallery2_1" data-fancybox="gallery2"><img src="assets/images/build_preview.png" alt=""></a><a class="build-gallery_item" href="#gallery2_2" data-fancybox="gallery2"><img src="assets/images/build_preview.png" alt=""></a><a class="build-gallery_item" href="#gallery2_3" data-fancybox="gallery2"><img src="assets/images/build_preview.png" alt=""></a>
+                <div id="gallery2_1" style="display: none;"><img src="assets/images/build_preview.png" alt=""></div>
+                <div id="gallery2_2" style="display: none;"><img src="assets/images/build_preview.png" alt=""></div>
+                <div id="gallery2_3" style="display: none;"><img src="assets/images/build_preview.png" alt=""></div>
+              </div>
             </div>
           </div>
         </div>

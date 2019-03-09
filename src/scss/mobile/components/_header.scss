@@ -5,4 +5,26 @@
 
 .header {
   padding: 20px 0;
+
+  &-title {
+    display: none;
+  }
+
+  &__navigation-menu {
+
+    .header-title {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+
+  .cab-links {
+    margin: 0;
+    padding: 10px 0;
+    display: block;
+
+    &:after {
+      display: none;
+    }
+  }
 }

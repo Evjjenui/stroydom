@@ -1,0 +1,24 @@
+.component-build-preview {
+
+  .component__title {
+    padding: 0 10px;
+    text-align: left;
+  }
+}
+
+.build-preview_item {
+  padding: 0 10px;
+
+  .build-gallery_item {
+    width: calc(50% - 5px);
+    margin: 0 10px 10px 0;
+
+    img {
+      display: block;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

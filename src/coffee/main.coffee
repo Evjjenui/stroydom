@@ -123,7 +123,7 @@ initAccordion = ->
       $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideUp()
 
 initFancyBox = ->
-  $(".video > a, .project-visual__item a, .gallery-item a").fancybox(
+  $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a").fancybox(
     arrows: true
     infobar: false
     toolbar: false
@@ -154,6 +154,13 @@ initSteps = ->
       return true
   )
 
+initProgress = ->
+  progressValue = $('.project-progress').attr('data-progress')
+  
+  $('.percentage').css("left", progressValue + "%")
+  $('.percentage span').text(progressValue)
+  $('.circle').css("left", progressValue + "%")
+
 $ ->
   initCarousel()
   initFancyBox()
@@ -161,3 +168,4 @@ $ ->
   initVideoSHow()
   initAccordion()
   initSteps()
+  initProgress()

@@ -5,6 +5,10 @@
         h1 Новое Минулово
         h3.sub-title
           | Строительство инд. жилого дома
+    .cabinet_description-sub-info
+      .image
+        img(src="./assets/images/cabinet_project_preview.jpg", alt="")
+    .cabinet_description-info
       .cabinet_description-info_text
         .cabinet_description-info_text_item
           p 
@@ -39,10 +43,19 @@
             span Эл.почта:
             | info@stroy-dom.pro
     .cabinet_description-sub-info
-      .image
-        img(src="./assets/images/cabinet_project_preview.jpg", alt="")
-      .project-progress
+      .project-progress(data-progress="30")
         span Проект завершен на:
+        .progress-line
+          .percentage
+            span 0
+            | %
+          .circle
+          .line
+          .zero
+            | 0
+          .hundred
+            | 100
+
       .project-info-download
         a(href="#") 
           span

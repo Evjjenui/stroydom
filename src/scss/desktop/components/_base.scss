@@ -3,6 +3,14 @@
   display: inline-block;
   vertical-align: top;
   width: 100%;
+
+  &__title {
+
+    h2 {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
 }
 
 .content-wrapper {

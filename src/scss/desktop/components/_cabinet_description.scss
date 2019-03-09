@@ -10,11 +10,12 @@
   &-sub-info {
     max-width: 295px;
     width: 100%;
+    margin-left: auto;
 
     .project-progress {
       margin-top: 90px;
 
-      span {
+      > span {
         font-weight: bold;
         font-size: 16px;
         line-height: 22px;
@@ -47,10 +48,10 @@
   }
 
   &-info {
-    width: calc(100% - 300px);
+    width: calc(100% - 320px);
 
     &_text {
-      margin-top: 30px;
+      margin-top: -50px;
 
       p {
         font-size: 14px;
@@ -66,5 +67,57 @@
         margin: 14px 0;
       }
     }
+  }
+}
+
+.progress-line {
+  width: 100%;
+  max-width: 280px;
+  position: relative;
+  padding: 32px 0 30px;
+
+  .percentage {
+    position: absolute;
+    font-weight: bold;
+    color: #1758a5;
+    font-size: 14px;
+    top: 0;
+    left: 0;
+  }
+
+  .circle {
+    height: 26px;
+    width: 26px;
+    background-color: #fff;
+    border: 3px solid #1758a5;
+    position: absolute;
+    left: 0;
+    top: 20px;
+
+    @include border-radius(50%);
+  }
+
+  .line {
+    height: 3px;
+    background-color: #d7d7d7;
+    width: 100%;
+
+    @include border-radius(2px);
+  }
+
+  .zero,
+  .hundred {
+    font-size: 14px;
+    line-height: 18px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .zero {
+    left: 0;
+  }
+
+  .hundred {
+    right: 0;
   }
 }

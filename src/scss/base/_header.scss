@@ -15,7 +15,6 @@
     line-height: 24px;
     font-weight: bold;
   }
-
   
   .contacts-block {
     margin-left: 128px;
@@ -36,6 +35,10 @@
     }
 
     &-menu {
+
+      .header-title {
+        display: none;
+      }
 
       > ul {
         @include flexbox();
@@ -178,14 +181,14 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #221e1f;
+  text-decoration: none;
 
-  a {
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 500;
-    color: #221e1f;
+  span {
     border-bottom: 2px dotted #1e63b0;
-    text-decoration: none;
     padding-bottom: 3px;
   }
 
