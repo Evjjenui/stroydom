@@ -4798,6 +4798,15 @@ h2 {
           display: inline-block;
           vertical-align: middle;
           margin-right: 10px; }
+    .contacts .interactive-map {
+      width: calc(100% + 40px);
+      margin: 40px -20px 0; }
+      .contacts .interactive-map span {
+        font-size: 24px;
+        line-height: 30px;
+        padding: 0 20px; }
+      .contacts .interactive-map iframe {
+        border: none; }
   .project-page {
     width: calc(100% + 40px);
     margin: 0 -20px; }
