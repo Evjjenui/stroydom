@@ -6,18 +6,17 @@
       .works-grid__item.first
         .works-grid-slider__item.first
           .image
-            img(src="assets/images/project_photo.jpg", alt="project photo")
+            img(src="assets/images/project_photo1.jpg", alt="project photo1")
             .name 
               | Коттеджный поселок
               br
               | «Новый Петербург»
-      -for (i = 0; i < 5; i++)
+      each elem, index in ['д. Жабино', 'ДНП Скандинавский парк', 'Коттеджный посёлок «Лесной хутор»', 'п. Белоостров', 'д. Грузино']
         .works-grid__item
           .works-grid-slider__item
             .image
-              img(src="assets/images/project_photo.jpg", alt="project photo")
-              .name 
-                | д. Жабино
+              img(src="assets/images/project_photo" + (index + 2) + ".jpg", alt="project photo" + (index + 2))
+              .name= elem
 
     span.show-all
       a(href="./our_objects.html")

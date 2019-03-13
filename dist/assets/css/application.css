@@ -3367,7 +3367,7 @@ h2 {
   font-weight: normal; }
 
 .content-text {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   font-weight: normal; }
   .content-text h1 {
@@ -3384,7 +3384,6 @@ h2 {
   .content-text h3 {
     font-size: 24px;
     line-height: 28px;
-    font-weight: normal;
     padding: 15px 0; }
   .content-text p {
     margin: 10px 0; }
@@ -3847,13 +3846,13 @@ h2 {
     padding: 40px 0; }
     .header__cabinet .menu-btn {
       display: none; }
-    .header-title {
-      font-size: 16px; }
-    .header__navigation-block {
+    .header__cabinet .header__navigation-block {
       position: static;
       height: auto;
       width: auto;
       padding-top: 0; }
+    .header-title {
+      font-size: 16px; }
   .logo {
     position: relative;
     z-index: 101; }
