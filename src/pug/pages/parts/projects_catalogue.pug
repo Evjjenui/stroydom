@@ -36,7 +36,24 @@ block container
               button.button Подобрать
     
         .projects-block
-          - for (i = 0; i < 11; i++)
+          - for (i = 0; i < 3; i++)
+            a.project-item(href="project.html")
+              span.photo
+                img(src="assets/images/house_photo1.jpg", alt="")
+              span.hide-content
+                span.link Подробнее
+                p Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой
+              span.project-info
+                span.project-info__main
+                  p Дрезден
+                  p 9 500 000 ₽
+                span.project-info__sizes
+                  span.square
+                    p 170 м2
+                  span.frame
+                    p Газобетон
+                  span.floors
+                    p 2 этажа
             a.project-item(href="project.html")
               span.photo
                 img(src="assets/images/house_photo.jpg", alt="")
@@ -46,13 +63,30 @@ block container
               span.project-info
                 span.project-info__main
                   p Кельн
+                  p 9 000 000 ₽
+                span.project-info__sizes
+                  span.square
+                    p 170 м2
+                  span.frame
+                    p Тёплая керамика
+                  span.floors
+                    p 2 этажа
+            a.project-item(href="project.html")
+              span.photo
+                img(src="assets/images/house_photo1.jpg", alt="")
+              span.hide-content
+                span.link Подробнее
+                p Проект двухэтажного дома 10 на 12 метров, общей площадью 170 м2, из газобетона, c террасой, котельной и кухней-столовой
+              span.project-info
+                span.project-info__main
+                  p Мюнхен
                   p 30 000 ₽
                 span.project-info__sizes
                   span.square
                     p 170 м2
                   span.frame
-                    p 170 м2
+                    p Брус
                   span.floors
-                    p 170 м2
+                    p 2 этажа
         
         include ../../components/_pagination

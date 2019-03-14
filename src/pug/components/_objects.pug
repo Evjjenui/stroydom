@@ -4,10 +4,10 @@
       h1
         | Наши объекты
     .objects-block
-      - for (i = 0; i < 3; i++)
+      each obj_name, index in ["Коттеджный поселок «Новый Петербург»", "п. Белоостров", "д. Грузино"]
         a.object-item(href="./object.html")
           span.photo
-            img(src="assets/images/house_photo.jpg", alt="")
+            img(src="assets/images/object_photo" + (index + 1) + ".jpg", alt="")
             span.hide-info
               span.object-info__sizes
                 span.square
@@ -18,7 +18,7 @@
                   p 170 м2
 
           span.object-info
-            p Коттеджный поселок «Новый Петербург»
+            p= obj_name
 
     span.show-all
       a(href="./projects.html")

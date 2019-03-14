@@ -28,6 +28,7 @@
 
         p {
           margin-top: 25px;
+          margin-left: 0;
         }
 
         span {
@@ -64,4 +65,9 @@
     margin-top: 30px;
     flex-wrap: wrap;
   }
+}
+
+.project-description {
+  margin-top: 30px;
+  width: 100%;
 }

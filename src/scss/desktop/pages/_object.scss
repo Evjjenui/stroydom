@@ -8,6 +8,7 @@
 
   .content-title {
     margin-bottom: 35px;
+    margin-top: 20px;
   }
 
   .objects-content {
@@ -16,5 +17,30 @@
 
   .object-item {
     margin-bottom: 30px;
+  }
+
+  .object-description {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    padding-right: 15%;
+  }
+
+  .building-area {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    width: 29%;
+    
+    p {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    span {
+      font-weight: normal;
+      color: #1758a5;
+    }
   }
 }

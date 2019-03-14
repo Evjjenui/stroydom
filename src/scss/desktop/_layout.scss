@@ -66,6 +66,9 @@ h2 {
 
   p {
     margin: 10px 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
   }
 
   strong {
@@ -109,7 +112,7 @@ h2 {
 }
 
 .content-title {
-  margin-top: 80px;
+  margin-top: 20px;
   margin-bottom: 40px;
   width: 100%;
 }

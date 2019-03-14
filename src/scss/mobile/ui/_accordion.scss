@@ -1,7 +1,7 @@
 .accordion {
 
   &-item {
-    margin: 0 20px 22px;
+    margin: 0 10px 22px;
 
     &.walls {
       
@@ -15,7 +15,29 @@
       span {
         padding-right: 40px;
         line-height: 20px;
+        width: 100%;
+
+        b {
+          display: block;
+        }
       }
+    }
+  }
+}
+
+.content-accordion {
+
+  h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.project-page {
+  .accordion {
+
+    &-item {
+      margin: 0 20px 22px;
     }
   }
 }

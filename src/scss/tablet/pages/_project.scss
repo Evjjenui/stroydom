@@ -33,17 +33,22 @@
 
       p {
         line-height: 30px;
-        color: #1758a5;
       }
 
       &_price {
-        margin-left: 0;
-        width: 30%;
-        text-align: right;
+        margin: 75px 0 0 0;
+        width: 100%;
+        text-align: left;
 
         p {
-          font-weight: 700;
-          font-size: 30px;
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0;
+
+          span {
+            font-weight: 700;
+            font-size: 24px;
+          }
         }
       }
     }
@@ -119,4 +124,9 @@
       vertical-align: middle;
     }
   }
+}
+
+.project-description {
+  margin-top: 30px;
+  width: 100%;
 }

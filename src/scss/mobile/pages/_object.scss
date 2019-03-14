@@ -19,10 +19,31 @@
   }
 
   .content-title {
-    margin-bottom: 0;
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 0;
   }
 
   .objects-content {
     flex-wrap: wrap;
+  }
+
+  .object-description {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .building-area {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.object-wrap {
+
+  + .component-order {
+    margin-bottom: 0;
   }
 }
