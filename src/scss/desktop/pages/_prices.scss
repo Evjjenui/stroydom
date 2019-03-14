@@ -58,6 +58,11 @@
         background-repeat: no-repeat;
         margin-bottom: 15px;
       }
+
+      p {
+        color: #666666;
+        max-width: 63%;
+      }
     }
 
     &__item {
@@ -139,7 +144,7 @@
       &.total {
         overflow: hidden;
         text-align: right;
-        margin-top: 0;
+        margin-top: 20px;
 
         p {
           font-size: 16px;
@@ -155,7 +160,7 @@
     }
 
     &__subitem {
-      width: 30%;
+      width: 32%;
       display: inline-block;
       vertical-align: bottom;
 
@@ -166,18 +171,16 @@
       strong {
         font-weight: normal;
         display: block;
-        margin-bottom: 30px;
+        margin-bottom: 32px;
       }
 
       &.size {
         width: 35%;
 
         label {
-          display: inline-block;
-          vertical-align: middle;
+          display: block;
           line-height: 24px;
-          width: 190px;
-          margin-top: 10px;
+          margin-bottom: 32px;
         }
 
         input[type="text"] {
@@ -191,7 +194,6 @@
           text-align: center;
           width: 94px;
           font-size: 14px;
-          margin-top: 10px;
 
           @include border-radius(5px);
 

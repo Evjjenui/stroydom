@@ -74,9 +74,8 @@ block container
         .icon
         h2 Рассчитать стоимость
         p
-          | С помощью этого калькулятора вы можете сделать приблизительный расчет стоимости строительства дома в комплектации
-          br
-          | «Базовый» включая стоимость строительных материалов.
+          | С помощью этого калькулятора вы можете сделать приблизительный расчет стоимости строительства дома в комплектации «Базовый» включая стоимость строительных материалов.
+
       form
       .prices-form__item.material
         .prices-form__item-title
@@ -103,18 +102,17 @@ block container
           .prices-form__subitem.size
             label(for="")
               | Площадь дома
-              br
               | (по фундаменту)
             input(type="text" placeholder="10")
             span м
-            label(for="")
-              | Ширина дома:
-            input(type="text" placeholder="8")
-            span м
+            //- label(for="")
+            //-   | Ширина дома:
+            //- input(type="text" placeholder="8")
+            //- span м
 
           .prices-form__subitem
             strong
-              | Толщина газобетона
+              | Толщина газобетона, мм
             .radiobuttons
               input#depth1(type="radio" name="depth" checked="checked")
               label(for="depth1")
