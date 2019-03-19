@@ -908,13 +908,10 @@ body.compensate-for-scrollbar {
 
 /* Styling for Small-Screen Devices */
 @media all and (max-width: 768px) {
-  .fancybox-thumbs {
-    width: 110px;
+  .fancybox-slide--html .fancybox-close-small {
+    display: none;
   }
   .fancybox-show-thumbs .fancybox-inner {
-    right: 110px;
-  }
-  .fancybox-thumbs__list a {
-    max-width: calc(100% - 10px);
+    right: 0;
   }
 }

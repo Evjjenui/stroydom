@@ -15,7 +15,10 @@
   grid-template-rows: 1fr 1fr;
 
   &__item {
-    display: block;
+
+    a {
+      display: block;
+    }
 
     &.first {
       grid-column: 1 / span 2;

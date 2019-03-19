@@ -25,13 +25,25 @@ block container
             
         .projects-filter
           form
-            -for (i = 0; i < 4; i ++)
-              .projects-filter__item
-                label Тип строения
-                select
-                  -for (j = 0; j < 6; j ++)
-                    option(value="")
-                      | some text
+            .projects-filter__item
+              label Материал стен
+              select
+                -for (j = 0; j < 6; j ++)
+                  option(value="")
+                    | some text
+            .projects-filter__item
+              label Общая площадь
+              select
+                -for (j = 0; j < 6; j ++)
+                  option(value="")
+                    | some text
+            .projects-filter__item
+              label Количество этажей
+              select
+                  option(value="")
+                    | 1
+                  option(value="")
+                    | 2
             .projects-filter__item
               button.button Подобрать
     

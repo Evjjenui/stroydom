@@ -3,20 +3,22 @@
     .component__title
       h1 Наши работы
     .works-grid
-      a.works-grid__item.first(href="object.html")
-        span.works-grid-slider__item.first
-          span.image
-            img(src="assets/images/project_photo1.jpg", alt="project photo1")
-            span.name 
-              | Коттеджный поселок
-              br
-              | «Новый Петербург»
+      .works-grid__item.first
+          span.works-grid-slider__item.first
+            a(href="object.html")
+              span.image
+                img(src="assets/images/project_photo1.jpg", alt="project photo1")
+              span.name 
+                | Коттеджный поселок
+                br
+                | «Новый Петербург»
       each elem, index in ['д. Жабино', 'ДНП Скандинавский парк', 'Коттеджный посёлок «Лесной хутор»', 'п. Белоостров', 'д. Грузино']
-        a.works-grid__item(href="object.html")
-          span.works-grid-slider__item
-            span.image
-              img(src="assets/images/project_photo" + (index + 2) + ".jpg", alt="project photo" + (index + 2))
-              span.name= elem
+        .works-grid__item
+            span.works-grid-slider__item
+              a(href="object.html")
+                span.image
+                  img(src="assets/images/project_photo" + (index + 2) + ".jpg", alt="project photo" + (index + 2))
+                span.name= elem
 
     span.show-all
       a(href="./our_objects.html")

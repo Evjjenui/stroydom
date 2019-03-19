@@ -7,11 +7,12 @@
 
   &__title {
     text-align: left;
+    padding: 0 10px;
     width: 80%;
 
     h1 {
-      font-size: 30px;
-      line-height: 36px;
+      font-size: 26px;
+      line-height: 32px;
     }
   }
 
@@ -31,6 +32,8 @@
   a {
     text-align: left;
     font-size: 0;
+    line-height: 0;
+    height: 32px;
   }
 }
 
