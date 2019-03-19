@@ -1,14 +1,17 @@
 .prices {
   margin-top: 0;
-  width: calc(100% + 40px);
-  margin-left: -20px;
-  margin-right: -20px;
+  width: 100%;
+
+  &-content {
+    width: 100%;
+  }
 
   .content-title {
     padding: 0 20px;
   }
 
   &-table {
+    margin-top: 20px;
 
     &__cell {
 
@@ -102,6 +105,10 @@
         padding: 0;
         background: none;
         text-align: left;
+
+        span {
+          display: block;
+        }
       }
     }
  

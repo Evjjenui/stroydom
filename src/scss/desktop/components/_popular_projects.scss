@@ -30,7 +30,7 @@
 
     @include border-radius(6px);
     @include box-shadow(0 14px 35px rgba(#000000, .11));
-    @include transition(.25s all linear);
+    // @include transition(.25s all linear);
 
     &:nth-child(3n) {
       margin-right: 0;

@@ -1553,7 +1553,7 @@ ol {
   width: 100%; }
   .component__title h2 {
     font-size: 36px;
-    line-height: 42px; }
+    line-height: 1.35em; }
 
 .content-wrapper {
   position: relative; }
@@ -1792,10 +1792,7 @@ ol {
   -webkit-border-radius: 6px;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
   -moz-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
-  -webkit-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
-  transition: 0.25s all linear;
-  -moz-transition: 0.25s all linear;
-  -webkit-transition: 0.25s all linear; }
+  -webkit-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11); }
   .project-item:nth-child(3n) {
     margin-right: 0; }
   .project-item .photo {
@@ -3004,8 +3001,6 @@ ol {
 
 .contacts {
   padding: 55px 0 80px; }
-  .contacts .content-title {
-    margin-bottom: 110px; }
   .contacts__content {
     width: 100%;
     display: -webkit-box;
@@ -3054,8 +3049,6 @@ ol {
   .project-page .content-accordion {
     margin-top: 80px;
     width: 100%; }
-  .project-page .content-title {
-    margin: 20px 0 35px; }
   .project-page__info {
     width: 100%;
     margin-top: 85px;
@@ -3156,9 +3149,6 @@ ol {
   .object-page .content-accordion {
     margin-top: 60px;
     width: 100%; }
-  .object-page .content-title {
-    margin-bottom: 35px;
-    margin-top: 20px; }
   .object-page .objects-content {
     flex-wrap: wrap; }
   .object-page .object-item {
@@ -3184,9 +3174,10 @@ ol {
 .prices {
   margin-top: 80px; }
   .prices-content {
-    width: 100%; }
+    width: 1290px;
+    margin: 0 auto; }
   .prices-table {
-    margin: 60px 0 20px;
+    margin: 50px 0 20px;
     width: 100%; }
     .prices-table__head strong {
       font-size: 18px; }
@@ -3194,7 +3185,7 @@ ol {
       background-color: #f8f8f8; }
     .prices-table__row {
       line-height: 30px;
-      padding: 15px 0 15px 40px;
+      padding: 15px 40px 15px;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -3265,11 +3256,15 @@ ol {
         margin-top: 20px; }
         .prices-form__item.total p {
           font-size: 16px;
-          line-height: 30px; }
+          line-height: 30px;
+          margin-bottom: 5px; }
         .prices-form__item.total span {
           font-size: 24px;
           line-height: 30px;
-          font-weight: 700; }
+          font-weight: 700;
+          display: inline-block;
+          vertical-align: middle;
+          padding-left: 5px; }
     .prices-form__subitem {
       width: 32%;
       display: inline-block;
@@ -3375,9 +3370,6 @@ ol {
   .engineering .breadcrumbs li a {
     color: #ffffff; }
 
-.services .content-title {
-  margin-bottom: 65px; }
-
 .content-wrapper {
   width: 1210px;
   margin: 0 auto;
@@ -3393,7 +3385,7 @@ ol {
   display: none; }
 
 h1 {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 52px;
   font-weight: 900;
   text-transform: none; }
@@ -3462,7 +3454,7 @@ h2 {
 
 .content-title {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   width: 100%; }
 
 @media (max-width: 1150px) and (min-width: 640px) {
@@ -4085,6 +4077,8 @@ h2 {
     margin-right: -20px; }
     .prices .content-title {
       padding: 0 20px; }
+    .prices-content {
+      width: 100%; }
     .prices-table__body .prices-table__row:nth-child(odd) {
       background-color: #f8f8f8; }
     .prices-table__row {
@@ -4205,32 +4199,27 @@ h2 {
     margin: 30px 0; }
     .component .content-wrapper {
       padding: 0 10px; }
-    .component__title h1 {
-      font-size: 24px;
-      line-height: 32px; }
+    .component__title {
+      text-align: left;
+      width: 80%; }
+      .component__title h1 {
+        font-size: 30px;
+        line-height: 36px; }
     .component .sub-title {
       font-size: 16px;
       line-height: 24px; }
   .show-all {
     top: 0;
-    right: auto;
-    position: relative;
-    width: 100%;
+    right: 20px;
     text-align: right;
-    padding-right: 20px; }
+    display: inline-block;
+    vertical-align: top; }
     .show-all a {
-      display: inline-block;
-      vertical-align: top;
-      text-align: left; }
+      text-align: left;
+      font-size: 0; }
   .video-block iframe {
     max-width: 100%;
     max-height: auto; }
-  .component__title {
-    text-align: center;
-    width: 100%; }
-    .component__title h1 {
-      font-size: 30px;
-      line-height: 36px; }
   .component-inro {
     margin: 0; }
     .component-inro .title {
@@ -4958,26 +4947,28 @@ h2 {
     margin-bottom: 0; }
   .prices {
     margin-top: 0;
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px; }
+    width: 100%; }
+    .prices-content {
+      width: 100%; }
     .prices .content-title {
       padding: 0 20px; }
-    .prices-table__cell p {
-      font-size: 14px;
-      line-height: 20px;
-      padding-right: 20px; }
-    .prices-table__cell:nth-child(2) {
-      width: 40%; }
-    .prices-table__body .prices-table__row:nth-child(odd) {
-      background-color: #f8f8f8; }
-    .prices-table__row {
-      padding: 15px 0 15px 20px;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex; }
+    .prices-table {
+      margin-top: 20px; }
+      .prices-table__cell p {
+        font-size: 14px;
+        line-height: 20px;
+        padding-right: 20px; }
+      .prices-table__cell:nth-child(2) {
+        width: 40%; }
+      .prices-table__body .prices-table__row:nth-child(odd) {
+        background-color: #f8f8f8; }
+      .prices-table__row {
+        padding: 15px 0 15px 20px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; }
     .prices-form {
       width: 100%; }
       .prices-form__title p {
@@ -5008,6 +4999,8 @@ h2 {
           padding: 0;
           background: none;
           text-align: left; }
+          .prices-form__item.total span {
+            display: block; }
       .prices-form__subitem {
         width: 100% !important;
         margin-bottom: 15px; }

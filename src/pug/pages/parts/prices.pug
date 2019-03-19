@@ -21,50 +21,51 @@ block container
             | Цены
           h3.sub-title
             | Подзаголовок
-        .prices-content
-          .prices-table
-            .prices-table__head
-              .prices-table__row
-                .prices-table__cell
-                  strong Наименование
-                .prices-table__cell
-                  strong Стоимость
-            .prices-table__body
-              .prices-table__row
-                .prices-table__cell
-                  p Цены на каркасные дома
-                .prices-table__cell
-                  p от 6 500 руб. / кв.м.
-              .prices-table__row
-                .prices-table__cell
-                  p Срубы
-                .prices-table__cell
-                  p от 11 000 руб. / кв.м.
-              .prices-table__row
-                .prices-table__cell
-                  p Дома из бруса
-                .prices-table__cell
-                  p от 9 000 руб. / кв.м.
-              .prices-table__row
-                .prices-table__cell
-                  p Дома из газобетона
-                .prices-table__cell
-                  p от 10 000 руб. / кв.м.
-              .prices-table__row
-                .prices-table__cell
-                  p  Дома из пеноблоков
-                .prices-table__cell
-                  p от 10 000 руб. / кв.м.
-              .prices-table__row
-                .prices-table__cell
-                  p Дачные дома
-                .prices-table__cell
-                  p от 6 500 руб. / кв.м.
-              .prices-table__row
-                .prices-table__cell
-                  p Кирпичные дома
-                .prices-table__cell
-                  p от 18 000 руб. / кв.м.
+
+  .prices-content
+    .prices-table
+      .prices-table__head
+        .prices-table__row
+          .prices-table__cell
+            strong Наименование
+          .prices-table__cell
+            strong Стоимость
+      .prices-table__body
+        .prices-table__row
+          .prices-table__cell
+            p Цены на каркасные дома
+          .prices-table__cell
+            p от 6 500 руб. / кв.м.
+        .prices-table__row
+          .prices-table__cell
+            p Срубы
+          .prices-table__cell
+            p от 11 000 руб. / кв.м.
+        .prices-table__row
+          .prices-table__cell
+            p Дома из бруса
+          .prices-table__cell
+            p от 9 000 руб. / кв.м.
+        .prices-table__row
+          .prices-table__cell
+            p Дома из газобетона
+          .prices-table__cell
+            p от 10 000 руб. / кв.м.
+        .prices-table__row
+          .prices-table__cell
+            p  Дома из пеноблоков
+          .prices-table__cell
+            p от 10 000 руб. / кв.м.
+        .prices-table__row
+          .prices-table__cell
+            p Дачные дома
+          .prices-table__cell
+            p от 6 500 руб. / кв.м.
+        .prices-table__row
+          .prices-table__cell
+            p Кирпичные дома
+          .prices-table__cell
+            p от 18 000 руб. / кв.м.
   
   include ../../components/_blue_component
 
@@ -141,11 +142,9 @@ block container
             input#floor1(type="radio" name="floor" checked="checked")
             label(for="floor1")
               span Монолитное перекрытие 
-                i (только для каменных домов)
             input#floor2(type="radio" name="floor")
             label(for="floor2")
               span Плиты перекрытия ПБ 220мм
-                i (только для каменных домов)
             input#floor3(type="radio" name="floor")
             label(for="floor3")
               span Деревянные балки
@@ -180,14 +179,12 @@ block container
             label(for="fundament2")
               span
                 | Забивные ж/б сваи 150х150мм
-                br
-                | (неактивно для дома из газобетона и Теплая керамика)
       
       .prices-form__item.total
         .total-price
-          p Стоимость работ с материалами: 
+          p Стоимость работ с материалами -
             span 5 495 600 рублей
-          p Стоимость работ без материалов: 
+          p Стоимость работ без материалов -
             span 5 495 600 рублей
 
 
