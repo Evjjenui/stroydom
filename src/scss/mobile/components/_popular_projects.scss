@@ -41,7 +41,7 @@
   }
 
   &-info {
-    
+    padding: 25px 25px 35px;
   }
 
   &-item {
@@ -60,37 +60,45 @@
         width: 100%;
       }
     }
+    
+    &:hover {
+      color: #221f1f;
+      background: none;
 
-    .hide-content {
-      display: none;
-      color: #fff;
-      height: 190px;
-      padding: 30px 25px 0;
-
-      a {
-        color: inherit;
-        font-size: 24px;
-        line-height: 26px;
-        font-weight: bold;
-        padding-right: 54px;
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-
-        &:before {
-          position: absolute;
-          display: block;
-          content: '';
-          width: 32px;
-          height: 23px;
-          right: 0;
-          top: calc(50% - 12px);
-          background: url(../images/sprite.png) -63px 0 no-repeat;
-        }
+      .hide-content {
+        display: none;
       }
 
-      p {
-        margin-top: 16px;
+      .photo {
+        opacity: 1;
+        display: block;
+      }
+
+      .project-info__sizes {
+
+        > span {
+
+          &.frame {
+              
+            &:before {
+              background-position: -38px top;
+            }
+          }
+
+          &.square {
+            
+            &:before {
+              background-position: 0 top;
+            }
+          }
+
+          &.floors {
+            
+            &:before {
+              background-position: -74px top;
+            }
+          }
+        }
       }
     }
   }

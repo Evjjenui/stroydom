@@ -4279,6 +4279,8 @@ h2 {
       padding: 30px 25px 0; }
   .projects-block {
     margin-bottom: 20px; }
+  .project-info {
+    padding: 25px 25px 35px; }
   .project-item {
     width: 100%;
     margin: 0 0 5px;
@@ -4293,31 +4295,20 @@ h2 {
       -webkit-transition: 0.25s opacity linear; }
       .project-item .photo img {
         width: 100%; }
-    .project-item .hide-content {
-      display: none;
-      color: #fff;
-      height: 190px;
-      padding: 30px 25px 0; }
-      .project-item .hide-content a {
-        color: inherit;
-        font-size: 24px;
-        line-height: 26px;
-        font-weight: bold;
-        padding-right: 54px;
-        display: inline-block;
-        vertical-align: top;
-        position: relative; }
-        .project-item .hide-content a:before {
-          position: absolute;
-          display: block;
-          content: '';
-          width: 32px;
-          height: 23px;
-          right: 0;
-          top: calc(50% - 12px);
-          background: url(../images/sprite.png) -63px 0 no-repeat; }
-      .project-item .hide-content p {
-        margin-top: 16px; }
+    .project-item:hover {
+      color: #221f1f;
+      background: none; }
+      .project-item:hover .hide-content {
+        display: none; }
+      .project-item:hover .photo {
+        opacity: 1;
+        display: block; }
+      .project-item:hover .project-info__sizes > span.frame:before {
+        background-position: -38px top; }
+      .project-item:hover .project-info__sizes > span.square:before {
+        background-position: 0 top; }
+      .project-item:hover .project-info__sizes > span.floors:before {
+        background-position: -74px top; }
   .component-advantages {
     margin: 0 0 40px; }
     .component-advantages .advantage-item {
