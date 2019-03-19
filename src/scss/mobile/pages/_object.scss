@@ -25,13 +25,13 @@
   }
 
   .objects-content {
-    flex-wrap: wrap;
-  }
 
-  .object-description {
-    display: block;
-    width: 100%;
-    padding-right: 0;
+    &.four-in-row {
+
+      .object-item {
+        width: 100%;
+      }
+    }
   }
 
   .building-area {

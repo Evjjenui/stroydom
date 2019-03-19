@@ -8,16 +8,23 @@
 
   .objects-content {
     flex-wrap: wrap;
+
+    &.four-in-row {
+
+      .object-item {
+        width: calc(25% - 12px);
+        margin-bottom: 18px;
+      }
+    }
   }
 
   .object-item {
     margin-bottom: 30px;
   }
 
-  .object-description {
+  .description-block {
     display: inline-block;
     vertical-align: top;
-    width: 70%;
     padding-right: 15%;
   }
 

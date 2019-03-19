@@ -15,6 +15,7 @@
   grid-template-rows: 1fr 1fr;
 
   &__item {
+    display: block;
 
     &.first {
       grid-column: 1 / span 2;
@@ -41,11 +42,13 @@
     z-index: 2;
     padding: 0 0 24px 30px;
     width: 100%;
+    display: block;
   }
 
   .image {
     position: relative;
     overflow: hidden;
+    display: block;
     max-height: 229px;
 
     @include border-radius(6px);

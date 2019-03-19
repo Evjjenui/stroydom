@@ -746,7 +746,7 @@ body.compensate-for-scrollbar {
   position: absolute;
   position: relative;
   white-space: nowrap;
-  width: 100%; }
+  width: 100% !important; }
 
 .fancybox-thumbs-x .fancybox-thumbs__list {
   overflow: hidden; }
@@ -771,7 +771,8 @@ body.compensate-for-scrollbar {
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   height: 75px;
   margin: 2px;
   max-height: calc(100% - 8px);
@@ -813,18 +814,19 @@ body.compensate-for-scrollbar {
   right: 0;
   bottom: 95px; }
 
-.fancybox-thumbs__list a {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  outline: none;
-  margin: 2px 4px; }
-  .fancybox-thumbs__list a:before {
-    border: none; }
-
-.fancybox-thumbs__list .fancybox-thumbs-active:before {
-  border: none;
-  background-color: rgba(23, 88, 165, 0.38); }
+.fancybox-thumbs__list {
+  text-align: center; }
+  .fancybox-thumbs__list a {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    outline: none;
+    margin: 2px 4px; }
+    .fancybox-thumbs__list a:before {
+      border: none; }
+  .fancybox-thumbs__list .fancybox-thumbs-active:before {
+    border: none;
+    background-color: rgba(23, 88, 165, 0.38); }
 
 /* Styling for Small-Screen Devices */
 @media all and (max-width: 768px) {
@@ -1653,7 +1655,7 @@ ol {
         left: calc(50% - 23px); }
   .component-inro__info {
     width: 100%;
-    padding-top: 32px;
+    padding: 32px 0 130px;
     background: url(../images/main_photo.jpg) right bottom no-repeat; }
     .component-inro__info p {
       font-size: 16px;
@@ -1698,7 +1700,7 @@ ol {
         background-position: 100% 0; }
       .component-inro__info .button-cab {
         width: 280px;
-        margin: 50px 0 130px;
+        margin: 40px 0 0;
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -2008,13 +2010,15 @@ ol {
   grid-gap: 28px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr; }
-  .works-grid__item.first {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2; }
-    .works-grid__item.first .image {
-      max-height: 488px; }
-      .works-grid__item.first .image:before {
-        height: 23.5%; }
+  .works-grid__item {
+    display: block; }
+    .works-grid__item.first {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2; }
+      .works-grid__item.first .image {
+        max-height: 488px; }
+        .works-grid__item.first .image:before {
+          height: 23.5%; }
   .works-grid .name {
     font-size: 18px;
     line-height: 22px;
@@ -2025,10 +2029,12 @@ ol {
     left: 0;
     z-index: 2;
     padding: 0 0 24px 30px;
-    width: 100%; }
+    width: 100%;
+    display: block; }
   .works-grid .image {
     position: relative;
     overflow: hidden;
+    display: block;
     max-height: 229px;
     border-radius: 6px;
     -moz-border-radius: 6px;
@@ -3051,31 +3057,33 @@ ol {
     width: 100%; }
   .project-page__info {
     width: 100%;
-    margin-top: 85px;
+    margin-top: 65px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: space-between; }
     .project-page__info > p {
       width: 100%;
       font-size: 14px;
       margin-top: 50px; }
     .project-page__info-item {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 24px;
-      margin-right: 40px; }
+      width: 18%; }
       .project-page__info-item span {
         font-weight: 700;
         display: inline-block;
         vertical-align: middle; }
       .project-page__info-item p {
         line-height: 30px;
-        color: #1758a5;
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 5px; }
+        color: #1758a5; }
+        .project-page__info-item p i {
+          font-style: normal;
+          padding-left: 5px;
+          color: #221f1f; }
       .project-page__info-item_price {
         margin-left: 0;
         margin-right: 0;
@@ -3085,8 +3093,8 @@ ol {
           color: #221f1f; }
           .project-page__info-item_price p span {
             font-weight: 700;
-            font-size: 24px;
-            vertical-align: top;
+            font-size: 22px;
+            vertical-align: middle;
             padding-left: 5px; }
 
 .project-visual {
@@ -3140,9 +3148,8 @@ ol {
       display: inline-block;
       vertical-align: middle; }
 
-.project-description {
-  margin-top: 50px;
-  width: 63%; }
+.description-block {
+  margin-top: 50px; }
 
 .object-page {
   margin-top: 55px; }
@@ -3151,12 +3158,14 @@ ol {
     width: 100%; }
   .object-page .objects-content {
     flex-wrap: wrap; }
+    .object-page .objects-content.four-in-row .object-item {
+      width: calc(25% - 12px);
+      margin-bottom: 18px; }
   .object-page .object-item {
     margin-bottom: 30px; }
-  .object-page .object-description {
+  .object-page .description-block {
     display: inline-block;
     vertical-align: top;
-    width: 70%;
     padding-right: 15%; }
   .object-page .building-area {
     display: inline-block;
@@ -3457,6 +3466,9 @@ h2 {
   margin-bottom: 30px;
   width: 100%; }
 
+.description-block {
+  width: 63%; }
+
 @media (max-width: 1150px) and (min-width: 640px) {
   .tablet-hide {
     display: block; }
@@ -3469,6 +3481,9 @@ h2 {
       padding-left: 0; }
   .content-title {
     margin-top: 0; }
+  .description-block {
+    display: block;
+    width: 100%; }
   .gallery-item {
     width: calc(50% - 10px);
     margin-bottom: 20px; }
@@ -4048,9 +4063,8 @@ h2 {
       .project-visual__subitem img {
         display: inline-block;
         vertical-align: middle; }
-  .project-description {
-    margin-top: 30px;
-    width: 100%; }
+  .description-block {
+    margin-top: 30px; }
   .object-page {
     margin-top: 55px; }
     .object-page .content-accordion {
@@ -4058,14 +4072,12 @@ h2 {
       width: 100%; }
     .object-page .content-title {
       margin-bottom: 35px; }
-    .object-page .objects-content {
-      flex-wrap: wrap; }
+    .object-page .objects-content.four-in-row .object-item {
+      width: calc(50% - 10px); }
+    .object-page .description-block {
+      padding-right: 0; }
     .object-page .object-item {
       margin-bottom: 30px; }
-    .object-page .object-description {
-      display: block;
-      width: 100%;
-      padding-right: 0; }
     .object-page .building-area {
       display: block;
       margin-top: 10px;
@@ -4172,6 +4184,11 @@ h2 {
     line-height: 36px; }
   .breadcrumbs {
     display: none; }
+  .description-block {
+    margin-top: 30px;
+    width: 100%;
+    padding-right: 0;
+    display: block; }
   .gallery-item {
     width: 100%;
     margin-bottom: 25px; }
@@ -4913,9 +4930,6 @@ h2 {
       width: 100%;
       margin-top: 30px;
       flex-wrap: wrap; }
-  .project-description {
-    margin-top: 30px;
-    width: 100%; }
   .object-page {
     margin: 0 -10px 0;
     width: calc(100% + 20px); }
@@ -4933,12 +4947,8 @@ h2 {
       margin-bottom: 25px;
       text-align: left;
       padding: 0; }
-    .object-page .objects-content {
-      flex-wrap: wrap; }
-    .object-page .object-description {
-      display: block;
-      width: 100%;
-      padding-right: 0; }
+    .object-page .objects-content.four-in-row .object-item {
+      width: 100%; }
     .object-page .building-area {
       display: block;
       margin-top: 10px;

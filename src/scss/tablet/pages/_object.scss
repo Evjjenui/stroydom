@@ -11,17 +11,21 @@
   }
 
   .objects-content {
-    flex-wrap: wrap;
+
+    &.four-in-row {
+
+      .object-item {
+        width: calc(50% - 10px);
+      }
+    }
+  }
+
+  .description-block {
+    padding-right: 0;
   }
 
   .object-item {
     margin-bottom: 30px;
-  }
-
-  .object-description {
-    display: block;
-    width: 100%;
-    padding-right: 0;
   }
 
   .building-area {
