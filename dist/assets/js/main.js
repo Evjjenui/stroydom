@@ -133,7 +133,7 @@
   };
 
   initFancyBox = function() {
-    return $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a").fancybox({
+    $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a").fancybox({
       arrows: true,
       infobar: false,
       toolbar: false,
@@ -142,6 +142,11 @@
         autoStart: true,
         axis: 'x'
       }
+    });
+    return $(".call-me > a").fancybox({
+      arrows: false,
+      infobar: false,
+      toolbar: false
     });
   };
 

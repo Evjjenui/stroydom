@@ -1,0 +1,43 @@
+.popup {
+  width: 300px;
+  padding: 25px 20px 10px;
+
+  .form__item {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    border: 1px solid #e7e6e6;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+
+    @include border-radius(5px);
+
+    &::-webkit-input-placeholder {
+      color: #999999;
+    }
+
+    &::-moz-placeholder {
+      color: #999999;
+    }
+
+    &:-moz-placeholder {
+      color: #999999;
+    }
+
+    &:-ms-input-placeholder {
+      color: #999999;
+    }
+  }
+
+  .button {
+    width: 100%;
+    @include button("medium", "blue");
+  }
+}

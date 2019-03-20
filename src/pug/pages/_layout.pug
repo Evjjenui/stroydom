@@ -13,6 +13,17 @@ html(lang="en")
           block content
 
     include ../base/_footer
+    
+    #contacts_popup(style="display: none;")
+      .popup
+        .popup-form
+          form(action="")
+            .form__item
+              input(type="text" placeholder="Ваше имя" required="required")
+            .form__item
+              input(type="text" placeholder="Ваш телефон" required="required")
+            .form__item
+              buttona.button Отправить
 
   script(src="vendor/js/jquery-1.11.3.min.js")
   script(src="vendor/js/jquery.steps.min.js")

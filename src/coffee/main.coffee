@@ -133,6 +133,11 @@ initFancyBox = ->
       axis      : 'x'
     }
   )
+  $(".call-me > a").fancybox(
+    arrows: false,
+    infobar: false,
+    toolbar: false,
+  )
 
 initSteps = ->
   $('#steps-calc').steps(
