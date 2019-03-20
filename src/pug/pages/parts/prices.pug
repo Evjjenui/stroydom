@@ -106,12 +106,8 @@ block container
               | (по фундаменту)
             input(type="text" placeholder="10")
             span м
-            //- label(for="")
-            //-   | Ширина дома:
-            //- input(type="text" placeholder="8")
-            //- span м
 
-          .prices-form__subitem
+          .type-1.prices-form__subitem
             strong
               | Толщина газобетона, мм
             .radiobuttons
@@ -139,11 +135,11 @@ block container
           span Межэтажные перекрытия
         .prices-form__item-content
           .radiobuttons
-            input#floor1(type="radio" name="floor" checked="checked")
-            label(for="floor1")
+            input.type-1#floor1(type="radio" name="floor" checked="checked")
+            label.type-1(for="floor1")
               span Монолитное перекрытие 
-            input#floor2(type="radio" name="floor")
-            label(for="floor2")
+            input.type-1#floor2(type="radio" name="floor")
+            label.type-1(for="floor2")
               span Плиты перекрытия ПБ 220мм
             input#floor3(type="radio" name="floor")
             label(for="floor3")
@@ -175,8 +171,8 @@ block container
             input#fundament1(type="radio" name="fundament" checked="checked")
             label(for="fundament1")
               span Монолитная плита 300 мм
-            input#fundament2(type="radio" name="fundament")
-            label(for="fundament2")
+            input.type-2#fundament2(type="radio" name="fundament")
+            label.type-2(for="fundament2")
               span
                 | Забивные ж/б сваи 150х150мм
       

@@ -876,7 +876,7 @@ body.compensate-for-scrollbar {
         background: url(../images/sprite.png) right top no-repeat; }
 
 .step-form label {
-  line-height: 18px;
+  line-height: 20px;
   display: inline-block;
   vertical-align: middle; }
   .step-form label i {
@@ -888,8 +888,8 @@ body.compensate-for-scrollbar {
   display: inline-block;
   vertical-align: middle;
   border: 2px solid #1758a5;
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%; }
@@ -2372,15 +2372,18 @@ ol {
   grid-gap: 28px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr; }
-  .works-grid__item a {
-    display: block; }
-  .works-grid__item.first {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2; }
-    .works-grid__item.first .image {
-      max-height: 488px; }
-      .works-grid__item.first .image:before {
-        height: 23.5%; }
+  .works-grid__item {
+    display: block;
+    position: relative; }
+    .works-grid__item a {
+      display: block; }
+    .works-grid__item.first {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2; }
+      .works-grid__item.first .image {
+        max-height: 488px; }
+        .works-grid__item.first .image:before {
+          height: 23.5%; }
   .works-grid .name {
     font-size: 18px;
     line-height: 22px;
@@ -3678,6 +3681,34 @@ ol {
             display: inline-block;
             vertical-align: middle;
             margin-left: 7px; }
+
+.type-one-active .type-1 {
+  position: relative;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; }
+
+.type-one-active .type-2 {
+  position: fixed;
+  left: -9999999px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none; }
+
+.type-2 {
+  position: relative;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; }
+
+.type-1 {
+  position: fixed;
+  left: -9999999px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none; }
 
 .projects-filter {
   margin-bottom: 90px; }

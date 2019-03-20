@@ -15,16 +15,16 @@
             | Из чего будет ваш дом?
           .step-form
             .step-form__item
-              input#material-1(type="radio" name="material" checked="checked")
-              label(for="material-1")
+              input#material1(type="radio" name="material" checked="checked")
+              label(for="material1")
                 | Дома из газобетона
             .step-form__item
-              input#material-2(type="radio" name="material")
-              label(for="material-2")
+              input#material2(type="radio" name="material")
+              label(for="material2")
                 | Каркасные дома
             .step-form__item
-              input#material-3(type="radio" name="material")
-              label(for="material-3")
+              input#material3(type="radio" name="material")
+              label(for="material3")
                 | Теплая керамика
 
           //- a.step-button(href="javascript:void(0)") Далее
@@ -37,15 +37,10 @@
           .step-form
             .step-form__item
               label(for="")
-                | Длина дома:
-              input#material-1(type="text" placeholder="10")
+                | Площадь дома:
+              input#material1(type="text" placeholder="10")
               span м
-            .step-form__item
-              label(for="")
-                | Ширина дома:
-              input#material-1(type="text" placeholder="8")
-              span м
-            .step-form__item
+            .step-form__item.type-1
               label(for="")
                 | Толщина газобетона:
               .radiobuttons
@@ -73,16 +68,14 @@
           .step-title
             | Межэтажные перекрытия
           .step-form
-            .step-form__item
+            .step-form__item.type-1
               input#overlappings-1(type="radio" name="overlappings")
               label(for="overlappings-1")
                 | Монолитное перекрытие 
-                i (только для каменных домов)
-            .step-form__item
+            .step-form__item.type-1
               input#overlappings-2(type="radio" name="overlappings")
               label(for="overlappings-2")
                 | Плиты перекрытия ПБ 220мм
-                i (только для каменных домов)
             .step-form__item
               input#overlappings-3(type="radio" name="overlappings")
               label(for="overlappings-3") Деревянные балки

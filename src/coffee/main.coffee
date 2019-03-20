@@ -171,6 +171,27 @@ initUI = ->
     minimumResultsForSearch: -1
   )
 
+initPrices = ->
+  priceForm = $(".prices-form, .component-calculator")
+    
+  if ($("#material1, #material3").is(':checked'))
+    priceForm.addClass('type-one-active')
+  else
+    return
+
+  $("#material1, #material2, #material3").on 'change', (e) ->
+    
+    if ($("#material1, #material3").is(':checked'))
+      priceForm.addClass('type-one-active')
+    else
+      priceForm.removeClass('type-one-active')
+
+
+
+
+$(window).load ->
+  initPrices()
+
 $ ->
   initCarousel()
   initFancyBox()
