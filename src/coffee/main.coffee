@@ -161,6 +161,11 @@ initProgress = ->
   $('.percentage span').text(progressValue)
   $('.circle').css("left", progressValue + "%")
 
+initUI = ->
+  $('select').select2(
+    minimumResultsForSearch: -1
+  )
+
 $ ->
   initCarousel()
   initFancyBox()
@@ -169,3 +174,4 @@ $ ->
   initAccordion()
   initSteps()
   initProgress()
+  initUI()

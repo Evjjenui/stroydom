@@ -804,7 +804,7 @@ body.compensate-for-scrollbar {
   position: absolute;
   position: relative;
   white-space: nowrap;
-  width: 100% !important;
+  width: 100%;
 }
 
 .fancybox-thumbs-x .fancybox-thumbs__list {
@@ -837,6 +837,7 @@ body.compensate-for-scrollbar {
   display: inline-block;
   vertical-align: top;
   height: 75px;
+  width: 100px;
   margin: 2px;
   max-height: calc(100% - 8px);
   max-width: calc(50% - 4px);
@@ -845,7 +846,6 @@ body.compensate-for-scrollbar {
   padding: 0;
   position: relative;
   -webkit-tap-highlight-color: transparent;
-  width: 100px;
   &::before {
     border: 4px solid #4ea7f9;
     bottom: 0;

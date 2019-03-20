@@ -1,5 +1,5 @@
 (function() {
-  var initAccordion, initCarousel, initFancyBox, initMenu, initProgress, initSteps, initVideoSHow;
+  var initAccordion, initCarousel, initFancyBox, initMenu, initProgress, initSteps, initUI, initVideoSHow;
 
   initCarousel = function() {
     $('.component-advantages .content-wrapper').slick({
@@ -174,6 +174,12 @@
     return $('.circle').css("left", progressValue + "%");
   };
 
+  initUI = function() {
+    return $('select').select2({
+      minimumResultsForSearch: -1
+    });
+  };
+
   $(function() {
     initCarousel();
     initFancyBox();
@@ -181,7 +187,8 @@
     initVideoSHow();
     initAccordion();
     initSteps();
-    return initProgress();
+    initProgress();
+    return initUI();
   });
 
 }).call(this);
