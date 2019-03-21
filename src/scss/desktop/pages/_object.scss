@@ -8,14 +8,6 @@
 
   .objects-content {
     flex-wrap: wrap;
-
-    &.four-in-row {
-
-      .object-item {
-        width: calc(25% - 12px);
-        margin-bottom: 18px;
-      }
-    }
   }
 
   .object-item {
@@ -46,3 +38,4 @@
     }
   }
 }
+

@@ -1,0 +1,123 @@
+extends ../_layout
+
+block header
+  include ../../base/_header_inner
+
+
+block container
+  .content-wrapper.engineering
+    .breadcrumbs
+      ul
+        li
+          a(href="./index.html") Главная
+        li
+          b /
+        li
+          span Проектирование
+
+  include ../../components/_engineering_top
+  .component.component-popular__objects
+    .content-wrapper
+      .component__title
+        h1
+          | Наши работы
+      .objects-block.four-in-row
+        each obj_name, index in ["ДНП Омега Сертолово 2", "Новое Иннолово 1", "Коттеджный поселок Приветное", "Новое Иннолово 2"]
+          a.object-item(href="./object.html")
+            span.photo
+              img(src="assets/images/fundament/photo" + (index + 1) + ".jpg", alt="")
+              span.hide-info
+                span.object-info__sizes
+                  span.square
+                    p 170 м2
+                  span.frame
+                    p 170 м2
+                  span.floors
+                    p 170 м2
+
+            span.object-info
+              p= obj_name
+
+      span.show-all
+        a(href="./our_objects.html")
+          | Посмотреть
+          br
+          | все работы
+
+  .component.component-advantages
+    .content-wrapper.four-in-row
+      each adv_name, index in ["Опытные бригады под руководством инженера-строителя", "Фиксированная стоимость и поэтапная оплата", "Возможность работы из материалов заказчика", "Фиксация всех скрытых работ и отчеты для заказчика"]
+        .advantage-item
+          .advantage-item__icon
+            img(src="assets/images/fundament/advantage_icon" + (index + 1) + ".png", alt="")
+          .advantage-item__text
+            p= adv_name
+  
+  .content-wrapper  
+    .content-text
+      .description-block
+        .video-block
+          iframe(width="1210px" height="675" src="https://www.youtube.com/embed/_OlN9p9q1J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        .content-title
+          h1 Расчитать стоимость
+          h3 Монолитная плита
+        .form-item
+          span Монолитная плита
+          .radiobuttons.separate
+            input#monolith1(type="radio" name="monolith" checked="checked")
+            label(for="monolith1")
+              span 200
+            input#monolith2(type="radio" name="monolith")
+            label(for="monolith2")
+              span 250
+            input#monolith3(type="radio" name="monolith")
+            label(for="monolith3")
+              span 300
+        .form-item
+          span Толщина песчанной подушки, мм
+          .radiobuttons.separate
+            input#depthA1(type="radio" name="depthA" checked="checked")
+            label(for="depthA1")
+              span 200
+            input#depthA2(type="radio" name="depthA")
+            label(for="depthA2")
+              span 300
+            input#depthA3(type="radio" name="depthA")
+            label(for="depthA3")
+              span 400
+            input#depthA4(type="radio" name="depthA")
+            label(for="depthA4")
+              span 500
+        .form-item
+          span Толщина подушки из щебня, мм
+          .radiobuttons.separate
+            input#depthB1(type="radio" name="depthB" checked="checked")
+            label(for="depthB1")
+              span 0
+            input#depthB2(type="radio" name="depthB")
+            label(for="depthB2")
+              span 100
+            input#depthB3(type="radio" name="depthB")
+            label(for="depthB3")
+              span 200
+            input#depthB3(type="radio" name="depthB")
+            label(for="depthB3")
+              span 300
+    .separate-line
+    .content-text
+      .description-block
+        .accordion-item.empty
+          .accordion-item__title
+            span
+              | В указанную стоимость входит
+
+          .accordion-item__content(style="display: none;")
+            p разметка и вынос осей на участке, контроль за высотными отметками при разработке котлована, устройство песочной и щебеночной подушки заданной толщины с послойной трамбовкой виброплитой, разводка труб канализации 110мм, ввод трубы водоснабжения, закладной под электричество, укладка гидроизоляции, монтаж опалубки, армирование двумя арматурными сетками размер ячейки 200х200мм, приемка бетона, вибрирование и выравнивание, демонтаж опалубки, уборка.
+
+            p Для начала работ со стороны Заказчика необходимо предоставить бытовку, электричество от 3 кВт и обеспечить подъезд к участку.
+        .calculations
+          p 
+            | Расчёт калькулятора —
+            span 225 000 руб.
+
+  include ../../components/_order

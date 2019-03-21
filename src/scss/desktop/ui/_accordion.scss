@@ -13,6 +13,21 @@
   &-item {
     margin-bottom: 22px;
 
+    &.empty {
+
+      .accordion-item__title {
+        padding-left: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      .accordion-item__content {
+        padding-left: 0;
+      }
+    }
+
     &.active {
       
       .accordion-item__content {
@@ -86,6 +101,8 @@
       padding: 0 0 0 50px  ;
       position: relative;
       cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
 
       &:before {
         position: absolute;
@@ -97,7 +114,6 @@
         top: calc(50% - 15px);
         background: url(../images/accordion_sprite.png) no-repeat;
       }
-
 
       span {
         padding-right: 60px;

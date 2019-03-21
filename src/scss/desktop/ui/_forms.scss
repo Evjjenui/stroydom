@@ -138,6 +138,41 @@
   @include border-radius(5px);
   @include flexbox();
 
+  &.separate {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0;
+    background: none;
+
+    label {
+      width: 92px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 12px;
+      
+      @include border-radius(5px);
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: 100%;
+      }
+    }
+  }
+
   label {
     width: 100%;
     height: 60px;
@@ -155,7 +190,7 @@
     align-items: center;
     justify-content: center;
 
-    &:after {
+    &:before {
       position: absolute;
       display: block;
       content: '';
@@ -192,13 +227,11 @@
     position: absolute;
     width: 1px !important;
 
-
-
     &:first-child {
 
       + label {
 
-        &:after {
+        &:before {
           display: none;
         }
       }
@@ -212,12 +245,12 @@
 
         + input + label {
 
-          &:after {
+          &:before {
             display: none;
           }
         }
 
-        &:after {
+        &:before {
           display: none;
         }
 

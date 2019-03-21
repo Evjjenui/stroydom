@@ -39,6 +39,7 @@ h2 {
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
+  width: 100%;
 
   h1 {
     font-size: 48px;
@@ -74,6 +75,34 @@ h2 {
   strong {
     font-weight: 700;
     padding: 10px 0;
+  }
+
+  .form-item {
+    margin-bottom: 20px;
+
+    > span {
+      display: inline-block;
+      vertical-align: middle;
+      min-width: 290px;
+      max-width: 290px;
+    }
+  }
+
+  .calculations {
+    width: 100%;
+    margin-top: 50px;
+    padding: 55px 30px 60px 50px;
+    background-color: #f0f4f9;
+
+    p {
+      font-size: 24px;
+      line-height: 28px;
+
+      span {
+        font-weight: bold;
+        padding-left: 5px;
+      }
+    }
   }
 }
 
@@ -119,4 +148,44 @@ h2 {
 
 .description-block {
   width: 63%;
+}
+
+.four-in-row {
+
+  .advantage-item {
+    width: calc(25% - 12px);
+    padding: 0 2.5%;
+  }
+
+  .object-item {
+    width: calc(25% - 12px);
+    margin-bottom: 18px;
+    min-height: 272px;
+
+    .hide-info {
+      padding: 37px 0 0 90px;
+    }
+
+    .object-info {
+      padding-top: 22px;
+    }
+
+    .photo {
+      height: 170px;
+    }
+  }
+}
+
+.video-block {
+  max-width: 100%;
+
+  iframe {
+    max-width: 100%;
+  }
+}
+
+.separate-line {
+  width: 100%;
+  border-top: 1px solid #e7e6e6;
+  margin: 30px 0;
 }

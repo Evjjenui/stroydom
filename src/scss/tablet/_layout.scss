@@ -21,3 +21,24 @@
   display: block;
   width: 100%;
 }
+
+.four-in-row {
+  flex-wrap: wrap;
+
+  .object-item {
+    width: calc(50% - 10px);
+    min-height: 350px;
+    
+    .object-info {
+      padding-top: 35px;
+    }
+
+    .photo {
+      height: 220px;
+    }
+
+    &:nth-child(3) {
+      display: block;
+    }
+  }
+}
