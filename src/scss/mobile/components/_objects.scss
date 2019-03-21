@@ -15,6 +15,17 @@
   flex-wrap: wrap;
 }
 
+.objects-slides {
+  
+  .objects-block {
+    padding: 0 10px;
+
+    .object-item {
+      margin: 0 10px;
+    }
+  }
+}
+
 .object {
 
   &s-block {

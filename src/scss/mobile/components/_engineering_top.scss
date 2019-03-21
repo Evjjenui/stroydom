@@ -3,6 +3,45 @@
   &-top {
     overflow: hidden;
 
+    &.fundament-page {
+      
+      .image {
+        width: 100%;
+        text-align: center;
+        height: 190px;
+        bottom: -45px;
+        z-index: 1;
+        top: auto;
+        background: none;
+        display: block;
+
+        img {
+          display: inline-block;
+          max-width: 290px;
+        }
+        
+        &:before {
+          bottom: calc(50% - 145px);
+          left: calc(50% - 145px);
+        }
+
+        &:after {
+          bottom: calc(50% - 208px);
+          left: calc(50% - 208px);
+        }
+      }
+      
+    }
+
+    .links {
+      margin-top: 15px;
+
+      a {
+        width: 100%;
+        margin: 15px 0;
+      }
+    }
+
     .image {
       position: relative;
       height: 145px;
@@ -34,6 +73,15 @@
   }
 
   &-promo {
+
+    .description-block {
+      width: 100%;
+      margin-top: 0;
+
+      p {
+        margin-top: 0;
+      }
+    }
 
     h2,
     h3 {

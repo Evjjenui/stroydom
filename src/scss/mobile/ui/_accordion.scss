@@ -41,3 +41,14 @@
     }
   }
 }
+
+.description-block {
+  
+  .accordion-item {
+    margin: 0 0 22px;
+
+    &__title {
+      display: block;
+    }
+  }
+}

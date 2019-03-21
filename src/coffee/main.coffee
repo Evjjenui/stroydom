@@ -37,6 +37,25 @@ initCarousel = ->
     ]
   )
 
+  $('.objects-slides .objects-block').slick(
+     responsive: [
+      {
+        breakpoint: 2560
+        settings: "unslick"
+      }
+      {
+        breakpoint: 767
+        settings:
+          dots: true
+          arrows: false
+          infinite: true
+          speed: 600
+          slidesToShow: 1
+          slidesToScroll: 1
+      }
+    ]
+  )
+
   $('.works-grid').slick(
      responsive: [
       {
@@ -123,7 +142,7 @@ initAccordion = ->
       $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideUp()
 
 initFancyBox = ->
-  $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a, .watch-video").fancybox(
+  $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a").fancybox(
     arrows: true
     infobar: false
     toolbar: false

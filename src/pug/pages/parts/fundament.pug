@@ -28,16 +28,14 @@ block container
           p Монолитная плита– это оптимальный вариант фундамента для каменного дома, высокая прочность, надежность и технологичность строительства делают этот вид фундаментов наиболее востребованным для домов из газобетона и кирпича в Санкт-Петербурге и Ленинградской области.
         .links
           a.calculate(href="#calculate") Рассчитать стоимость
-          a.watch-video(href="#watch_video" data-fancybox="video") Смотреть видео
-          div(id="#watch_video" style="display: none;")
-            iframe(width="560" height="315" src="https://www.youtube.com/embed/_OlN9p9q1J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          a.watch-video(href="#watch_video") Смотреть видео
 
       .image
         img(src="./assets/images/fundament/fundament_img.png", alt="fundament img")
 
-  .component.component-popular__objects
+  .component.component-popular__objects.objects-slides
     .content-wrapper
-      .component__title
+      .component-title
         h1
           | Наши работы
       .objects-block.four-in-row
@@ -75,7 +73,7 @@ block container
   .content-wrapper  
     .content-text
       .description-block
-        .video-block
+        .video-block#watch_video
           iframe(width="1210px" height="675" src="https://www.youtube.com/embed/_OlN9p9q1J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
         #calculate.content-title
           h1 Расчитать стоимость

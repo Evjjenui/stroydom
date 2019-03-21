@@ -3,6 +3,28 @@
   &-top {
     overflow: hidden;
 
+    &.fundament-page {
+      
+      .image {
+        width: 290px;
+        height: 190px;
+        bottom: auto;
+        right: 100px;
+        top: calc(40% - 145px);
+        
+        &:before {
+          bottom: calc(50% - 223px);
+          left: calc(50% - 223px);
+        }
+
+        &:after {
+          bottom: calc(50% - 322px);
+          left: calc(50% - 322px);
+        }
+      }
+      
+    }
+
     .image {
       right: -400px;
       bottom: 0;
@@ -28,6 +50,10 @@
   }
 
   &-promo {
+
+    .description-block {
+      width: 100%;
+    }
 
     h2,
     h3 {

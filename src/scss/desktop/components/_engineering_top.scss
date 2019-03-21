@@ -12,13 +12,11 @@
         top: calc(50% - 195px);
         
         &:before {
-          border-radius: 50%;
           bottom: calc(50% - 313px);
           left: calc(50% - 313px);
         }
 
         &:after {
-          border-radius: 50%;
           bottom: calc(50% - 452px);
           left: calc(50% - 452px);
         }
