@@ -3,6 +3,33 @@
   &-top {
     @include gradient-vertical(#66ccff, #1b6bc6);
 
+    &.fundament-page {
+      
+      .image {
+        width: 560px;
+        height: 390px;
+        bottom: auto;
+        top: calc(50% - 195px);
+        
+        &:before {
+          border-radius: 50%;
+          bottom: calc(50% - 313px);
+          left: calc(50% - 313px);
+        }
+
+        &:after {
+          border-radius: 50%;
+          bottom: calc(50% - 452px);
+          left: calc(50% - 452px);
+        }
+      }
+      
+    }
+
+    .links {
+      margin-top: 30px;
+    }
+
     .image {
       position: absolute;
       display: inherit;
@@ -52,6 +79,14 @@
     position: relative;
     z-index: 4;
 
+    .description-block {
+      width: 45%;
+
+      p {
+        max-width: 100%;
+      }
+    }
+
     h2,
     h3 {
       font-size: 60px;
@@ -66,4 +101,34 @@
       margin-top: 40px;
     }
   }
+}
+
+.calculate {
+  background-color: #fff;
+  width: 290px;
+  font-size: 16px;
+  line-height: 60px;
+  font-weight: 900;
+  color: #221f1f;
+  text-decoration: none;
+  text-align: center;
+  height: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 55px;
+  
+  @include box-shadow(0 15px 24px rgba(#000000, .19));
+  @include border-radius(5px);
+}
+
+.watch-video {
+  font-size: 16px;
+  line-height: 60px;
+  font-weight: 900;
+  color: #fff;
+  background: url(../images/video-icon.png) left center no-repeat;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 80px;
 }

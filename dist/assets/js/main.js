@@ -133,7 +133,7 @@
   };
 
   initFancyBox = function() {
-    $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a").fancybox({
+    $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a, .watch-video").fancybox({
       arrows: true,
       infobar: false,
       toolbar: false,

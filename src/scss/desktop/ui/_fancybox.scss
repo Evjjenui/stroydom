@@ -782,6 +782,12 @@ body.compensate-for-scrollbar {
 .fancybox-thumbs-x {
   overflow-x: auto;
   overflow-y: hidden;
+  text-align: center;
+
+  .fancybox-thumbs__list {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 .fancybox-show-thumbs {

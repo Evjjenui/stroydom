@@ -13,9 +13,28 @@ block container
         li
           b /
         li
-          span Проектирование
+          span Монолитный фундамент
 
-  include ../../components/_engineering_top
+  .engineering-top.fundament-page
+    .content-wrapper
+      .engineering-promo
+        h2 
+          | Фундамент
+          br 
+          | монолитная 
+          br
+          | плита
+        .description-block
+          p Монолитная плита– это оптимальный вариант фундамента для каменного дома, высокая прочность, надежность и технологичность строительства делают этот вид фундаментов наиболее востребованным для домов из газобетона и кирпича в Санкт-Петербурге и Ленинградской области.
+        .links
+          a.calculate(href="#calculate") Рассчитать стоимость
+          a.watch-video(href="#watch_video" data-fancybox="video") Смотреть видео
+          div(id="#watch_video" style="display: none;")
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/_OlN9p9q1J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+      .image
+        img(src="./assets/images/fundament/fundament_img.png", alt="fundament img")
+
   .component.component-popular__objects
     .content-wrapper
       .component__title
@@ -58,7 +77,7 @@ block container
       .description-block
         .video-block
           iframe(width="1210px" height="675" src="https://www.youtube.com/embed/_OlN9p9q1J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-        .content-title
+        #calculate.content-title
           h1 Расчитать стоимость
           h3 Монолитная плита
         .form-item
