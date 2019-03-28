@@ -5,8 +5,10 @@
     .component-news__content
       -for (i = 0; i < 3; i++)
         .component-news__item
+          .component-news__item_image
+            img(src="assets/images/house_photo.jpg", alt="")
           .component-news__item_date
-            | 01.08.2018
+            span 01.08.2018
           .component-news__item_title 
             | Новости со стройплощадок — август
           .component-news__item_info

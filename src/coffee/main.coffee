@@ -132,6 +132,8 @@ initVideoSHow = ->
 initAccordion = ->
   $(".accordion-item__content").slideUp()
 
+  $('.open-start').find('.accordion-item__content').stop().slideDown()
+
   $('.accordion-item__title').on 'click', (e) ->
 
     $(this).closest('.accordion-item').toggleClass('active')

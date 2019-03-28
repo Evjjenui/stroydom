@@ -38,7 +38,19 @@
       cursor: pointer;
       background-color: #fff;
 
+      @include transition(.3s background ease-in);
       @include border-radius(5px);
+
+      &:hover,
+      &:active {
+        background-color: #1758a5;
+        color: #fff;
+
+        &:before {
+          background-position: -63px 0;
+          @include transform(rotate(0));
+        }
+      }
 
       &:before {
         display: block;

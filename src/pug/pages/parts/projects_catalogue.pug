@@ -28,22 +28,23 @@ block container
             .projects-filter__item
               label Материал стен
               select
-                -for (j = 0; j < 6; j ++)
-                  option(value="")
-                    | some text
+                each mat_item in ["Газобетон", "Каркас"]
+                  option(value="")= mat_item
             .projects-filter__item
               label Общая площадь
               select
-                -for (j = 0; j < 6; j ++)
+                each square_item in ["до 100", "100-250", "250"]
                   option(value="")
-                    | some text
+                    = square_item
+                    | &nbsp;м
+                    sup 2
+                option(value="")
+                  | более
             .projects-filter__item
               label Количество этажей
               select
-                  option(value="")
-                    | 1
-                  option(value="")
-                    | 2
+                each floor_item in ["1 этаж", "2 этажа"]
+                  option(value="")= floor_item
             .projects-filter__item
               button.button Подобрать
     

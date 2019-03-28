@@ -94,7 +94,21 @@ block container
             label(for="material3")
               span Теплая керамика
 
-
+      
+      .prices-form__item.fundament
+        .prices-form__item-title
+          .icon
+          span Фундамент
+        .prices-form__item-content
+          .radiobuttons
+            input#fundament1(type="radio" name="fundament" checked="checked")
+            label(for="fundament1")
+              span Монолитная плита 300 мм
+            input.type-2#fundament2(type="radio" name="fundament")
+            label.type-2(for="fundament2")
+              span
+                | Забивные ж/б сваи 150х150мм
+      
       .prices-form__item.size
         .prices-form__item-title
           .icon
@@ -146,7 +160,6 @@ block container
             label(for="floor3")
               span Деревянные балки
 
-
       .prices-form__item.roof
         .prices-form__item-title
           .icon
@@ -162,20 +175,6 @@ block container
             input#roof3(type="radio" name="roof")
             label(for="roof3")
               span Керамическая черепица
-      
-      .prices-form__item.fundament
-        .prices-form__item-title
-          .icon
-          span Фундамент
-        .prices-form__item-content
-          .radiobuttons
-            input#fundament1(type="radio" name="fundament" checked="checked")
-            label(for="fundament1")
-              span Монолитная плита 300 мм
-            input.type-2#fundament2(type="radio" name="fundament")
-            label.type-2(for="fundament2")
-              span
-                | Забивные ж/б сваи 150х150мм
       
       .prices-form__item.total
         .total-price

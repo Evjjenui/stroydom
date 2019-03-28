@@ -1,7 +1,6 @@
 .component-why {
   background-color: #fff;
   overflow: hidden;
-  padding: 15px 0 10px;
 
   &_content {
     @include flexbox();

@@ -1,5 +1,4 @@
 .prices {
-  margin-top: 80px;
 
   &-content {
     width: 1290px;
@@ -7,7 +6,7 @@
   }
 
   &-table {
-    margin: 50px 0 20px;
+    margin: 0 0 20px;
     width: 100%;
 
     &__head {
@@ -67,8 +66,8 @@
     }
 
     &__item {
-      padding-bottom: 60px;
-      margin-top: 30px;
+      padding-bottom: 40px;
+      margin-top: 40px;
       border-bottom: 1px solid #e7e6e6;
 
       &:last-child {
@@ -124,6 +123,7 @@
       }
 
       &.roof {
+        border: none;
 
         .icon {
           background-image: url(../images/build_sprite.png);
@@ -133,7 +133,6 @@
       }
 
       &.fundament {
-        border: none;
 
         .icon {
           background-image: url(../images/build_sprite.png);
@@ -145,7 +144,7 @@
       &.total {
         overflow: hidden;
         text-align: right;
-        margin-top: 20px;
+        margin-top: 40px;
 
         p {
           font-size: 16px;
