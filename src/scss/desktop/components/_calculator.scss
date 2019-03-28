@@ -75,6 +75,7 @@
     justify-content: center;
     padding-top: 0;
 
+
     .total-price {
       margin-bottom: 42px;
 
@@ -222,13 +223,10 @@
     left: 80px;
     bottom: 50px;
 
-    li:first-child {
-      display: none;
-    }
 
-    li:nth-child(2) {
+    li {
       
-      a {
+      a:not(.previous) {
         width: 306px;
         height: 60px;
         line-height: 60px;
@@ -257,6 +255,14 @@
 
           @include transform(rotate(180deg));
         }
+      }
+
+      a.previous {
+        position: absolute;
+        bottom: -20px;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
       }
     }
   }

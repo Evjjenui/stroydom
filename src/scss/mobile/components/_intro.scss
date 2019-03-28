@@ -1,4 +1,4 @@
-.component-inro {
+.component-intro {
   margin: 0;
 
   .title {
@@ -8,6 +8,7 @@
     h1 {
       font-size: 30px;
       line-height: 36px;
+      max-width: 100%;
     }
 
     &:after {

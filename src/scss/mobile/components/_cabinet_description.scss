@@ -4,6 +4,15 @@
 
   .component__title {
     text-align: left;
+    padding: 0;
+
+    h1 {
+      max-width: 100%;
+    }
+
+    .project-info-download {
+      margin: 10px 0 0 0;
+    }
   }
 }
 
@@ -15,6 +24,7 @@
 
   &-sub-info {
     max-width: 100%;
+    padding: 0 10px;
 
     .image {
       margin-top: 30px;
@@ -26,14 +36,6 @@
 
     .project-progress {
       margin-top: 60px;
-      padding: 0 10px;
-    }
-
-    .project-info-download {
-
-      a {
-        left: 0;
-      }
     }
   }
 

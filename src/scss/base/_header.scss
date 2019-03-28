@@ -206,7 +206,7 @@
   }
 
   &.back-to {
-    padding-left: 40px;
+    padding: 0 0 0 40px;
     margin-right: 55px;
 
     &:after {
@@ -215,7 +215,7 @@
   }
 
   &.quit {
-    padding-right: 40px;
+    padding: 0 40px 0 0;
     margin-left: 55px;
 
     &:after {

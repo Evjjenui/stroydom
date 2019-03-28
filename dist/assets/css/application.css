@@ -1846,12 +1846,12 @@ select {
     background-position: -63px -30px;
     background-repeat: no-repeat; }
   .cab-links.back-to {
-    padding-left: 40px;
+    padding: 0 0 0 40px;
     margin-right: 55px; }
     .cab-links.back-to:after {
       left: 0; }
   .cab-links.quit {
-    padding-right: 40px;
+    padding: 0 40px 0 0;
     margin-left: 55px; }
     .cab-links.quit:after {
       right: 0;
@@ -2002,18 +2002,18 @@ ol {
       font-size: 16px;
       line-height: 24px;
       margin: 15px 0; }
-  .component-about .component-title {
+  .component-about .component__title {
     margin-bottom: 25px; }
   .component-about-image {
     position: absolute;
     right: -100px;
     bottom: -77px; }
 
-.component-inro {
+.component-intro {
   margin: 0; }
-  .component-inro .content-wrapper {
+  .component-intro .content-wrapper {
     flex-wrap: wrap; }
-  .component-inro__top {
+  .component-intro__top {
     width: 100%;
     display: -webkit-box;
     display: -moz-box;
@@ -2022,10 +2022,10 @@ ol {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-  .component-inro .title {
+  .component-intro .title {
     width: 73%;
     position: relative; }
-    .component-inro .title:after {
+    .component-intro .title:after {
       position: absolute;
       display: block;
       content: '';
@@ -2036,16 +2036,16 @@ ol {
       background-repeat: no-repeat;
       right: 20px;
       top: calc(50% - 15px); }
-    .component-inro .title h1 {
+    .component-intro .title h1 {
       font-size: 48px;
       line-height: 52px;
       font-weight: 900; }
-  .component-inro .video {
+  .component-intro .video {
     margin-left: 0; }
-    .component-inro .video a {
+    .component-intro .video a {
       position: relative;
       display: block; }
-      .component-inro .video a:before {
+      .component-intro .video a:before {
         position: absolute;
         display: block;
         content: '';
@@ -2055,16 +2055,16 @@ ol {
         background-position: 0 0;
         top: calc(50% - 23px);
         left: calc(50% - 23px); }
-  .component-inro__info {
+  .component-intro__info {
     width: 100%;
-    padding: 32px 0 130px;
+    padding: 42px 0 130px;
     background: url(../images/main_photo.jpg) right bottom no-repeat; }
-    .component-inro__info p {
+    .component-intro__info p {
       font-size: 16px;
       line-height: 24px;
       color: #666666;
       margin-bottom: 33px; }
-    .component-inro__info .button {
+    .component-intro__info .button {
       width: 280px;
       color: #fff;
       display: inline-block;
@@ -2098,9 +2098,9 @@ ol {
       box-shadow: 0 15px 24px rgba(0, 0, 0, 0.19);
       -moz-box-shadow: 0 15px 24px rgba(0, 0, 0, 0.19);
       -webkit-box-shadow: 0 15px 24px rgba(0, 0, 0, 0.19); }
-      .component-inro__info .button:hover, .component-inro__info .button:active {
+      .component-intro__info .button:hover, .component-intro__info .button:active {
         background-position: 100% 0; }
-      .component-inro__info .button-cab {
+      .component-intro__info .button-cab {
         width: 280px;
         margin: 40px 0 0;
         border-radius: 5px;
@@ -2131,10 +2131,11 @@ ol {
         font-weight: 900;
         font-size: 16px;
         border: 3px solid #1758a5;
+        background-color: #fff;
         color: #221e1f;
         display: block;
         position: relative; }
-        .component-inro__info .button-cab:before {
+        .component-intro__info .button-cab:before {
           content: '';
           display: block;
           width: 26px;
@@ -2143,15 +2144,15 @@ ol {
           left: 22px;
           top: 14px;
           background: url(../images/cab_icon.png) no-repeat; }
-    .component-inro__info .guarantee {
+    .component-intro__info .guarantee {
       margin: 68px 0 58px; }
-      .component-inro__info .guarantee p {
+      .component-intro__info .guarantee p {
         display: inline-block;
         vertical-align: middle;
         position: relative;
         font-weight: 700;
         padding-right: 105px; }
-        .component-inro__info .guarantee p:after {
+        .component-intro__info .guarantee p:after {
           position: absolute;
           display: block;
           content: '';
@@ -2163,7 +2164,7 @@ ol {
           background: -moz-linear-gradient(left, #17559e 0%, #318be5 100%);
           background: -webkit-linear-gradient(left, #17559e 0%, #318be5 100%);
           background: linear-gradient(to right, #17559e 0%, #318be5 100%); }
-    .component-inro__info .years {
+    .component-intro__info .years {
       display: inline-block;
       vertical-align: middle;
       margin-right: 20px; }
@@ -2716,9 +2717,7 @@ ol {
   position: absolute;
   left: 80px;
   bottom: 50px; }
-  .component-doubled .actions.clearfix li:first-child {
-    display: none; }
-  .component-doubled .actions.clearfix li:nth-child(2) a {
+  .component-doubled .actions.clearfix li a:not(.previous) {
     width: 306px;
     height: 60px;
     line-height: 60px;
@@ -2733,7 +2732,7 @@ ol {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px; }
-    .component-doubled .actions.clearfix li:nth-child(2) a:before {
+    .component-doubled .actions.clearfix li a:not(.previous):before {
       display: block;
       position: absolute;
       content: '';
@@ -2747,6 +2746,12 @@ ol {
       transform: rotate(180deg);
       -moz-transform: rotate(180deg);
       -webkit-transform: rotate(180deg); }
+  .component-doubled .actions.clearfix li a.previous {
+    position: absolute;
+    bottom: -20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none; }
 
 .steps.clearfix ul,
 .steps-dots ul {
@@ -3043,9 +3048,9 @@ ol {
   background-position: left top; }
   .component-blue_double-elements .clone-item {
     width: calc(50% - 15px); }
-  .component-blue .component-title {
+  .component-blue .component__title {
     margin-bottom: 40px; }
-    .component-blue .component-title h1 {
+    .component-blue .component__title h1 {
       color: #fff;
       font-size: 36px;
       line-height: 40px;
@@ -3346,39 +3351,56 @@ ol {
   background-size: cover;
   padding: 70px 0;
   margin: 0; }
+  .component-cabinet_description .component__title {
+    position: relative; }
+    .component-cabinet_description .component__title h1 {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 70%; }
+  .component-cabinet_description .project-info-download {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 0 0 10px; }
+    .component-cabinet_description .project-info-download a {
+      background: url(../images/download_icon.png) left center no-repeat;
+      background-size: 30px;
+      text-decoration: none;
+      color: #1758a5;
+      font-size: 15px;
+      line-height: 42px;
+      padding-left: 40px;
+      display: inline-block;
+      vertical-align: top; }
+      .component-cabinet_description .project-info-download a span {
+        text-decoration: underline;
+        display: inline-block; }
 
 .cabinet_description-sub-info {
   max-width: 295px;
   width: 100%;
   margin-left: auto; }
+  .cabinet_description-sub-info_text_item {
+    margin-top: 20px; }
+    .cabinet_description-sub-info_text_item p {
+      font-size: 14px;
+      line-height: 22px;
+      margin: 5px 0; }
+    .cabinet_description-sub-info_text_item span {
+      font-weight: bold;
+      padding-right: 6px; }
   .cabinet_description-sub-info .project-progress {
-    margin-top: 90px; }
+    margin-top: 40px; }
     .cabinet_description-sub-info .project-progress > span {
       font-weight: bold;
       font-size: 16px;
       line-height: 22px;
-      display: block; }
-  .cabinet_description-sub-info .project-info-download a {
-    background: url(../images/download_icon.png) left center no-repeat;
-    background-size: 46px;
-    text-decoration: none;
-    color: #1758a5;
-    font-size: 18px;
-    line-height: 20px;
-    padding-left: 72px;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 70px;
-    position: relative;
-    left: -72px; }
-    .cabinet_description-sub-info .project-info-download a span {
-      text-decoration: underline;
-      display: inline-block; }
+      display: block;
+      margin-bottom: 5px; }
 
 .cabinet_description-info {
   width: calc(100% - 320px); }
   .cabinet_description-info_text {
-    margin-top: -50px; }
+    margin-top: 15px; }
     .cabinet_description-info_text p {
       font-size: 14px;
       line-height: 32px; }
@@ -3398,42 +3420,50 @@ ol {
     font-weight: bold;
     color: #1758a5;
     font-size: 14px;
-    top: 0;
-    left: 0; }
-  .progress-line .circle {
-    height: 26px;
-    width: 26px;
-    background-color: #fff;
-    border: 3px solid #1758a5;
-    position: absolute;
+    line-height: 24px;
+    text-align: center;
+    top: -2px;
     left: 0;
-    top: 20px;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%; }
+    background-color: #e4e4e4;
+    padding: 0 5px;
+    width: 50px;
+    margin-left: -25px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px; }
+    .progress-line .percentage:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 7px 7px 0 7px;
+      border-color: #e4e4e4 transparent transparent transparent;
+      left: calc(50% - 7px);
+      bottom: -7px; }
   .progress-line .line {
-    height: 3px;
+    height: 10px;
     background-color: #d7d7d7;
     width: 100%;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px; }
-  .progress-line .zero,
-  .progress-line .hundred {
-    font-size: 14px;
-    line-height: 18px;
-    position: absolute;
-    bottom: 0; }
-  .progress-line .zero {
-    left: 0; }
-  .progress-line .hundred {
-    right: 0; }
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px; }
+    .progress-line .line__bg {
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-image: repeating-linear-gradient(-45deg, #5786be, #5786be 15px, #1758a5 7px, #1758a5 22px); }
 
 .build-preview_item {
   width: 100%;
   display: block;
   padding-bottom: 50px;
-  margin-top: 50px;
+  margin-top: 30px;
   border-bottom: 1px solid #e7e6e6; }
   .build-preview_item:last-child {
     border: none; }
@@ -4064,7 +4094,7 @@ h2 {
       font-size: 16px;
       line-height: 24px;
       margin: 15px 0; }
-  .component-about .component-title {
+  .component-about .component__title {
     margin-bottom: 25px; }
   .component-about-image {
     position: absolute;
@@ -4072,21 +4102,22 @@ h2 {
     bottom: -64px; }
     .component-about-image img {
       width: 580px; }
-  .component-inro {
+  .component-intro {
     margin: 0; }
-    .component-inro .title h1 {
+    .component-intro .title h1 {
       font-size: 36px;
-      line-height: 46px; }
-    .component-inro .title:after {
+      line-height: 46px;
+      max-width: 100%; }
+    .component-intro .title:after {
       display: none; }
-    .component-inro .video {
+    .component-intro .video {
       margin-left: 0;
       width: 195px;
       height: 115px; }
-      .component-inro .video a {
+      .component-intro .video a {
         position: relative;
         display: block; }
-        .component-inro .video a:before {
+        .component-intro .video a:before {
           position: absolute;
           display: block;
           content: '';
@@ -4096,9 +4127,9 @@ h2 {
           background-position: 0 0;
           top: calc(50% - 23px);
           left: calc(50% - 23px); }
-    .component-inro__info {
+    .component-intro__info {
       background-image: url(../images/main_photo_tablet.jpg); }
-      .component-inro__info .guarantee p {
+      .component-intro__info .guarantee p {
         font-size: 14px;
         line-height: 22px; }
   .component-popular__projects .project-item:nth-child(3) {
@@ -4384,8 +4415,6 @@ h2 {
     margin-top: 30px; }
   .component-cabinet_description {
     margin: 0; }
-  .cabinet_description-sub-info .project-info-download a {
-    left: -14px; }
   .menu-opened {
     overflow: hidden;
     position: fixed;
@@ -4807,20 +4836,18 @@ h2 {
       display: block;
       width: 100%;
       margin-bottom: 15px; }
-  .component {
-    margin: 30px 0; }
-    .component .content-wrapper {
-      padding: 0 10px; }
-    .component__title {
-      text-align: left;
-      padding: 0 10px;
-      width: 80%; }
-      .component__title h1 {
-        font-size: 26px;
-        line-height: 32px; }
-    .component .sub-title {
-      font-size: 16px;
-      line-height: 24px; }
+  .component .content-wrapper {
+    padding: 0 10px; }
+  .component__title {
+    text-align: left;
+    padding: 0 10px; }
+    .component__title h1,
+    .component__title h2 {
+      font-size: 26px;
+      line-height: 32px; }
+  .component .sub-title {
+    font-size: 16px;
+    line-height: 24px; }
   .show-all {
     top: 0;
     right: 20px;
@@ -4835,28 +4862,29 @@ h2 {
   .video-block iframe {
     max-width: 100%;
     max-height: auto; }
-  .component-inro {
+  .component-intro {
     margin: 0; }
-    .component-inro .title {
+    .component-intro .title {
       text-align: center;
       width: 100%; }
-      .component-inro .title h1 {
+      .component-intro .title h1 {
         font-size: 30px;
-        line-height: 36px; }
-      .component-inro .title:after {
+        line-height: 36px;
+        max-width: 100%; }
+      .component-intro .title:after {
         display: none; }
-    .component-inro .video {
+    .component-intro .video {
       display: none; }
-    .component-inro__info {
+    .component-intro__info {
       background-size: contain;
       text-align: center;
       padding-top: 10px;
       padding-bottom: 210px; }
-      .component-inro__info p {
+      .component-intro__info p {
         margin-bottom: 10px; }
-      .component-inro__info .button {
+      .component-intro__info .button {
         width: 100%; }
-        .component-inro__info .button-cab {
+        .component-intro__info .button-cab {
           width: 100%;
           margin-bottom: 15px; }
   .component-popular__projects .project-item:nth-child(3) {
@@ -5099,7 +5127,7 @@ h2 {
   .component-popular__objects .content-wrapper {
     flex-wrap: wrap;
     padding: 0; }
-  .component-popular__objects .component-title {
+  .component-popular__objects .component__title {
     padding: 0 20px; }
   .objects-content,
   .objects-block {
@@ -5213,9 +5241,9 @@ h2 {
       padding: 0 20px; }
     .component-blue_double-elements .clone-item {
       width: 100%; }
-    .component-blue .component-title {
+    .component-blue .component__title {
       padding: 0 20px 0 0; }
-      .component-blue .component-title h1 {
+      .component-blue .component__title h1 {
         font-size: 24px;
         line-height: 30px; }
   .clone-item {
@@ -5331,20 +5359,23 @@ h2 {
     padding: 55px 0;
     margin: 0; }
     .component-cabinet_description .component__title {
-      text-align: left; }
+      text-align: left;
+      padding: 0; }
+      .component-cabinet_description .component__title h1 {
+        max-width: 100%; }
+      .component-cabinet_description .component__title .project-info-download {
+        margin: 10px 0 0 0; }
   .cabinet_description-info_text {
     margin-top: 15px; }
   .cabinet_description-sub-info {
-    max-width: 100%; }
+    max-width: 100%;
+    padding: 0 10px; }
     .cabinet_description-sub-info .image {
       margin-top: 30px; }
       .cabinet_description-sub-info .image img {
         width: 100%; }
     .cabinet_description-sub-info .project-progress {
-      margin-top: 60px;
-      padding: 0 10px; }
-    .cabinet_description-sub-info .project-info-download a {
-      left: 0; }
+      margin-top: 60px; }
   .cabinet_description-info {
     width: 100%;
     padding: 0 10px; }

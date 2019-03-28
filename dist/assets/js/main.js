@@ -178,13 +178,23 @@
       enablePagination: true,
       enableFinishButton: false,
       enableCancelButton: false,
+      enableAllSteps: true,
       labels: {
-        next: 'Далее'
+        next: 'Далее',
+        previous: 'Назад'
+      },
+      onInit: function(e) {
+        $('a[href=\'#previous\']').addClass('previous');
+        return $('.previous').hide();
       },
       onStepChanging: function(event, currentIndex, newIndex) {
         $('.steps-numbers p span').text(newIndex + 1);
         if (newIndex === $('.wizard .step').length - 1) {
           $('.component-calculator__forms_controls, .steps.clearfix').hide();
+          $('.previous').css('display', 'inline-block');
+        } else {
+          $('.component-calculator__forms_controls, .steps.clearfix').show();
+          $('.previous').hide();
         }
         return true;
       }
@@ -196,7 +206,7 @@
     progressValue = $('.project-progress').attr('data-progress');
     $('.percentage').css("left", progressValue + "%");
     $('.percentage span').text(progressValue);
-    return $('.circle').css("left", progressValue + "%");
+    return $('.line__bg').css("width", progressValue + "%");
   };
 
   initUI = function() {

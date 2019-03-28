@@ -168,14 +168,24 @@ initSteps = ->
     enablePagination: true
     enableFinishButton: false
     enableCancelButton: false
+    enableAllSteps: true
     labels:
       next: 'Далее'
+      previous: 'Назад'
+
+    onInit: (e) ->
+      $('a[href=\'#previous\']').addClass('previous')
+      $('.previous').hide()
 
     onStepChanging: (event, currentIndex, newIndex) ->
       $('.steps-numbers p span').text(newIndex + 1)
 
       if newIndex == $('.wizard .step').length - 1
         $('.component-calculator__forms_controls, .steps.clearfix').hide()
+        $('.previous').css('display', 'inline-block')
+      else 
+        $('.component-calculator__forms_controls, .steps.clearfix').show()
+        $('.previous').hide()
 
       return true
   )
@@ -185,7 +195,7 @@ initProgress = ->
   
   $('.percentage').css("left", progressValue + "%")
   $('.percentage span').text(progressValue)
-  $('.circle').css("left", progressValue + "%")
+  $('.line__bg').css("width", progressValue + "%")
 
 initUI = ->
   $('select').select2(
