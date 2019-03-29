@@ -9,13 +9,16 @@
 
 .component-steps-content {
   flex-wrap: wrap;
+
+  .component-item_step {
+    width: auto;
+    margin: 0 10px 25px;
+   
+    @include box-shadow(0 10px 15px rgba(#000000, .11));
+  }
 }
 
 .component-steps__work {
-
-  .content-wrapper {
-    padding: 0;
-  }
   
   .component-steps-content {
     display: block;
@@ -23,10 +26,6 @@
   }  
 
   .component-item_step {
-    width: auto;
-    margin: 0 10px 25px;
-
-    @include box-shadow(0 10px 15px rgba(#000000, .11));
 
     .item_step {
 

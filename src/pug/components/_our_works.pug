@@ -5,7 +5,7 @@
     .works-grid
       .works-grid__item.first
           span.works-grid-slider__item.first
-            a(href="object.html")
+            a(href="object.html").item-wrap
               span.image
                 img(src="assets/images/project_photo1.jpg", alt="project photo1")
               span.name 
@@ -15,7 +15,7 @@
       each elem, index in ['д. Жабино', 'ДНП Скандинавский парк', 'Коттеджный посёлок «Лесной хутор»', 'п. Белоостров', 'д. Грузино']
         .works-grid__item
             span.works-grid-slider__item
-              a(href="object.html")
+              a(href="object.html").item-wrap
                 span.image
                   img(src="assets/images/project_photo" + (index + 2) + ".jpg", alt="project photo" + (index + 2))
                 span.name= elem

@@ -14,13 +14,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 
+  .item-wrap {
+    display: block;
+    position: relative;
+  }
+
   &__item {
     display: block;
     position: relative;
-
-    a {
-      display: block;
-    }
 
     &.first {
       grid-column: 1 / span 2;

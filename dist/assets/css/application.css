@@ -2411,11 +2411,12 @@ ol {
   grid-gap: 28px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr; }
+  .works-grid .item-wrap {
+    display: block;
+    position: relative; }
   .works-grid__item {
     display: block;
     position: relative; }
-    .works-grid__item a {
-      display: block; }
     .works-grid__item.first {
       grid-column: 1 / span 2;
       grid-row: 1 / span 2; }
@@ -4759,7 +4760,6 @@ h2 {
       padding-right: 0;
       padding-left: 0; }
   .content-title {
-    margin-top: 50px;
     text-align: left;
     padding: 0; }
     .content-title h1 {
@@ -4812,7 +4812,7 @@ h2 {
     font-size: 18px;
     line-height: 26px; }
   .project-page .accordion-item {
-    margin: 0 20px 22px; }
+    margin: 0 0 22px; }
   .description-block .accordion-item {
     margin: 0 0 22px; }
     .description-block .accordion-item__title {
@@ -4836,18 +4836,21 @@ h2 {
       display: block;
       width: 100%;
       margin-bottom: 15px; }
-  .component .content-wrapper {
-    padding: 0 10px; }
-  .component__title {
-    text-align: left;
-    padding: 0 10px; }
-    .component__title h1,
-    .component__title h2 {
-      font-size: 26px;
-      line-height: 32px; }
-  .component .sub-title {
-    font-size: 16px;
-    line-height: 24px; }
+  .component {
+    margin: 20px 0;
+    padding: 20px 0; }
+    .component .content-wrapper {
+      padding: 0 10px; }
+    .component__title {
+      text-align: left;
+      padding: 0 10px; }
+      .component__title h1,
+      .component__title h2 {
+        font-size: 26px;
+        line-height: 32px; }
+    .component .sub-title {
+      font-size: 16px;
+      line-height: 24px; }
   .show-all {
     top: 0;
     right: 20px;
@@ -4864,6 +4867,8 @@ h2 {
     max-height: auto; }
   .component-intro {
     margin: 0; }
+    .component-intro .content-wrapper {
+      padding: 0 20px; }
     .component-intro .title {
       text-align: center;
       width: 100%; }
@@ -4892,7 +4897,7 @@ h2 {
   .component-popular__projects .show-all {
     top: 0; }
   .component-popular__projects .projects-block {
-    margin-bottom: 20px; }
+    margin-bottom: 0; }
     .component-popular__projects .projects-block .slick-list {
       padding-bottom: 20px; }
   .component-popular__projects .project-item {
@@ -5106,6 +5111,8 @@ h2 {
   .component-popular__services {
     padding: 50px 0 30px;
     margin-bottom: 0; }
+    .component-popular__services .content-wrapper {
+      padding: 0 20px; }
   .services-item {
     width: 100%;
     background-image: none !important;
@@ -5118,7 +5125,7 @@ h2 {
     .services-item__title {
       display: inline-block;
       vertical-align: middle;
-      margin: 0 0 0 25px;
+      margin: 0 0 0 23px;
       padding: 0; }
       .services-item__title:before {
         display: none; }
@@ -5212,22 +5219,20 @@ h2 {
     .object-info__sizes p {
       color: inherit;
       font-size: 14px; }
-  .component-order {
-    margin-bottom: 80px; }
-    .component-order .content-wrapper {
-      flex-wrap: wrap;
-      z-index: 1;
-      min-height: 406px; }
-    .component-order .component-doubled__info > * {
-      width: 100%; }
-    .component-order .component-doubled__info .icon {
-      width: 43px;
-      height: 38px;
-      background-image: url(../images/sprite.png);
-      background-position: -162px 0;
-      background-repeat: no-repeat; }
-    .component-order .step-button {
-      margin-top: 0; }
+  .component-order .content-wrapper {
+    flex-wrap: wrap;
+    z-index: 1;
+    min-height: 406px; }
+  .component-order .component-doubled__info > * {
+    width: 100%; }
+  .component-order .component-doubled__info .icon {
+    width: 43px;
+    height: 38px;
+    background-image: url(../images/sprite.png);
+    background-position: -162px 0;
+    background-repeat: no-repeat; }
+  .component-order .step-button {
+    margin-top: 0; }
   .content-wrapper + .component-order {
     margin-bottom: 0; }
   .component-service_advantages .service_advantages__content {
@@ -5273,27 +5278,27 @@ h2 {
     margin-bottom: 25px; }
   .component-steps-content {
     flex-wrap: wrap; }
-  .component-steps__work .content-wrapper {
-    padding: 0; }
+    .component-steps-content .component-item_step {
+      width: auto;
+      margin: 0 10px 25px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11);
+      -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11);
+      -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11); }
   .component-steps__work .component-steps-content {
     display: block;
     width: 100%; }
-  .component-steps__work .component-item_step {
-    width: auto;
-    margin: 0 10px 25px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11);
-    -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11);
-    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.11); }
-    .component-steps__work .component-item_step .item_step-title {
-      padding: 0 20px; }
-    .component-steps__work .component-item_step .item_step-description {
-      padding: 0 20px; }
+  .component-steps__work .component-item_step .item_step-title {
+    padding: 0 20px; }
+  .component-steps__work .component-item_step .item_step-description {
+    padding: 0 20px; }
   .component-pricing {
     padding: 0; }
     .component-pricing_item {
       width: 100%;
       margin: 15px 0;
       padding: 35px 20px 115px; }
+    .component-pricing-content {
+      padding: 0 10px; }
     .component-pricing .min-price br {
       display: none; }
   .engineering-top {
@@ -5339,7 +5344,7 @@ h2 {
         left: calc(50% - 208px);
         bottom: -180px; }
     .engineering-top .content-wrapper {
-      padding: 40px 13px 0; }
+      padding: 40px 20px 0; }
   .engineering-promo .description-block {
     width: 100%;
     margin-top: 0; }
@@ -5561,31 +5566,28 @@ h2 {
         padding: 0 20px; }
       .contacts .interactive-map iframe {
         border: none; }
-  .project-page {
-    width: calc(100% + 40px);
-    margin: 0 -20px; }
-    .project-page .content-accordion {
-      margin: 40px 0 0; }
-    .project-page .content-title {
-      margin-top: 30px; }
-    .project-page__info {
-      flex-wrap: wrap;
-      margin-top: 30px;
-      padding: 0  20px; }
-      .project-page__info-item {
-        margin: 20px 0;
-        width: 100%;
-        text-align: left; }
-        .project-page__info-item span {
-          width: 55%; }
-        .project-page__info-item_price p {
-          margin-top: 25px;
-          margin-left: 0; }
-        .project-page__info-item_price span {
-          width: auto; }
+  .project-page .content-accordion {
+    margin: 40px 0 0; }
+  .project-page .content-title {
+    margin-top: 30px; }
+  .project-page__info {
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 0; }
+    .project-page__info-item {
+      margin: 20px 0;
+      width: 100%;
+      text-align: left; }
+      .project-page__info-item span {
+        width: 55%; }
+      .project-page__info-item_price p {
+        margin-top: 25px;
+        margin-left: 0; }
+      .project-page__info-item_price span {
+        width: auto; }
   .project-visual {
     width: 100%;
-    padding: 0 20px;
+    padding: 0;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -5634,8 +5636,6 @@ h2 {
     width: 100%; }
     .prices-content {
       width: 100%; }
-    .prices .content-title {
-      padding: 0 20px; }
     .prices-table {
       margin-top: 20px; }
       .prices-table__cell p {
@@ -5711,21 +5711,20 @@ h2 {
       padding: 0; }
       .service-view .component.component-video .content-wrapper iframe {
         height: 100%; }
-  .projects-catalogue {
-    width: calc(100% + 40px);
-    margin: 0 -20px; }
-    .projects-catalogue .projects-block {
-      padding: 0 10px; }
-    .projects-catalogue .projects-filter {
-      padding: 0 20px;
-      margin-bottom: 60px;
-      width: 100%; }
-      .projects-catalogue .projects-filter__item {
-        width: 100%;
-        margin: 0 0 15px;
-        display: none; }
-        .projects-catalogue .projects-filter__item:first-child, .projects-catalogue .projects-filter__item:last-child {
-          display: block; } }
+  .projects-catalogue .projects-block {
+    padding: 0; }
+  .projects-catalogue .projects-filter {
+    padding: 0;
+    margin-bottom: 60px;
+    width: 100%; }
+    .projects-catalogue .projects-filter__item {
+      width: 100%;
+      margin: 0 0 15px;
+      display: none; }
+      .projects-catalogue .projects-filter__item .select2-container {
+        min-width: 100%; }
+      .projects-catalogue .projects-filter__item:first-child, .projects-catalogue .projects-filter__item:last-child {
+        display: block; } }
 
 @media screen and (max-width: 380px) {
   .project-item .photo {
