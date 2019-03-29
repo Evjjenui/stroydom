@@ -255,6 +255,7 @@
   pointer-events: auto;
 }
 
+.radiobuttons.type-3,
 label.type-1,
 .type-1 {
   position: fixed;
@@ -262,4 +263,26 @@ label.type-1,
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.type-three-active {
+  
+  .radiobuttons {
+
+    &.type-3 {
+      position: relative;
+      left: 0;
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &.type-1 {
+      position: fixed;
+      left: -9999999px;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 }

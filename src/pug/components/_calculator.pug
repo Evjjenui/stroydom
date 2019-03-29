@@ -42,14 +42,21 @@
                 sup 2
             .step-form__item.type-1
               label(for="")
-                | Толщина газобетона:
-              .radiobuttons
+                | Толщина стен:
+              .radiobuttons.type-1
                 input#depth1(type="radio" name="depth" checked="checked")
                 label(for="depth1")
                   span 300
                 input#depth2(type="radio" name="depth")
                 label(for="depth2")
                   span 400
+              .radiobuttons.type-3
+                input#depth1(type="radio" name="depth3" checked="checked")
+                label(for="depth31")
+                  span 380
+                input#depth2(type="radio" name="depth3")
+                label(for="depth32")
+                  span 440
             .step-form__item.floors
               label(for="")
                 | Количество этажей:

@@ -1,6 +1,17 @@
+.component-calculator {
+
+  .component-doubled__forms .step {
+    width: 100%;
+  }
+}
+
 .component-doubled {
   overflow: hidden;
   background-color: #fff;
+
+  .actions.clearfix li a.previous {
+    bottom: -118px;
+  }
   
   .content-wrapper {
     padding: 0;
@@ -106,6 +117,19 @@
     .step-button {
       width: 100%;
     }
+    
+    .total-price {
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      span {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
   }
 
   &_step2 {
@@ -113,7 +137,7 @@
     .step-form__item {
 
       > label {
-        width: 192px;
+        width: 160px;
       }
     }
   }
@@ -124,6 +148,7 @@
   top: auto;
   left: 20px;
   bottom: 33px;
+  width: auto;
 }
 
 .steps.clearfix,
@@ -140,25 +165,11 @@
 
     a {
       display: block;
-      width: 10px;
-      height: 10px;
       margin: 0;
-      background-color: #f0f4f9;
-      cursor: pointer;
-
-      @include border-radius(50%);
     }
 
     &.last {
       display: none;
-    }
-
-    &.active,
-    &.current {
-
-      a {
-        background-color: #1758a5;
-      }
     }
   }
 }

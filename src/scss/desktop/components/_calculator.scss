@@ -27,6 +27,14 @@
       background-repeat: no-repeat;
     }
   }
+
+  .component-doubled__forms .step {
+    width: calc(100% - 114px);
+
+    &.component-calculator__forms_step5 {
+      width: 100%;
+    }
+  }
 }
 
 .component-doubled__forms {
@@ -43,7 +51,7 @@
     .content {
       @include flexbox();
       width: 100%;
-      justify-content: center;
+      justify-content: start;
     }
   }
 
@@ -111,12 +119,15 @@
 
   &_controls {
     width: 114px;
-    padding-bottom: 85px;
+    padding-bottom: 55px;
 
     @include flexbox();
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    position: absolute;
+    height: 100%;
+    right: 0px;
 
     .steps-numbers {
       margin: 115px 0 0;
@@ -271,6 +282,11 @@
 
 .steps.clearfix,
 .steps-dots {
+  text-align: center;
+  width: 114px;
+  z-index: 2;
+  right: 0;
+  position: absolute;
 
   ul {
     list-style: none;
@@ -279,7 +295,7 @@
   li {
 
     a {
-      display: block;
+      display: inline-block;
       width: 10px;
       height: 10px;
       margin: 0 0 20px;

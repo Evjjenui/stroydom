@@ -2552,6 +2552,11 @@ ol {
   background-position: -114px 0;
   background-repeat: no-repeat; }
 
+.component-calculator .component-doubled__forms .step {
+  width: calc(100% - 114px); }
+  .component-calculator .component-doubled__forms .step.component-calculator__forms_step5 {
+    width: 100%; }
+
 .component-doubled__forms {
   background-color: #fff;
   height: 100%;
@@ -2571,7 +2576,7 @@ ol {
       display: -webkit-flex;
       display: flex;
       width: 100%;
-      justify-content: center; }
+      justify-content: start; }
   .component-doubled__forms .step {
     display: -webkit-box;
     display: -moz-box;
@@ -2616,7 +2621,7 @@ ol {
 
 .component-calculator__forms_controls {
   width: 114px;
-  padding-bottom: 85px;
+  padding-bottom: 55px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2624,7 +2629,10 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  right: 0px; }
   .component-calculator__forms_controls .steps-numbers {
     margin: 115px 0 0;
     color: #1758a5; }
@@ -2754,30 +2762,34 @@ ol {
     font-weight: 700;
     text-decoration: none; }
 
-.steps.clearfix ul,
-.steps-dots ul {
-  list-style: none; }
-
-.steps.clearfix li a,
-.steps-dots li a {
-  display: block;
-  width: 10px;
-  height: 10px;
-  margin: 0 0 20px;
-  background-color: #f0f4f9;
-  cursor: pointer;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%; }
-
-.steps.clearfix li.last,
-.steps-dots li.last {
-  display: none; }
-
-.steps.clearfix li.active a, .steps.clearfix li.current a,
-.steps-dots li.active a,
-.steps-dots li.current a {
-  background-color: #1758a5; }
+.steps.clearfix,
+.steps-dots {
+  text-align: center;
+  width: 114px;
+  z-index: 2;
+  right: 0;
+  position: absolute; }
+  .steps.clearfix ul,
+  .steps-dots ul {
+    list-style: none; }
+  .steps.clearfix li a,
+  .steps-dots li a {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 0 20px;
+    background-color: #f0f4f9;
+    cursor: pointer;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%; }
+  .steps.clearfix li.last,
+  .steps-dots li.last {
+    display: none; }
+  .steps.clearfix li.active a, .steps.clearfix li.current a,
+  .steps-dots li.active a,
+  .steps-dots li.current a {
+    background-color: #1758a5; }
 
 .component-map {
   position: relative;
@@ -3825,8 +3837,23 @@ ol {
   opacity: 1;
   pointer-events: auto; }
 
+.radiobuttons.type-3,
 label.type-1,
 .type-1 {
+  position: fixed;
+  left: -9999999px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none; }
+
+.type-three-active .radiobuttons.type-3 {
+  position: relative;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; }
+
+.type-three-active .radiobuttons.type-1 {
   position: fixed;
   left: -9999999px;
   visibility: hidden;
@@ -4214,6 +4241,8 @@ h2 {
       max-width: 100%; }
       .component-news__item:nth-child(3) {
         display: none; }
+  .component-calculator .component-doubled__forms .step {
+    width: calc(100% - 55px); }
   .component-doubled__forms {
     width: 57%; }
     .component-doubled__forms .step {
@@ -4232,29 +4261,20 @@ h2 {
     position: absolute;
     left: 25px;
     bottom: 50px; }
-  .steps.clearfix {
-    right: 20px; }
-  .steps.clearfix ul,
-  .steps-dots ul {
-    list-style: none; }
-  .steps.clearfix li a,
-  .steps-dots li a {
-    display: block;
-    width: 10px;
-    height: 10px;
-    margin: 0 0 20px;
-    background-color: #f0f4f9;
-    cursor: pointer;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%; }
-  .steps.clearfix li.last,
-  .steps-dots li.last {
-    display: none; }
-  .steps.clearfix li.active a, .steps.clearfix li.current a,
-  .steps-dots li.active a,
-  .steps-dots li.current a {
-    background-color: #1758a5; }
+  .steps.clearfix,
+  .steps-dots {
+    width: 55px; }
+    .steps.clearfix ul,
+    .steps-dots ul {
+      list-style: none; }
+    .steps.clearfix li a,
+    .steps-dots li a {
+      width: 10px;
+      height: 10px;
+      margin: 0 0 20px; }
+    .steps.clearfix li.last,
+    .steps-dots li.last {
+      display: none; }
   .component-map {
     height: 585px; }
     .component-map .objects-count {
@@ -5008,9 +5028,13 @@ h2 {
         max-height: 229px; }
   .component-news {
     display: none; }
+  .component-calculator .component-doubled__forms .step {
+    width: 100%; }
   .component-doubled {
     overflow: hidden;
     background-color: #fff; }
+    .component-doubled .actions.clearfix li a.previous {
+      bottom: -118px; }
     .component-doubled .content-wrapper {
       padding: 0; }
     .component-doubled.component-calculator .component-doubled__info {
@@ -5071,13 +5095,20 @@ h2 {
       margin: 0; }
     .component-calculator__forms_step5.step .step-button {
       width: 100%; }
+    .component-calculator__forms_step5.step .total-price p {
+      font-size: 18px;
+      line-height: 26px; }
+    .component-calculator__forms_step5.step .total-price span {
+      font-size: 24px;
+      line-height: 32px; }
   .component-calculator__forms_step2 .step-form__item > label {
-    width: 192px; }
+    width: 160px; }
   .steps.clearfix {
     right: auto;
     top: auto;
     left: 20px;
-    bottom: 33px; }
+    bottom: 33px;
+    width: auto; }
   .steps.clearfix ul,
   .steps-dots ul {
     list-style: none; }
@@ -5089,21 +5120,10 @@ h2 {
     .steps.clearfix li a,
     .steps-dots li a {
       display: block;
-      width: 10px;
-      height: 10px;
-      margin: 0;
-      background-color: #f0f4f9;
-      cursor: pointer;
-      border-radius: 50%;
-      -moz-border-radius: 50%;
-      -webkit-border-radius: 50%; }
+      margin: 0; }
     .steps.clearfix li.last,
     .steps-dots li.last {
       display: none; }
-    .steps.clearfix li.active a, .steps.clearfix li.current a,
-    .steps-dots li.active a,
-    .steps-dots li.current a {
-      background-color: #1758a5; }
   .component-why,
   .component-about,
   .component-map {

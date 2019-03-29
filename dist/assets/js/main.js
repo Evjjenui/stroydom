@@ -171,10 +171,22 @@
   };
 
   initSteps = function() {
+    var stepBack;
+    stepBack = function() {
+      return false;
+    };
+    stepBack = function() {
+      console.log('Step back');
+      if ($('#steps-calc').steps('previous')) {
+        return setTimeout((function() {
+          return stepBack();
+        }), 600);
+      }
+    };
     return $('#steps-calc').steps({
       headerTag: '.hidden-title',
       bodyTag: '.step',
-      transitionEffect: 'fade',
+      transitionEffect: 'none',
       enablePagination: true,
       enableFinishButton: false,
       enableCancelButton: false,
@@ -184,16 +196,31 @@
         previous: 'Назад'
       },
       onInit: function(e) {
-        $('a[href=\'#previous\']').addClass('previous');
-        return $('.previous').hide();
+        $('a[href="#previous"]').addClass('previous');
+        $('.previous').hide();
+        return $('a[href="#previous"]').on('click', function() {
+          return stepBack();
+        });
       },
       onStepChanging: function(event, currentIndex, newIndex) {
         $('.steps-numbers p span').text(newIndex + 1);
         if (newIndex === $('.wizard .step').length - 1) {
-          $('.component-calculator__forms_controls, .steps.clearfix').hide();
+          // $('.component-calculator__forms_controls, .steps.clearfix').hide()
+          $('.component-calculator__forms_controls, .steps.clearfix').css({
+            position: 'absolute',
+            // transform: 'translate3d(100px,0px,0px)',
+            visibility: 'hidden',
+            opacity: '0'
+          });
           $('.previous').css('display', 'inline-block');
         } else {
-          $('.component-calculator__forms_controls, .steps.clearfix').show();
+          
+          // $('.component-calculator__forms_controls, .steps.clearfix').show()
+          $('.component-calculator__forms_controls, .steps.clearfix').css({
+            // transform: 'none'
+            opacity: '1',
+            visibility: 'visible'
+          });
           $('.previous').hide();
         }
         return true;
@@ -224,10 +251,16 @@
       return;
     }
     return $("#material1, #material2, #material3").on('change', function(e) {
+      priceForm.removeClass('type-one-active, type-three-active');
       if ($("#material1, #material3").is(':checked')) {
-        return priceForm.addClass('type-one-active');
+        priceForm.addClass('type-one-active');
       } else {
-        return priceForm.removeClass('type-one-active');
+        priceForm.removeClass('type-one-active');
+      }
+      if ($("#material3").is(':checked')) {
+        return priceForm.addClass('type-three-active');
+      } else {
+
       }
     });
   };

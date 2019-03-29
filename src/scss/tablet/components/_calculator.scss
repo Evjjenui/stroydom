@@ -1,3 +1,10 @@
+.component-calculator {
+
+  .component-doubled__forms .step {
+    width: calc(100% - 55px);
+  }
+}
+
 .component-doubled__forms {
   width: 57%;
 
@@ -42,13 +49,9 @@
   }
 }
 
-
-.steps.clearfix {
-  right: 20px;
-}
-
 .steps.clearfix,
 .steps-dots {
+  width: 55px;
 
   ul {
     list-style: none;
@@ -57,26 +60,13 @@
   li {
 
     a {
-      display: block;
       width: 10px;
       height: 10px;
       margin: 0 0 20px;
-      background-color: #f0f4f9;
-      cursor: pointer;
-
-      @include border-radius(50%);
     }
 
     &.last {
       display: none;
-    }
-
-    &.active,
-    &.current {
-
-      a {
-        background-color: #1758a5;
-      }
     }
   }
 }

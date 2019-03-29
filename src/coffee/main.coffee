@@ -161,10 +161,15 @@ initFancyBox = ->
   )
 
 initSteps = ->
+  stepBack = -> false
+  stepBack = -> 
+    console.log 'Step back'
+    setTimeout((-> stepBack()), 600) if $('#steps-calc').steps('previous')
+
   $('#steps-calc').steps(
     headerTag: '.hidden-title'
     bodyTag: '.step'
-    transitionEffect: 'fade'
+    transitionEffect: 'none'
     enablePagination: true
     enableFinishButton: false
     enableCancelButton: false
@@ -174,21 +179,37 @@ initSteps = ->
       previous: 'Назад'
 
     onInit: (e) ->
-      $('a[href=\'#previous\']').addClass('previous')
+      $('a[href="#previous"]').addClass('previous')
       $('.previous').hide()
+      $('a[href="#previous"]').on 'click', ->
+        stepBack()
 
     onStepChanging: (event, currentIndex, newIndex) ->
       $('.steps-numbers p span').text(newIndex + 1)
 
       if newIndex == $('.wizard .step').length - 1
-        $('.component-calculator__forms_controls, .steps.clearfix').hide()
+        # $('.component-calculator__forms_controls, .steps.clearfix').hide()
+        $('.component-calculator__forms_controls, .steps.clearfix').css(
+          position: 'absolute',
+          # transform: 'translate3d(100px,0px,0px)',
+          visibility: 'hidden',
+          opacity: '0'
+        )
         $('.previous').css('display', 'inline-block')
       else 
-        $('.component-calculator__forms_controls, .steps.clearfix').show()
+        # $('.component-calculator__forms_controls, .steps.clearfix').show()
+        $('.component-calculator__forms_controls, .steps.clearfix').css(
+          # transform: 'none'
+          opacity: '1'
+          visibility: 'visible',
+        )
         $('.previous').hide()
 
       return true
   )
+
+
+
 
 initProgress = ->
   progressValue = $('.project-progress').attr('data-progress')
@@ -211,11 +232,17 @@ initPrices = ->
     return
 
   $("#material1, #material2, #material3").on 'change', (e) ->
+    priceForm.removeClass('type-one-active, type-three-active')
     
     if ($("#material1, #material3").is(':checked'))
       priceForm.addClass('type-one-active')
     else
       priceForm.removeClass('type-one-active')
+
+    if ($("#material3").is(':checked'))
+      priceForm.addClass('type-three-active')
+    else
+      return
 
 
 
