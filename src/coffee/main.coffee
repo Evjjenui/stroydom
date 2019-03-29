@@ -143,14 +143,16 @@ initAccordion = ->
     else
       $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideUp()
 
-  # cabinet accordion
+cabinetAccordion = ->
+  if window.innerWidth < 640
+    console.log (window.innerwidth)
+    $('.cabinet_description-info').slideUp()
 
-  $('.cabinet_description-info').slideUp()
-  $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideUp()
-  $('.show-info').on 'click', (e) ->
-    $(this).toggleClass('active')
-    $('.cabinet_description-info').slideToggle()
-    $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideToggle()
+    $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideUp()
+    $('.show-info').on 'click', (e) ->
+      $(this).toggleClass('active')
+      $('.cabinet_description-info').slideToggle()
+      $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideToggle()
 
 initFancyBox = ->
   $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a").fancybox(
@@ -172,47 +174,43 @@ initFancyBox = ->
 initSteps = ->
   stepBack = -> false
   stepBack = -> 
-    console.log 'Step back'
-    setTimeout((-> stepBack()), 600) if $('#steps-calc').steps('previous')
+    setTimeout((-> stepBack()), 200) if $('#steps-calc').steps('previous')
 
   $('#steps-calc').steps(
     headerTag: '.hidden-title'
     bodyTag: '.step'
     transitionEffect: 'none'
     enablePagination: true
-    enableFinishButton: false
+    enableFinishButton: true
     enableCancelButton: false
     enableAllSteps: true
     labels:
       next: 'Далее'
       previous: 'Назад'
+      finish: 'Рассчитать заново'
 
     onInit: (e) ->
       $('a[href="#previous"]').addClass('previous')
-      $('.previous').hide()
-      $('a[href="#previous"]').on 'click', ->
-        stepBack()
+      $('a[href="#finish"]').addClass('finish-button')
+
+    onFinished: (e) ->
+      stepBack()
 
     onStepChanging: (event, currentIndex, newIndex) ->
       $('.steps-numbers p span').text(newIndex + 1)
 
       if newIndex == $('.wizard .step').length - 1
-        # $('.component-calculator__forms_controls, .steps.clearfix').hide()
         $('.component-calculator__forms_controls, .steps.clearfix').css(
           position: 'absolute',
-          # transform: 'translate3d(100px,0px,0px)',
           visibility: 'hidden',
           opacity: '0'
         )
-        $('.previous').css('display', 'inline-block')
+        $('.previous').hide()
       else 
-        # $('.component-calculator__forms_controls, .steps.clearfix').show()
         $('.component-calculator__forms_controls, .steps.clearfix').css(
-          # transform: 'none'
           opacity: '1'
           visibility: 'visible',
         )
-        $('.previous').hide()
 
       return true
   )
@@ -268,3 +266,4 @@ $ ->
   initSteps()
   initProgress()
   initUI()
+  cabinetAccordion()

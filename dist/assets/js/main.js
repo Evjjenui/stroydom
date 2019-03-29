@@ -1,5 +1,5 @@
 (function() {
-  var initAccordion, initCarousel, initFancyBox, initMenu, initPrices, initProgress, initSteps, initUI, initVideoSHow;
+  var cabinetAccordion, initAccordion, initCarousel, initFancyBox, initMenu, initPrices, initProgress, initSteps, initUI, initVideoSHow;
 
   initCarousel = function() {
     $('.component-advantages .content-wrapper').slick({
@@ -142,7 +142,7 @@
   initAccordion = function() {
     $('.accordion-item__content').slideUp();
     $('.open-start').find('.accordion-item__content').stop().slideDown();
-    $('.accordion-item__title').on('click', function(e) {
+    return $('.accordion-item__title').on('click', function(e) {
       $(this).closest('.accordion-item').toggleClass('active');
       if ($('.accordion-item').hasClass('active')) {
         return $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideToggle();
@@ -150,14 +150,19 @@
         return $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideUp();
       }
     });
-    // cabinet accordion
-    $('.cabinet_description-info').slideUp();
-    $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideUp();
-    return $('.show-info').on('click', function(e) {
-      $(this).toggleClass('active');
-      $('.cabinet_description-info').slideToggle();
-      return $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideToggle();
-    });
+  };
+
+  cabinetAccordion = function() {
+    if (window.innerWidth < 640) {
+      console.log(window.innerwidth);
+      $('.cabinet_description-info').slideUp();
+      $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideUp();
+      return $('.show-info').on('click', function(e) {
+        $(this).toggleClass('active');
+        $('.cabinet_description-info').slideToggle();
+        return $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideToggle();
+      });
+    }
   };
 
   initFancyBox = function() {
@@ -184,11 +189,10 @@
       return false;
     };
     stepBack = function() {
-      console.log('Step back');
       if ($('#steps-calc').steps('previous')) {
         return setTimeout((function() {
           return stepBack();
-        }), 600);
+        }), 200);
       }
     };
     return $('#steps-calc').steps({
@@ -196,40 +200,35 @@
       bodyTag: '.step',
       transitionEffect: 'none',
       enablePagination: true,
-      enableFinishButton: false,
+      enableFinishButton: true,
       enableCancelButton: false,
       enableAllSteps: true,
       labels: {
         next: 'Далее',
-        previous: 'Назад'
+        previous: 'Назад',
+        finish: 'Рассчитать заново'
       },
       onInit: function(e) {
         $('a[href="#previous"]').addClass('previous');
-        $('.previous').hide();
-        return $('a[href="#previous"]').on('click', function() {
-          return stepBack();
-        });
+        return $('a[href="#finish"]').addClass('finish-button');
+      },
+      onFinished: function(e) {
+        return stepBack();
       },
       onStepChanging: function(event, currentIndex, newIndex) {
         $('.steps-numbers p span').text(newIndex + 1);
         if (newIndex === $('.wizard .step').length - 1) {
-          // $('.component-calculator__forms_controls, .steps.clearfix').hide()
           $('.component-calculator__forms_controls, .steps.clearfix').css({
             position: 'absolute',
-            // transform: 'translate3d(100px,0px,0px)',
             visibility: 'hidden',
             opacity: '0'
           });
-          $('.previous').css('display', 'inline-block');
+          $('.previous').hide();
         } else {
-          
-          // $('.component-calculator__forms_controls, .steps.clearfix').show()
           $('.component-calculator__forms_controls, .steps.clearfix').css({
-            // transform: 'none'
             opacity: '1',
             visibility: 'visible'
           });
-          $('.previous').hide();
         }
         return true;
       }
@@ -285,7 +284,8 @@
     initAccordion();
     initSteps();
     initProgress();
-    return initUI();
+    initUI();
+    return cabinetAccordion();
   });
 
 }).call(this);

@@ -13,7 +13,7 @@
   outline: none;
   letter-spacing: .4px;
 
-  @include transition(.3s all ease-in);
+  @include transition(.25s all ease-in);
   @include border-radius(5px)
 
   @if $button-size == "big" {
@@ -42,6 +42,12 @@
     border: 3px solid #1758a5;
     background-color: #fff;
     color: #221e1f;
+
+    &:hover,
+    &:active {
+      background-color: #1758a5;
+      color: #fff;
+    }
   }
 
   @if $button-bg == "blue" {

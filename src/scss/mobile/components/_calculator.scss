@@ -9,10 +9,6 @@
   overflow: hidden;
   background-color: #fff;
 
-  .actions.clearfix li a.previous {
-    bottom: -118px;
-  }
-  
   .content-wrapper {
     padding: 0;
   }
@@ -20,7 +16,7 @@
   &.component-calculator {
 
     .component-doubled__info {
-      padding: 40px 20px 0;
+      padding: 30px 20px 0;
 
       h2 {
         margin: 0;
@@ -62,16 +58,23 @@
     bottom: 130px;
     width: calc(100% - 40px);
     max-width: 335px;
-
-    li:nth-child(2) a {
-      width:  100%;
-    }
   }
 }
 
 .component-doubled__forms {
   width: 100%;
   height: auto;
+
+  .actions.clearfix {
+
+    li a {
+
+      &.finish-button {
+        width: 100%;
+        top: 70px;
+      }
+    }
+  }
 
   &.wizard .content {
     flex-wrap: wrap;
@@ -107,7 +110,7 @@
   }
   
   &_step5.step {
-    padding-bottom: 50px;
+    padding: 30px 20px 100px;
 
     input[type="text"] {
       width: 100%;
@@ -119,6 +122,7 @@
     }
     
     .total-price {
+      margin-bottom: 30px;
 
       p {
         font-size: 18px;

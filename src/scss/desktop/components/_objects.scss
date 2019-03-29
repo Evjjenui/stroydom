@@ -8,7 +8,7 @@
 .objects-content,
 .objects-block {
   width: 100%;
-  margin: 45px 0;
+  margin: 0 0 40px;
 
   @include flexbox();
   justify-content: space-between;

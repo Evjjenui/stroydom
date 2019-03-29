@@ -9,7 +9,7 @@ block container
     .breadcrumbs
       ul
         li
-          a(href="./index.html") Главная
+          a(href="./index.html") СтройДом
         li
           b /
         li
@@ -20,7 +20,7 @@ block container
         .content-title
           h1
             | Каталог проектов
-          h3.sub-title
+          //- h3.sub-title
             | Подзаголовок
             
         .projects-filter
@@ -33,13 +33,15 @@ block container
             .projects-filter__item
               label Общая площадь
               select
-                each square_item in ["до 100", "100-250", "250"]
+                each square_item in ["до 100", "100-250"]
                   option(value="")
                     = square_item
                     | &nbsp;м
                     sup 2
                 option(value="")
-                  | более
+                  | 250 м
+                  sup 2
+                  | &nbsp;и более
             .projects-filter__item
               label Количество этажей
               select

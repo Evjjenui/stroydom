@@ -3,5 +3,9 @@
   &-item {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+
+    img {
+      width: 100%;
+    }
   }
 }

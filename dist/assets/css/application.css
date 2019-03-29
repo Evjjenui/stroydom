@@ -1132,7 +1132,7 @@ select {
 
 .gallery-content {
   width: 100%;
-  margin: 50px 0 20px;
+  margin: 40px 0 0;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1682,9 +1682,9 @@ select {
     clear: both;
     outline: none;
     letter-spacing: .4px;
-    transition: 0.3s all ease-in;
-    -moz-transition: 0.3s all ease-in;
-    -webkit-transition: 0.3s all ease-in;
+    transition: 0.25s all ease-in;
+    -moz-transition: 0.25s all ease-in;
+    -webkit-transition: 0.25s all ease-in;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -1950,7 +1950,6 @@ ol {
   list-style-position: inside; }
 
 .component {
-  margin: 20px 0;
   padding: 40px 0;
   display: inline-block;
   vertical-align: top;
@@ -2079,9 +2078,9 @@ ol {
       clear: both;
       outline: none;
       letter-spacing: .4px;
-      transition: 0.3s all ease-in;
-      -moz-transition: 0.3s all ease-in;
-      -webkit-transition: 0.3s all ease-in;
+      transition: 0.25s all ease-in;
+      -moz-transition: 0.25s all ease-in;
+      -webkit-transition: 0.25s all ease-in;
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
@@ -2119,9 +2118,9 @@ ol {
         clear: both;
         outline: none;
         letter-spacing: .4px;
-        transition: 0.3s all ease-in;
-        -moz-transition: 0.3s all ease-in;
-        -webkit-transition: 0.3s all ease-in;
+        transition: 0.25s all ease-in;
+        -moz-transition: 0.25s all ease-in;
+        -webkit-transition: 0.25s all ease-in;
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -2135,6 +2134,9 @@ ol {
         color: #221e1f;
         display: block;
         position: relative; }
+        .component-intro__info .button-cab:hover, .component-intro__info .button-cab:active {
+          background-color: #1758a5;
+          color: #fff; }
         .component-intro__info .button-cab:before {
           content: '';
           display: block;
@@ -2177,7 +2179,7 @@ ol {
 
 .projects-block {
   width: 100%;
-  margin: 45px 0;
+  margin: 45px 0 0;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2596,10 +2598,9 @@ ol {
   width: 192px; }
 
 .component-calculator__forms_step5.step {
-  justify-content: center;
-  padding-top: 0; }
+  padding-top: 40px; }
   .component-calculator__forms_step5.step .total-price {
-    margin-bottom: 42px; }
+    margin-bottom: 40px; }
     .component-calculator__forms_step5.step .total-price p {
       font-size: 24px;
       line-height: 32px; }
@@ -2643,21 +2644,42 @@ ol {
         font-size: 36px; }
 
 .component-doubled .step-button {
-  width: 306px;
-  height: 60px;
-  line-height: 60px;
-  padding: 0 0 0 32px;
-  color: #1758a5;
-  font-size: 16px;
-  font-weight: 700;
-  display: block;
-  position: relative;
-  border: 2px solid #1758a5;
-  margin-top: 45px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+  font-family: "GothamPro", sans-serif;
+  font-weight: 500;
+  text-align: center;
   text-decoration: none;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  clear: both;
+  outline: none;
+  letter-spacing: .4px;
+  transition: 0.25s all ease-in;
+  -moz-transition: 0.25s all ease-in;
+  -webkit-transition: 0.25s all ease-in;
   border-radius: 5px;
   -moz-border-radius: 5px;
-  -webkit-border-radius: 5px; }
+  -webkit-border-radius: 5px;
+  font-size: 15px;
+  height: 60px;
+  line-height: 60px;
+  font-weight: 900;
+  font-size: 16px;
+  border: 3px solid #1758a5;
+  background-color: #fff;
+  color: #221e1f;
+  display: block;
+  text-align: left;
+  width: 306px;
+  padding: 0 0 0 32px;
+  color: #1758a5;
+  margin-top: 45px; }
+  .component-doubled .step-button:hover, .component-doubled .step-button:active {
+    background-color: #1758a5;
+    color: #fff; }
   .component-doubled .step-button:before {
     display: block;
     position: absolute;
@@ -2672,6 +2694,11 @@ ol {
     transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg); }
+  .component-doubled .step-button:hover:before, .component-doubled .step-button:active:before {
+    background-position: -63px 0;
+    transform: rotate(0);
+    -moz-transform: rotate(0);
+    -webkit-transform: rotate(0); }
 
 .component-doubled__content {
   position: relative;
@@ -2726,41 +2753,91 @@ ol {
   position: absolute;
   left: 80px;
   bottom: 50px; }
-  .component-doubled .actions.clearfix li a:not(.previous) {
-    width: 306px;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 0 0 32px;
-    color: #1758a5;
-    font-size: 16px;
-    font-weight: 700;
-    display: block;
-    position: relative;
-    border: 2px solid #1758a5;
-    text-decoration: none;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px; }
-    .component-doubled .actions.clearfix li a:not(.previous):before {
-      display: block;
-      position: absolute;
-      content: '';
-      width: 32px;
-      height: 24px;
-      right: 58px;
-      top: calc(50% - 12px);
-      background-image: url(../images/sprite.png);
-      background-position: -63px -30px;
-      background-repeat: no-repeat;
-      transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -webkit-transform: rotate(180deg); }
-  .component-doubled .actions.clearfix li a.previous {
-    position: absolute;
-    bottom: -20px;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none; }
+  .component-doubled .actions.clearfix li {
+    display: inline-block;
+    vertical-align: top; }
+    .component-doubled .actions.clearfix li.disabled {
+      width: 0;
+      opacity: 0;
+      visibility: hidden; }
+    .component-doubled .actions.clearfix li a {
+      color: #fff;
+      display: inline-block;
+      vertical-align: top;
+      font-family: "GothamPro", sans-serif;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      position: relative;
+      border: none;
+      cursor: pointer;
+      clear: both;
+      outline: none;
+      letter-spacing: .4px;
+      transition: 0.25s all ease-in;
+      -moz-transition: 0.25s all ease-in;
+      -webkit-transition: 0.25s all ease-in;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      font-size: 15px;
+      height: 60px;
+      line-height: 60px;
+      font-weight: 900;
+      font-size: 16px;
+      border: 3px solid #1758a5;
+      background-color: #fff;
+      color: #221e1f;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      width: 140px;
+      padding: 0 0 0 15px;
+      color: #1758a5; }
+      .component-doubled .actions.clearfix li a:hover, .component-doubled .actions.clearfix li a:active {
+        background-color: #1758a5;
+        color: #fff; }
+      .component-doubled .actions.clearfix li a:before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 32px;
+        height: 24px;
+        right: 15px;
+        top: calc(50% - 12px);
+        background-image: url(../images/sprite.png);
+        background-position: -63px -30px;
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg); }
+      .component-doubled .actions.clearfix li a:hover:before, .component-doubled .actions.clearfix li a:active:before {
+        background-position: -63px 0;
+        transform: rotate(0);
+        -moz-transform: rotate(0);
+        -webkit-transform: rotate(0); }
+      .component-doubled .actions.clearfix li a.previous {
+        text-align: right;
+        padding: 0 15px 0 0;
+        margin-right: 15px; }
+        .component-doubled .actions.clearfix li a.previous:before {
+          right: auto;
+          left: 15px;
+          transform: rotate(0);
+          -moz-transform: rotate(0);
+          -webkit-transform: rotate(0); }
+        .component-doubled .actions.clearfix li a.previous:hover:before, .component-doubled .actions.clearfix li a.previous:active:before {
+          background-position: -63px 0;
+          transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg); }
+      .component-doubled .actions.clearfix li a.finish-button {
+        width: 306px;
+        text-align: center;
+        position: absolute;
+        top: -10px; }
+        .component-doubled .actions.clearfix li a.finish-button:before {
+          display: none; }
 
 .steps.clearfix,
 .steps-dots {
@@ -2834,7 +2911,9 @@ ol {
 
 .component-popular__services {
   background-color: #f0f4f9;
-  margin-bottom: 0; }
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 40px 0 10px; }
   .component-popular__services .services-content {
     width: 100%;
     display: -webkit-box;
@@ -2849,7 +2928,7 @@ ol {
   background-color: #fff;
   padding: 60px 38px 0 38px;
   min-height: 280px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   text-decoration: none;
   color: #221f1f;
   width: calc(33.3333% - 22px);
@@ -2930,7 +3009,7 @@ ol {
 .objects-content,
 .objects-block {
   width: 100%;
-  margin: 45px 0;
+  margin: 0 0 40px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3018,22 +3097,26 @@ ol {
     color: inherit;
     font-size: 14px; }
 
-.component-order {
-  margin-bottom: 40px; }
-  .component-order .content-wrapper {
-    flex-wrap: wrap;
-    z-index: 1;
-    min-height: 406px; }
-  .component-order .component-doubled__info > * {
-    width: 100%; }
-  .component-order .component-doubled__info .icon {
-    width: 43px;
-    height: 38px;
-    background-image: url(../images/sprite.png);
-    background-position: -162px 0;
-    background-repeat: no-repeat; }
-  .component-order .step-button {
-    margin-top: 0; }
+.component-order .content-wrapper {
+  flex-wrap: wrap;
+  z-index: 1;
+  min-height: 406px; }
+
+.component-order .component-calculator__forms_step5.step {
+  padding-bottom: 50px; }
+
+.component-order .component-doubled__info > * {
+  width: 100%; }
+
+.component-order .component-doubled__info .icon {
+  width: 43px;
+  height: 38px;
+  background-image: url(../images/sprite.png);
+  background-position: -162px 0;
+  background-repeat: no-repeat; }
+
+.component-order .step-button {
+  margin-top: 0; }
 
 .component-service_advantages {
   background-color: #f0f4f9; }
@@ -3058,7 +3141,8 @@ ol {
 .component-blue {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left top; }
+  background-position: left top;
+  padding-bottom: 10px; }
   .component-blue_double-elements .clone-item {
     width: calc(50% - 15px); }
   .component-blue .component__title {
@@ -3127,7 +3211,7 @@ ol {
   .component-why_item {
     width: 33.33333%;
     padding-right: 100px;
-    margin: 35px 0; }
+    margin: 20px 0; }
     .component-why_item .icon {
       background: url(../images/why_sprite.png) no-repeat;
       width: 58px;
@@ -3273,8 +3357,6 @@ ol {
     .engineering-top.fundament-page .image:after {
       bottom: calc(50% - 452px);
       left: calc(50% - 452px); }
-  .engineering-top .links {
-    margin-top: 30px; }
   .engineering-top .image {
     position: absolute;
     display: inherit;
@@ -3321,12 +3403,13 @@ ol {
   .engineering-promo h3 {
     font-size: 48px;
     line-height: 52px;
-    font-weight: 900; }
+    font-weight: 900;
+    padding: 40px 0; }
   .engineering-promo p {
     font-size: 16px;
     line-height: 24px;
     max-width: 385px;
-    margin-top: 30px; }
+    margin-bottom: 40px; }
 
 .calculate {
   background-color: #fff;
@@ -3483,8 +3566,8 @@ ol {
 .build-preview_item {
   width: 100%;
   display: block;
-  padding-bottom: 50px;
-  margin-top: 30px;
+  padding-bottom: 40px;
+  margin-top: 40px;
   border-bottom: 1px solid #e7e6e6; }
   .build-preview_item:last-child {
     border: none; }
@@ -3544,8 +3627,7 @@ ol {
   .contacts__map {
     margin-left: 0; }
   .contacts__info {
-    margin-right: 0;
-    padding-top: 50px; }
+    margin-right: 0; }
     .contacts__info-text {
       display: inline-block;
       vertical-align: top;
@@ -3569,7 +3651,7 @@ ol {
 
 .project-page__info {
   width: 100%;
-  margin-top: 65px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -3769,7 +3851,8 @@ ol {
     .prices-form__item.total {
       overflow: hidden;
       text-align: right;
-      margin-top: 40px; }
+      margin-top: 40px;
+      padding-bottom: 0; }
       .prices-form__item.total p {
         font-size: 16px;
         line-height: 30px;
@@ -3869,7 +3952,9 @@ label.type-1,
   pointer-events: none; }
 
 .projects-filter {
-  margin-bottom: 90px; }
+  margin-bottom: 40px; }
+  .projects-filter .select2-container {
+    min-width: 100%; }
   .projects-filter__item {
     width: 228px;
     margin-right: 13px;
@@ -3884,35 +3969,46 @@ label.type-1,
     .projects-filter__item:last-child {
       margin-right: 0; }
     .projects-filter__item .button {
-      width: 100%;
-      height: 60px;
-      line-height: 58px;
-      padding: 0 0 0 32px;
-      color: #1758a5;
-      font-size: 16px;
-      font-weight: 700;
+      margin-top: 40px;
+      color: #fff;
+      display: inline-block;
+      vertical-align: top;
+      font-family: "GothamPro", sans-serif;
+      font-weight: 500;
+      text-align: center;
       text-decoration: none;
-      display: block;
       position: relative;
-      border: 2px solid #1758a5;
-      margin-top: 41px;
-      text-align: left;
+      border: none;
       cursor: pointer;
-      background-color: #fff;
-      transition: 0.3s background ease-in;
-      -moz-transition: 0.3s background ease-in;
-      -webkit-transition: 0.3s background ease-in;
+      clear: both;
+      outline: none;
+      letter-spacing: .4px;
+      transition: 0.25s all ease-in;
+      -moz-transition: 0.25s all ease-in;
+      -webkit-transition: 0.25s all ease-in;
       border-radius: 5px;
       -moz-border-radius: 5px;
-      -webkit-border-radius: 5px; }
+      -webkit-border-radius: 5px;
+      font-size: 15px;
+      height: 60px;
+      line-height: 60px;
+      font-weight: 900;
+      font-size: 16px;
+      border: 3px solid #1758a5;
+      background-color: #fff;
+      color: #221e1f;
+      width: 100%;
+      padding: 0 0 0 32px;
+      display: block;
+      text-align: left; }
       .projects-filter__item .button:hover, .projects-filter__item .button:active {
         background-color: #1758a5;
         color: #fff; }
-        .projects-filter__item .button:hover:before, .projects-filter__item .button:active:before {
-          background-position: -63px 0;
-          transform: rotate(0);
-          -moz-transform: rotate(0);
-          -webkit-transform: rotate(0); }
+      .projects-filter__item .button:hover:before, .projects-filter__item .button:active:before {
+        background-position: -63px 0;
+        transform: rotate(0);
+        -moz-transform: rotate(0);
+        -webkit-transform: rotate(0); }
       .projects-filter__item .button:before {
         display: block;
         position: absolute;
@@ -3936,7 +4032,8 @@ label.type-1,
 
 .engineering .breadcrumbs {
   position: absolute;
-  width: auto; }
+  width: auto;
+  z-index: 1; }
   .engineering .breadcrumbs li span,
   .engineering .breadcrumbs li b,
   .engineering .breadcrumbs li a {
@@ -3980,24 +4077,24 @@ h2 {
   line-height: 24px;
   font-weight: normal;
   width: 100%;
-  margin: 40px 0; }
+  margin: 40px 0 30px; }
   .content-text h1 {
     font-size: 48px;
     line-height: 1.35em;
     font-weight: 900;
     text-transform: none;
-    padding: 15px 0; }
+    padding: 0 0 15px; }
   .content-text h2 {
     font-size: 36px;
     line-height: 1.35em;
     font-weight: 700;
-    padding: 15px 0; }
+    padding: 0 0 15px; }
   .content-text h3 {
     font-size: 24px;
     line-height: 28px;
-    padding: 15px 0; }
+    padding: 0 0 15px; }
   .content-text p {
-    margin: 10px 0;
+    margin: 0 0 10px;
     display: inline-block;
     vertical-align: top;
     width: 100%; }
@@ -4105,8 +4202,10 @@ h2 {
   .gallery-item {
     width: calc(50% - 10px);
     margin-bottom: 20px; }
+    .gallery-item img {
+      width: 100%; }
   .component {
-    margin: 30px 0; }
+    margin: 0; }
     .component__title h1 {
       font-size: 36px;
       line-height: 42px; }
@@ -4122,7 +4221,7 @@ h2 {
     max-width: 100%;
     max-height: 450px; }
   .component-about .content-wrapper {
-    padding: 100px 0 85px 20px; }
+    padding: 0 0 0 20px; }
   .component-about-text {
     width: 74%; }
     .component-about-text p {
@@ -4210,10 +4309,8 @@ h2 {
           background: url(../images/sprite.png) -63px 0 no-repeat; }
       .project-item .hide-content p {
         margin-top: 16px; }
-  .component-advantages {
-    margin: 0 0 40px; }
-    .component-advantages .content-wrapper {
-      padding: 0 10px; }
+  .component-advantages .content-wrapper {
+    padding: 0 10px; }
   .component-our-advantages {
     margin: 0; }
   .our-advantages_slider {
@@ -4291,7 +4388,6 @@ h2 {
       padding-left: 57px;
       left: 20px; }
   .component-popular__services {
-    padding: 100px 0 75px;
     margin-bottom: 0; }
   .services-item {
     width: calc(50% - 10px); }
@@ -4302,7 +4398,6 @@ h2 {
   .objects-content,
   .objects-block {
     width: 100%;
-    margin: 45px 0;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -4350,22 +4445,20 @@ h2 {
     .object-info__sizes p {
       color: inherit;
       font-size: 14px; }
-  .component-order {
-    margin-bottom: 80px; }
-    .component-order .content-wrapper {
-      flex-wrap: wrap;
-      z-index: 1;
-      min-height: 406px; }
-    .component-order .component-doubled__info > * {
-      width: 100%; }
-    .component-order .component-doubled__info .icon {
-      width: 43px;
-      height: 38px;
-      background-image: url(../images/sprite.png);
-      background-position: -162px 0;
-      background-repeat: no-repeat; }
-    .component-order .step-button {
-      margin-top: 0; }
+  .component-order .content-wrapper {
+    flex-wrap: wrap;
+    z-index: 1;
+    min-height: 406px; }
+  .component-order .component-doubled__info > * {
+    width: 100%; }
+  .component-order .component-doubled__info .icon {
+    width: 43px;
+    height: 38px;
+    background-image: url(../images/sprite.png);
+    background-position: -162px 0;
+    background-repeat: no-repeat; }
+  .component-order .step-button {
+    margin-top: 0; }
   .component-service_advantages .service_advantages__content {
     margin-top: 55px; }
     .component-service_advantages .service_advantages__content .service_advantages-item {
@@ -4394,8 +4487,7 @@ h2 {
         background: linear-gradient(to right, #17559e 0%, #318be5 100%); }
   .component-why_item {
     width: 50%;
-    padding-right: 80px;
-    margin: 35px 0; }
+    padding-right: 80px; }
     .component-why_item__control {
       padding-right: 80px; }
     .component-why_item:nth-child(2n) {
@@ -4440,8 +4532,7 @@ h2 {
   .engineering-promo p {
     font-size: 16px;
     line-height: 24px;
-    max-width: 325px;
-    margin-top: 30px; }
+    max-width: 325px; }
   .component-cabinet_description {
     margin: 0; }
   .menu-opened {
@@ -4567,7 +4658,6 @@ h2 {
       margin: 0 -20px;
       width: calc(100% + 40px); }
     .contacts__info {
-      padding-top: 30px;
       padding-bottom: 30px;
       width: 100%;
       display: -webkit-box;
@@ -4597,7 +4687,6 @@ h2 {
     margin-top: 30px; }
   .project-page__info {
     width: 100%;
-    margin-top: 55px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -4617,7 +4706,7 @@ h2 {
       .project-page__info-item p {
         line-height: 30px; }
       .project-page__info-item_price {
-        margin: 75px 0 0 0;
+        margin: 40px 0 0 0;
         width: 100%;
         text-align: left; }
         .project-page__info-item_price p {
@@ -4685,13 +4774,8 @@ h2 {
       .project-visual__subitem img {
         display: inline-block;
         vertical-align: middle; }
-  .description-block {
-    margin-top: 30px; }
   .object-page .content-accordion {
-    margin-top: 60px;
     width: 100%; }
-  .object-page .content-title {
-    margin-bottom: 35px; }
   .object-page .description-block {
     padding-right: 0; }
   .object-page .object-item {
@@ -4718,7 +4802,8 @@ h2 {
       display: -webkit-flex;
       display: flex; }
     .prices-form {
-      width: 100%; }
+      width: 100%;
+      margin-top: 40px; }
       .prices-form__title p {
         max-width: 100%; }
       .prices-form__title .icon {
@@ -4729,8 +4814,6 @@ h2 {
         background-repeat: no-repeat;
         margin-bottom: 15px; }
       .prices-form__item {
-        padding-bottom: 60px;
-        margin-top: 50px;
         border-bottom: 1px solid #e7e6e6; }
         .prices-form__item:last-child {
           margin-bottom: 0;
@@ -4797,7 +4880,6 @@ h2 {
   .breadcrumbs {
     display: none; }
   .description-block {
-    margin-top: 30px;
     width: 100%;
     padding-right: 0;
     display: block; }
@@ -5024,6 +5106,8 @@ h2 {
       margin: 0 10px; }
       .works-grid .slick-slide > div:first-child {
         margin-bottom: 25px; }
+    .works-grid .name {
+      padding: 0 20px 20px; }
     .works-grid__item {
       width: 100%;
       overflow: hidden;
@@ -5043,12 +5127,10 @@ h2 {
   .component-doubled {
     overflow: hidden;
     background-color: #fff; }
-    .component-doubled .actions.clearfix li a.previous {
-      bottom: -118px; }
     .component-doubled .content-wrapper {
       padding: 0; }
     .component-doubled.component-calculator .component-doubled__info {
-      padding: 40px 20px 0; }
+      padding: 30px 20px 0; }
       .component-doubled.component-calculator .component-doubled__info h2 {
         margin: 0;
         padding: 0; }
@@ -5075,11 +5157,12 @@ h2 {
       bottom: 130px;
       width: calc(100% - 40px);
       max-width: 335px; }
-      .component-doubled .actions.clearfix li:nth-child(2) a {
-        width: 100%; }
   .component-doubled__forms {
     width: 100%;
     height: auto; }
+    .component-doubled__forms .actions.clearfix li a.finish-button {
+      width: 100%;
+      top: 70px; }
     .component-doubled__forms.wizard .content {
       flex-wrap: wrap; }
     .component-doubled__forms .step {
@@ -5099,18 +5182,20 @@ h2 {
     bottom: 30px;
     right: 20px; }
   .component-calculator__forms_step5.step {
-    padding-bottom: 50px; }
+    padding: 30px 20px 100px; }
     .component-calculator__forms_step5.step input[type="text"] {
       width: 100%;
       margin: 0; }
     .component-calculator__forms_step5.step .step-button {
       width: 100%; }
-    .component-calculator__forms_step5.step .total-price p {
-      font-size: 18px;
-      line-height: 26px; }
-    .component-calculator__forms_step5.step .total-price span {
-      font-size: 24px;
-      line-height: 32px; }
+    .component-calculator__forms_step5.step .total-price {
+      margin-bottom: 30px; }
+      .component-calculator__forms_step5.step .total-price p {
+        font-size: 18px;
+        line-height: 26px; }
+      .component-calculator__forms_step5.step .total-price span {
+        font-size: 24px;
+        line-height: 32px; }
   .component-calculator__forms_step2 .step-form__item > label {
     width: 160px; }
   .steps.clearfix {
@@ -5173,9 +5258,11 @@ h2 {
     padding: 0 10px; }
     .objects-slides .objects-block .object-item {
       margin: 0 10px; }
+  .four-in-row .objects-block,
   .objects-block {
     padding: 0 20px;
     margin-bottom: 0; }
+  .four-in-row .object-item,
   .object-item {
     width: 100%;
     margin: 0 0 25px;
@@ -5187,15 +5274,19 @@ h2 {
     line-height: 0;
     font-size: 0;
     min-height: 1px; }
+    .four-in-row .object-item.empty,
     .object-item.empty {
       display: none; }
+    .four-in-row .object-item:hover .hide-info,
     .object-item:hover .hide-info {
       opacity: 0;
       visibility: hidden; }
+    .four-in-row .object-item .photo,
     .object-item .photo {
       position: relative;
       z-index: 2;
       height: auto; }
+      .four-in-row .object-item .photo:before,
       .object-item .photo:before {
         position: absolute;
         display: block;
@@ -5209,6 +5300,7 @@ h2 {
         background: -moz-linear-gradient(top, transparent 0%, black 100%);
         background: -webkit-linear-gradient(top, transparent 0%, black 100%);
         background: linear-gradient(to bottom, transparent 0%, black 100%); }
+  .four-in-row .object-info,
   .object-info {
     position: absolute;
     display: block;
@@ -5221,14 +5313,17 @@ h2 {
     color: #fff;
     font-weight: 700;
     padding: 0 0 24px 30px; }
+    .four-in-row .object-info__sizes > span,
     .object-info__sizes > span {
       margin-bottom: 15px;
       display: block; }
+      .four-in-row .object-info__sizes > span p,
       .object-info__sizes > span p {
         position: relative;
         padding-left: 42px;
         display: inline-block;
         vertical-align: top; }
+        .four-in-row .object-info__sizes > span p:before,
         .object-info__sizes > span p:before {
           position: absolute;
           display: block;
@@ -5237,15 +5332,20 @@ h2 {
           height: 25px;
           background: url(../images/build_sprite.png) no-repeat;
           left: 0; }
+      .four-in-row .object-info__sizes > span.frame p:before,
       .object-info__sizes > span.frame p:before {
         background-position: -38px top; }
+      .four-in-row .object-info__sizes > span.square p:before,
       .object-info__sizes > span.square p:before {
         background-position: 0 top; }
+      .four-in-row .object-info__sizes > span.floors,
       .object-info__sizes > span.floors {
         margin-bottom: 0; }
+        .four-in-row .object-info__sizes > span.floors p:before,
         .object-info__sizes > span.floors p:before {
           height: 27px;
           background-position: -74px top; }
+    .four-in-row .object-info__sizes p,
     .object-info__sizes p {
       color: inherit;
       font-size: 14px; }
@@ -5630,8 +5730,6 @@ h2 {
         padding: 0 20px; }
       .contacts .interactive-map iframe {
         border: none; }
-  .project-page .content-accordion {
-    margin: 40px 0 0; }
   .project-page .content-title {
     margin-top: 30px; }
   .project-page__info {
@@ -5639,7 +5737,7 @@ h2 {
     margin-top: 30px;
     padding: 0; }
     .project-page__info-item {
-      margin: 20px 0;
+      margin: 0;
       width: 100%;
       text-align: left; }
       .project-page__info-item span {

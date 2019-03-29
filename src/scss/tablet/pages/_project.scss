@@ -10,7 +10,6 @@
 
   &__info {
     width: 100%;
-    margin-top: 55px;
 
     @include flexbox();
     justify-content: space-between;
@@ -35,7 +34,7 @@
       }
 
       &_price {
-        margin: 75px 0 0 0;
+        margin: 40px 0 0 0;
         width: 100%;
         text-align: left;
 
@@ -123,8 +122,4 @@
       vertical-align: middle;
     }
   }
-}
-
-.description-block {
-  margin-top: 30px;
 }

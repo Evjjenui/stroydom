@@ -1,6 +1,8 @@
 .component-popular__services {
   background-color: #f0f4f9;
+  margin-top: 0;
   margin-bottom: 0;
+  padding: 40px 0 10px;
 
   .services-content {
     width: 100%;
@@ -14,7 +16,7 @@
   background-color: #fff;
   padding: 60px 38px 0 38px;
   min-height: 280px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   text-decoration: none;
   color: #221f1f;
   width: calc(33.3333% - 22px);

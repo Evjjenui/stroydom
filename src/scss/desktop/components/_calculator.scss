@@ -80,12 +80,10 @@
   }
 
   &_step5.step {
-    justify-content: center;
-    padding-top: 0;
-
+    padding-top: 40px;
 
     .total-price {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
 
       p {
         font-size: 24px;
@@ -148,20 +146,13 @@
 .component-doubled {
 
   .step-button {
+    @include button("big", "blue-border");
+    display: block;
+    text-align: left;
     width: 306px;
-    height: 60px;
-    line-height: 60px;
     padding: 0 0 0 32px;
     color: #1758a5;
-    font-size: 16px;
-    font-weight: 700;
-    display: block;
-    position: relative;
-    border: 2px solid #1758a5;
     margin-top: 45px;
-    text-decoration: none;
-
-    @include border-radius(5px);
 
     &:before {
       display: block;
@@ -176,6 +167,15 @@
       background-repeat: no-repeat;
 
       @include transform(rotate(180deg));
+    }
+
+    &:hover,
+    &:active {
+
+      &:before {
+        background-position: -63px 0;
+        @include transform(rotate(0));
+      }
     }
   }
 
@@ -234,23 +234,24 @@
     left: 80px;
     bottom: 50px;
 
-
     li {
-      
-      a:not(.previous) {
-        width: 306px;
-        height: 60px;
-        line-height: 60px;
-        padding: 0 0 0 32px;
-        color: #1758a5;
-        font-size: 16px;
-        font-weight: 700;
-        display: block;
-        position: relative;
-        border: 2px solid #1758a5;
-        text-decoration: none;
+      display: inline-block;
+      vertical-align: top;
 
-        @include border-radius(5px);
+      &.disabled {
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+      a {
+        @include button("big", "blue-border");
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        width: 140px;
+        padding: 0 0 0 15px;
+        color: #1758a5;
 
         &:before {
           display: block;
@@ -258,7 +259,7 @@
           content: '';
           width: 32px;
           height: 24px;
-          right: 58px;
+          right: 15px;
           top: calc(50% - 12px);
           background-image: url(../images/sprite.png);
           background-position: -63px -30px;
@@ -266,14 +267,47 @@
 
           @include transform(rotate(180deg));
         }
-      }
 
-      a.previous {
-        position: absolute;
-        bottom: -20px;
-        font-size: 16px;
-        font-weight: 700;
-        text-decoration: none;
+        &:hover,
+        &:active {
+
+          &:before {
+            background-position: -63px 0;
+            @include transform(rotate(0));
+          }
+        }
+
+        &.previous {
+          text-align: right;
+          padding: 0 15px 0 0;
+          margin-right: 15px;
+
+          &:before {
+            right: auto;
+            left: 15px;
+            @include transform(rotate(0));
+          }
+
+          &:hover,
+          &:active {
+
+            &:before {
+              background-position: -63px 0;
+              @include transform(rotate(180deg));
+            }
+          }
+        }
+
+        &.finish-button {
+          width: 306px;
+          text-align: center;
+          position: absolute;
+          top: -10px;
+
+          &:before {
+            display: none;
+          }
+        }
       }
     }
   }

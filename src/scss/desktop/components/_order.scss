@@ -1,10 +1,13 @@
 .component-order {
-  margin-bottom: 40px;
 
   .content-wrapper {
     flex-wrap: wrap;
     z-index: 1;
     min-height: 406px;
+  }
+
+  .component-calculator__forms_step5.step {
+    padding-bottom: 50px;
   }
 
   .component-doubled__info {
