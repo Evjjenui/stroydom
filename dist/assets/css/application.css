@@ -3364,6 +3364,14 @@ ol {
   background-size: cover;
   padding: 70px 0;
   margin: 0; }
+  .component-cabinet_description .show-block {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
   .component-cabinet_description .component__title {
     position: relative; }
     .component-cabinet_description .component__title h1 {
@@ -4810,6 +4818,8 @@ h2 {
       font-size: 18px; }
       .content-text .calculations p span {
         display: block; }
+  .mob-hide {
+    display: none; }
   .gallery-item {
     width: 100%;
     margin-bottom: 25px; }
@@ -5383,13 +5393,47 @@ h2 {
   .component-cabinet_description {
     padding: 55px 0;
     margin: 0; }
+    .component-cabinet_description .desk-hide {
+      display: block; }
+    .component-cabinet_description .show-info {
+      color: #1758a5;
+      padding: 5px 40px 5px 10px;
+      position: relative;
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 15px; }
+      .component-cabinet_description .show-info.active:after {
+        transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg); }
+      .component-cabinet_description .show-info:after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 10px;
+        height: 19px;
+        right: 0;
+        top: calc(50% - 10px);
+        background: url(../images/sprite.png) -225px top no-repeat;
+        transition: 0.25s all linear;
+        -moz-transition: 0.25s all linear;
+        -webkit-transition: 0.25s all linear;
+        transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg); }
     .component-cabinet_description .component__title {
       text-align: left;
-      padding: 0; }
+      padding: 0;
+      width: 100%; }
       .component-cabinet_description .component__title h1 {
-        max-width: 100%; }
-      .component-cabinet_description .component__title .project-info-download {
-        margin: 10px 0 0 0; }
+        max-width: 100%;
+        padding: 0 10px; }
+        .component-cabinet_description .component__title h1.mob-hide {
+          display: none; }
+      .component-cabinet_description .component__title .project-info-download.mob-hide {
+        display: none; }
+    .component-cabinet_description .project-info-download {
+      margin: 30px 0 0 0; }
   .cabinet_description-info_text {
     margin-top: 15px; }
   .cabinet_description-sub-info {

@@ -130,7 +130,7 @@ initVideoSHow = ->
     $(this).addClass('hide')
 
 initAccordion = ->
-  $(".accordion-item__content").slideUp()
+  $('.accordion-item__content').slideUp()
 
   $('.open-start').find('.accordion-item__content').stop().slideDown()
 
@@ -142,6 +142,15 @@ initAccordion = ->
       $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideToggle()
     else
       $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideUp()
+
+  # cabinet accordion
+
+  $('.cabinet_description-info').slideUp()
+  $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideUp()
+  $('.show-info').on 'click', (e) ->
+    $(this).toggleClass('active')
+    $('.cabinet_description-info').slideToggle()
+    $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideToggle()
 
 initFancyBox = ->
   $(".video > a, .project-visual__item a, .gallery-item a, .build-gallery a").fancybox(

@@ -1,57 +1,67 @@
 .component.component-cabinet_description
   .content-wrapper
-    .cabinet_description-info
-      .component__title
-        h1 Новое Минулово
-        .project-info-download
+    .component__title.desk-hide
+      h1 Новое Минулово
+    .show-info.desk-hide
+      | Подробнее
+    .show-block
+      .cabinet_description-info
+        .component__title
+          h1.mob-hide Новое Минулово
+          .project-info-download.mob-hide
+            a(href="#") 
+              span
+                | Материалы проекта
+          h3.sub-title
+            | Строительство инд. жилого дома
+
+        .cabinet_description-info_text
+          .cabinet_description-info_text_item
+            p 
+              span Адрес объекта:
+              | Кленовая улица д 90
+          .cabinet_description-info_text_item
+            p 
+              span Заказчик:
+              | Добрынин Леонид Владимирович
+            p 
+              span Телефон:
+              | +79618021741
+            p 
+              span Эл почта:
+              | dobr@mail.ru
+          .cabinet_description-info_text_item
+
+            p 
+              span Руководитель проекта:
+              | Вадим
+            p 
+              span Телефон:
+              | +79618021741
+            p 
+              span Эл.почта:
+              | info@stroy-dom.pro
+      .cabinet_description-sub-info
+        .image
+          img(src="./assets/images/cabinet_project_preview.jpg", alt="")
+        .cabinet_description-sub-info_text_item
+          p 
+            span Дата начала работ:
+            | 25/05/2017
+          p 
+            span Планируемая дата сдачи проекта:
+            | 31/05/2017
+        .project-progress(data-progress="30")
+          span Проект завершен на:
+          .progress-line
+            .percentage
+              span 0
+              | %
+            .line
+              .line__bg
+
+        .project-info-download.desk-hide
           a(href="#") 
             span
               | Материалы проекта
-        h3.sub-title
-          | Строительство инд. жилого дома
-
-      .cabinet_description-info_text
-        .cabinet_description-info_text_item
-          p 
-            span Адрес объекта:
-            | Кленовая улица д 90
-        .cabinet_description-info_text_item
-          p 
-            span Заказчик:
-            | Добрынин Леонид Владимирович
-          p 
-            span Телефон:
-            | +79618021741
-          p 
-            span Эл почта:
-            | dobr@mail.ru
-        .cabinet_description-info_text_item
-
-          p 
-            span Руководитель проекта:
-            | Вадим
-          p 
-            span Телефон:
-            | +79618021741
-          p 
-            span Эл.почта:
-            | info@stroy-dom.pro
-    .cabinet_description-sub-info
-      .image
-        img(src="./assets/images/cabinet_project_preview.jpg", alt="")
-      .cabinet_description-sub-info_text_item
-        p 
-          span Дата начала работ:
-          | 25/05/2017
-        p 
-          span Планируемая дата сдачи проекта:
-          | 31/05/2017
-      .project-progress(data-progress="30")
-        span Проект завершен на:
-        .progress-line
-          .percentage
-            span 0
-            | %
-          .line
-            .line__bg
 

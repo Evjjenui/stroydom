@@ -140,15 +140,23 @@
   };
 
   initAccordion = function() {
-    $(".accordion-item__content").slideUp();
+    $('.accordion-item__content').slideUp();
     $('.open-start').find('.accordion-item__content').stop().slideDown();
-    return $('.accordion-item__title').on('click', function(e) {
+    $('.accordion-item__title').on('click', function(e) {
       $(this).closest('.accordion-item').toggleClass('active');
       if ($('.accordion-item').hasClass('active')) {
         return $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideToggle();
       } else {
         return $(this).closest('.accordion-item__title').next('.accordion-item__content').stop().slideUp();
       }
+    });
+    // cabinet accordion
+    $('.cabinet_description-info').slideUp();
+    $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideUp();
+    return $('.show-info').on('click', function(e) {
+      $(this).toggleClass('active');
+      $('.cabinet_description-info').slideToggle();
+      return $('.cabinet_description-sub-info .image, .cabinet_description-sub-info_text_item').slideToggle();
     });
   };
 
