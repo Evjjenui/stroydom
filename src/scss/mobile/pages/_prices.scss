@@ -7,7 +7,6 @@
   }
 
   &-table {
-    margin-top: 20px;
 
     &__cell {
 
@@ -58,7 +57,7 @@
 
         span {
           display: inline-block;
-          vertical-align: top;
+          vertical-align: middle;
           max-width: 85%;
           line-height: 28px;
         }

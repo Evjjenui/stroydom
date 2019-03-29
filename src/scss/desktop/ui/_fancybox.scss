@@ -914,9 +914,9 @@ body.compensate-for-scrollbar {
 
 /* Styling for Small-Screen Devices */
 @media all and (max-width: 768px) {
-  .fancybox-slide--html .fancybox-close-small {
-    display: none;
-  }
+  // .fancybox-slide--html .fancybox-close-small {
+  //   display: none;
+  // }
   .fancybox-show-thumbs .fancybox-inner {
     right: 0;
   }

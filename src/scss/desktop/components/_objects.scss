@@ -8,11 +8,15 @@
 .objects-content,
 .objects-block {
   width: 100%;
-  margin: 0 0 40px;
+  margin: 0;
 
   @include flexbox();
   justify-content: space-between;
 
+}
+
+.objects-content {
+  margin-bottom: 40px;
 }
 
 .object {

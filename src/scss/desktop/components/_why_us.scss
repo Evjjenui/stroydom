@@ -1,18 +1,18 @@
 .component-why {
   background-color: #fff;
   overflow: hidden;
+  padding-bottom: 0;
 
   &_content {
     @include flexbox();
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 25px;
   }
 
   &_item {
     width: 33.33333%;
     padding-right: 100px;
-    margin: 20px 0;
+    margin: 0 0 40px;
 
     .icon {
       background: url(../images/why_sprite.png) no-repeat;

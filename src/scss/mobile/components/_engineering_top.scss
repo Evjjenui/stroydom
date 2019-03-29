@@ -34,11 +34,14 @@
     }
 
     .links {
-      margin-top: 15px;
 
       a {
         width: 100%;
         margin: 15px 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
 
@@ -68,7 +71,7 @@
     }
 
     .content-wrapper {
-      padding: 40px 20px 0;
+      padding: 0 20px 0;
     }
   }
 
@@ -95,7 +98,6 @@
 
     p {
       max-width: 100%;
-      margin-top: 20px;
     }
   }
 }

@@ -1,6 +1,14 @@
 .component-intro {
   margin: 0;
 
+  .content-wrapper {
+    padding-right: 0;
+  }
+
+  &__top {
+    padding-right: 20px;
+  }
+
   .title {
 
     h1 {
