@@ -7,11 +7,43 @@
       display: none;
     }
 
-    .header__navigation-block {
-      position: static;
-      height: auto;
-      width: auto;
-      padding-top: 0;
+    .header__navigation {
+
+      &-block {
+        position: static;
+        height: auto;
+        width: auto;
+        padding-top: 0;
+      }
+
+      &-menu {
+
+        > ul {
+
+          > li {
+
+            > a {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__navigation {
+
+    &-menu {
+
+      > ul {
+
+        > li {
+
+          > a {
+            padding: 0;
+          }
+        }
+      }
     }
   }
 
@@ -24,11 +56,13 @@
 .logo {
   position: relative;
   z-index: 101;
+  margin: 0;
 }
 
 .contacts-block {
   display: block;
   margin-right: 100px;
+  margin-top: 0;
 }
 
 .cab-links {

@@ -1,5 +1,5 @@
 .header {
-  padding: 33px 0 40px;
+  padding: 0 0 40px;
   background-color: #fff;
   position: relative;
   z-index: 100;
@@ -47,11 +47,21 @@
           margin-right: 25px;
           position: relative;
 
+          > a {
+            font-weight: 500;
+            color: #333;
+            font-size: 14px;
+            line-height: 24px;
+            text-decoration: none;
+            padding: 40px 0 7px;
+            display: block;
+          }
+
           &:before {
             content: '';
             width: 0;
             height: 2px;
-            top: -48px;
+            top: -8px;
             left: 0;
             position: absolute;
             
@@ -134,9 +144,11 @@
 }
 
 .logo {
+  margin-top: 33px;
 }
 
 .contacts-block {
+  margin-top: 33px;
 
   .phone {
     padding-bottom: 5px;

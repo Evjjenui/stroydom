@@ -207,7 +207,6 @@ initSteps = ->
 
     onStepChanging: (event, currentIndex, newIndex) ->
       form.validate().settings.ignore = ':disabled,:hidden'
-      # return form.valid()
       
       if form.valid()
         $('.steps-numbers p span').text(newIndex + 1)

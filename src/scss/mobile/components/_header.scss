@@ -1,6 +1,7 @@
 .logo {
   position: relative;
   z-index: 101;
+  margin: 0;
 }
 
 .header {
@@ -11,6 +12,16 @@
   }
 
   &__navigation-menu {
+
+    > ul {
+
+      > li {
+
+        > a {
+          padding: 0;
+        }
+      }
+    }
 
     .header-title {
       display: block;
