@@ -207,8 +207,10 @@ initSteps = ->
 
     onStepChanging: (event, currentIndex, newIndex) ->
       form.validate().settings.ignore = ':disabled,:hidden'
-
-      $('.steps-numbers p span').text(newIndex + 1)
+      # return form.valid()
+      
+      if form.valid()
+        $('.steps-numbers p span').text(newIndex + 1)
 
       if newIndex == $('.wizard .step').length - 1
         $('.component-calculator__forms_controls, .steps.clearfix').css(
