@@ -57,7 +57,10 @@
     left: 20px;
     bottom: 130px;
     width: calc(100% - 40px);
-    max-width: 335px;
+
+    li a {
+      width: 132px;
+    }
   }
 }
 
@@ -72,6 +75,10 @@
       &.finish-button {
         width: 100%;
         top: 70px;
+
+        &:before {
+          left: 18px;
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>СтройДом &mdash; Строительство домов в Санкт-Петербурге и Ленинградской области</title>
+    <title> </title>
     <meta charset="utf-8" content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
@@ -98,7 +98,7 @@
               </div>
               <div class="project-page__info">
                 <div class="project-page__info-item"><span>Площадь: </span>
-                  <p>170 м2<i>- строительная</i></p>
+                  <p>170 м2<i>&mdash; строительная</i></p>
                 </div>
                 <div class="project-page__info-item"><span>Высота 1-этажа:</span>
                   <p>3 метра</p>
@@ -243,12 +243,17 @@
     <div id="contacts_popup" style="display: none;">
       <div class="popup">
         <div class="popup-form">
+          <div class="popup-title">Обратный звонок</div>
           <form action="">
             <div class="form__item">
               <input type="text" placeholder="Ваше имя" required="required">
             </div>
             <div class="form__item">
               <input type="text" placeholder="Ваш телефон" required="required">
+            </div>
+            <div class="form__item uploader">
+              <input id="load-file" type="file">
+              <label for="load-file">Прикрепить файл</label>
             </div>
             <div class="form__item">
               <buttona class="button">Отправить</buttona>
@@ -261,6 +266,7 @@
   <script src="vendor/js/jquery-1.11.3.min.js"></script>
   <script src="vendor/js/jquery.steps.min.js"></script>
   <script src="vendor/js/jquery.fancybox.min.js"></script>
+  <script src="vendor/js/jquery.validate.min.js"></script>
   <script src="vendor/js/slick.min.js"></script>
   <script src="vendor/js/select2.min.js"></script>
   <script src="assets/js/map.js?ver=2"></script>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>СтройДом &mdash; Строительство домов в Санкт-Петербурге и Ленинградской области</title>
+    <title> </title>
     <meta charset="utf-8" content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
@@ -48,7 +48,7 @@
               <div class="cabinet_description-info">
                 <div class="component__title">
                   <h1 class="mob-hide">Новое Минулово</h1>
-                  <div class="project-info-download mob-hide"><a href="#"> <span>Материалы проекта</span></a></div>
+                  <div class="project-info-download mob-hide"><a href="#"> <span>Яндекс.Диск</span></a></div>
                   <h3 class="sub-title">Строительство инд. жилого дома</h3>
                 </div>
                 <div class="cabinet_description-info_text">
@@ -60,20 +60,11 @@
                     <p> <span>Телефон:</span>+79618021741</p>
                     <p> <span>Эл почта:</span>dobr@mail.ru</p>
                   </div>
-                  <div class="cabinet_description-info_text_item">
-                    <p> <span>Руководитель проекта:</span>Вадим</p>
-                    <p> <span>Телефон:</span>+79618021741</p>
-                    <p> <span>Эл.почта:</span>info@stroy-dom.pro</p>
-                  </div>
                 </div>
               </div>
               <div class="cabinet_description-sub-info">
                 <div class="image"><img src="./assets/images/cabinet_project_preview.jpg" alt=""></div>
-                <div class="cabinet_description-sub-info_text_item">
-                  <p> <span>Дата начала работ:</span>25/05/2017</p>
-                  <p> <span>Планируемая дата сдачи проекта:</span>31/05/2017</p>
-                </div>
-                <div class="project-progress" data-progress="30"><span>Проект завершен на:</span>
+                <div class="project-progress" data-progress="30">
                   <div class="progress-line">
                     <div class="percentage"><span>0</span>%</div>
                     <div class="line">
@@ -81,7 +72,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="project-info-download desk-hide"><a href="#"> <span>Материалы проекта</span></a></div>
+                <div class="cabinet_description-sub-info_text_item">
+                  <p> <span>Дата начала работ:</span>25/05/2017</p>
+                  <p> <span>Планируемая дата сдачи проекта:</span>31/05/2017</p>
+                </div>
+                <div class="cabinet_description-sub-info_text_item">
+                  <p> <span>Руководитель проекта:</span>Вадим</p>
+                  <p> <span>Телефон:</span>+79618021741</p>
+                  <p> <span>Эл.почта:</span>info@stroy-dom.pro</p>
+                </div>
               </div>
             </div>
           </div>
@@ -145,12 +144,17 @@
     <div id="contacts_popup" style="display: none;">
       <div class="popup">
         <div class="popup-form">
+          <div class="popup-title">Обратный звонок</div>
           <form action="">
             <div class="form__item">
               <input type="text" placeholder="Ваше имя" required="required">
             </div>
             <div class="form__item">
               <input type="text" placeholder="Ваш телефон" required="required">
+            </div>
+            <div class="form__item uploader">
+              <input id="load-file" type="file">
+              <label for="load-file">Прикрепить файл</label>
             </div>
             <div class="form__item">
               <buttona class="button">Отправить</buttona>
@@ -163,6 +167,7 @@
   <script src="vendor/js/jquery-1.11.3.min.js"></script>
   <script src="vendor/js/jquery.steps.min.js"></script>
   <script src="vendor/js/jquery.fancybox.min.js"></script>
+  <script src="vendor/js/jquery.validate.min.js"></script>
   <script src="vendor/js/slick.min.js"></script>
   <script src="vendor/js/select2.min.js"></script>
   <script src="assets/js/map.js?ver=2"></script>

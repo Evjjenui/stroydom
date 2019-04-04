@@ -83,11 +83,11 @@
     padding-top: 40px;
 
     .total-price {
-      margin-bottom: 40px;
+      margin-bottom: 1em;
 
       p {
         font-size: 24px;
-        line-height: 32px;
+        line-height: 2em;
       }
 
       span {
@@ -160,7 +160,7 @@
       content: '';
       width: 32px;
       height: 24px;
-      right: 58px;
+      right: 38px;
       top: calc(50% - 12px);
       background-image: url(../images/sprite.png);
       background-position: -63px -30px;
@@ -239,7 +239,6 @@
       vertical-align: top;
 
       &.disabled {
-        width: 0;
         opacity: 0;
         visibility: hidden;
       }
@@ -300,12 +299,24 @@
 
         &.finish-button {
           width: 306px;
-          text-align: center;
+          text-align: right;
           position: absolute;
+          padding-right: 32px;
           top: -10px;
 
           &:before {
-            display: none;
+            right: auto;
+            left: 38px;
+            @include transform(rotate(0));
+          }
+
+          &:hover,
+          &:active {
+
+            &:before {
+              background-position: -63px 0;
+              @include transform(rotate(180deg));
+            }
           }
         }
       }

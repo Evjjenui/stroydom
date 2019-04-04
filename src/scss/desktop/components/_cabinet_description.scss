@@ -14,22 +14,21 @@
     position: relative;
 
     h1 {
-      display: inline-block;
-      vertical-align: top;
+      display: inline;
       max-width: 70%;
     }
   }
 
   .project-info-download {
-    display: inline-block;
-    vertical-align: bottom;
+    display: inline;
+    // vertical-align: bottom;
     margin: 0 0 0 10px;
 
     a {
       background: url(../images/download_icon.png) left center no-repeat;
       background-size: 30px;
       text-decoration: none;
-      color: #1758a5;
+      color: #777;
       font-size: 15px;
       line-height: 42px;
       padding-left: 40px;
@@ -37,7 +36,6 @@
       vertical-align: top;
       
       span {
-        text-decoration: underline;
         display: inline-block;
       }
     }
@@ -50,6 +48,10 @@
     max-width: 295px;
     width: 100%;
     margin-left: auto;
+
+    img {
+      display: block;
+    }
 
     &_text_item {
       margin-top: 20px;

@@ -172,10 +172,19 @@ initFancyBox = ->
   )
 
 initSteps = ->
+  form = $("#steps-calc")
+  form.validate
+    errorPlacement: (error, element) ->
+      element.before error
+    rules: {
+      required: true
+    }
+
   stepBack = -> false
   stepBack = -> 
     setTimeout((-> stepBack()), 200) if $('#steps-calc').steps('previous')
-
+    $('a[href="#previous"]').show()
+    
   $('#steps-calc').steps(
     headerTag: '.hidden-title'
     bodyTag: '.step'
@@ -197,6 +206,8 @@ initSteps = ->
       stepBack()
 
     onStepChanging: (event, currentIndex, newIndex) ->
+      form.validate().settings.ignore = ':disabled,:hidden'
+
       $('.steps-numbers p span').text(newIndex + 1)
 
       if newIndex == $('.wizard .step').length - 1
@@ -212,11 +223,12 @@ initSteps = ->
           visibility: 'visible',
         )
 
-      return true
+      if currentIndex < newIndex
+        form.find('.body:eq(' + newIndex + ') label.error').remove();
+        form.find('.body:eq(' + newIndex + ') .error').removeClass('error');
+
+      return form.valid()
   )
-
-
-
 
 initProgress = ->
   progressValue = $('.project-progress').attr('data-progress')

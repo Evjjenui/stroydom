@@ -6,8 +6,8 @@
         h2 Рассчитать стоимость
         p С помощью этого калькулятора вы можете сделать приблизительный расчет стоимости строительства дома в комплектации «Базовый» включая стоимость строительных материалов.
       
-      #steps-calc.component-doubled__forms
-
+      
+      form#steps-calc.component-doubled__forms
         .hidden-title
           | Из чего будет ваш дом?
         .component-calculator__forms_step1.step
@@ -37,7 +37,7 @@
             .step-form__item
               label(for="")
                 | Площадь дома:
-              input#material1(type="text" placeholder="10")
+              input#material1(type="text" placeholder="10" required)
               span м
                 sup 2
             .step-form__item.type-1
@@ -111,8 +111,8 @@
           | Стоимость
         .component-calculator__forms_step5.step(style="display: none;")
           .total-price
-            p Стоимость вашего дома:
-            span 5 495 600 рублей
+            p Стоимость дома:
+            span 5 495 600 &#8381;
           .step-form
             .step-form__item
               input(type="text" placeholder="Ваше имя")
@@ -122,12 +122,6 @@
           a.step-button(href="javascript:void(0)") Отправить заявку
 
         .component-calculator__forms_controls
-          //- .steps-dots
-          //-   ul
-          //-     li.active
-          //-     li
-          //-     li
-          //-     li
           .steps-numbers
             p 
               span 1

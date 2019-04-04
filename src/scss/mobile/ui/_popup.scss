@@ -1,0 +1,17 @@
+.popup {
+  width: 96%;
+  padding: 40px 20px 50px;
+  margin: auto;
+
+  &-title {
+    font-size: 24px;
+  }
+
+  &:before {
+    width: 96vw;
+    width: calc(100% + 24px);
+    height: calc(100% + 20px);
+    left: -12px;
+    top: -10px;
+  }
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>СтройДом &mdash; Строительство домов в Санкт-Петербурге и Ленинградской области</title>
+    <title> </title>
     <meta charset="utf-8" content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
@@ -149,7 +149,7 @@
           <div class="content-text">
             <div class="description-block">
               <div class="video-block" id="watch_video">
-                <iframe width="1210px" height="430px" src="https://www.youtube.com/embed/_OlN9p9q1J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1210" height="430" src="https://www.youtube.com/embed/_OlN9p9q1J4" allowfullscreen></iframe>
               </div>
               <div class="content-title" id="calculate">
                 <h1>Расчитать стоимость</h1>
@@ -269,12 +269,17 @@
     <div id="contacts_popup" style="display: none;">
       <div class="popup">
         <div class="popup-form">
+          <div class="popup-title">Обратный звонок</div>
           <form action="">
             <div class="form__item">
               <input type="text" placeholder="Ваше имя" required="required">
             </div>
             <div class="form__item">
               <input type="text" placeholder="Ваш телефон" required="required">
+            </div>
+            <div class="form__item uploader">
+              <input id="load-file" type="file">
+              <label for="load-file">Прикрепить файл</label>
             </div>
             <div class="form__item">
               <buttona class="button">Отправить</buttona>
@@ -287,6 +292,7 @@
   <script src="vendor/js/jquery-1.11.3.min.js"></script>
   <script src="vendor/js/jquery.steps.min.js"></script>
   <script src="vendor/js/jquery.fancybox.min.js"></script>
+  <script src="vendor/js/jquery.validate.min.js"></script>
   <script src="vendor/js/slick.min.js"></script>
   <script src="vendor/js/select2.min.js"></script>
   <script src="assets/js/map.js?ver=2"></script>

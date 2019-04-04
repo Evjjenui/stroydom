@@ -93,7 +93,14 @@
           position: absolute;
           left: 22px;
           top: 14px;
-          background: url(../images/cab_icon.png) no-repeat;
+          background: url(../images/cab_icon.png) left top no-repeat;
+        }
+
+        &:hover {
+
+          &:before {
+            background-position: left bottom;
+          }
         }
       }
     }

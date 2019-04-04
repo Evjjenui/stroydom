@@ -17,17 +17,22 @@ html(lang="en")
     #contacts_popup(style="display: none;")
       .popup
         .popup-form
+          .popup-title Обратный звонок
           form(action="")
             .form__item
               input(type="text" placeholder="Ваше имя" required="required")
             .form__item
               input(type="text" placeholder="Ваш телефон" required="required")
+            .form__item.uploader
+              input#load-file(type="file")
+              label(for="load-file") Прикрепить файл
             .form__item
               buttona.button Отправить
 
   script(src="vendor/js/jquery-1.11.3.min.js")
   script(src="vendor/js/jquery.steps.min.js")
   script(src="vendor/js/jquery.fancybox.min.js")
+  script(src="vendor/js/jquery.validate.min.js")
   script(src="vendor/js/slick.min.js")
   script(src="vendor/js/select2.min.js")
   script(src="assets/js/map.js?ver=2")

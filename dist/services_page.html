@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>СтройДом &mdash; Строительство домов в Санкт-Петербурге и Ленинградской области</title>
+    <title> </title>
     <meta charset="utf-8" content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
@@ -160,7 +160,7 @@
                   <h2>Рассчитать стоимость</h2>
                   <p>С помощью этого калькулятора вы можете сделать приблизительный расчет стоимости строительства дома в комплектации «Базовый» включая стоимость строительных материалов.</p>
                 </div>
-                <div class="component-doubled__forms" id="steps-calc">
+                <form class="component-doubled__forms" id="steps-calc">
                   <div class="hidden-title">Из чего будет ваш дом?</div>
                   <div class="component-calculator__forms_step1 step">
                     <div class="step-title">Из чего будет ваш дом?</div>
@@ -185,7 +185,7 @@
                     <div class="step-form">
                       <div class="step-form__item">
                         <label for="">Площадь дома:</label>
-                        <input id="material1" type="text" placeholder="10"><span>м<sup>2</sup></span>
+                        <input id="material1" type="text" placeholder="10" required><span>м<sup>2</sup></span>
                       </div>
                       <div class="step-form__item type-1">
                         <label for="">Толщина стен:</label>
@@ -254,7 +254,7 @@
                   <div class="hidden-title">Стоимость</div>
                   <div class="component-calculator__forms_step5 step" style="display: none;">
                     <div class="total-price">
-                      <p>Стоимость вашего дома:</p><span>5 495 600 рублей</span>
+                      <p>Стоимость дома:</p><span>5 495 600 &#8381;</span>
                     </div>
                     <div class="step-form">
                       <div class="step-form__item">
@@ -270,7 +270,7 @@
                       <p> <span>1</span>/4</p>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -343,12 +343,17 @@
     <div id="contacts_popup" style="display: none;">
       <div class="popup">
         <div class="popup-form">
+          <div class="popup-title">Обратный звонок</div>
           <form action="">
             <div class="form__item">
               <input type="text" placeholder="Ваше имя" required="required">
             </div>
             <div class="form__item">
               <input type="text" placeholder="Ваш телефон" required="required">
+            </div>
+            <div class="form__item uploader">
+              <input id="load-file" type="file">
+              <label for="load-file">Прикрепить файл</label>
             </div>
             <div class="form__item">
               <buttona class="button">Отправить</buttona>
@@ -361,6 +366,7 @@
   <script src="vendor/js/jquery-1.11.3.min.js"></script>
   <script src="vendor/js/jquery.steps.min.js"></script>
   <script src="vendor/js/jquery.fancybox.min.js"></script>
+  <script src="vendor/js/jquery.validate.min.js"></script>
   <script src="vendor/js/slick.min.js"></script>
   <script src="vendor/js/select2.min.js"></script>
   <script src="assets/js/map.js?ver=2"></script>

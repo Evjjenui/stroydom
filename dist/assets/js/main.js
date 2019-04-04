@@ -184,16 +184,26 @@
   };
 
   initSteps = function() {
-    var stepBack;
+    var form, stepBack;
+    form = $("#steps-calc");
+    form.validate({
+      errorPlacement: function(error, element) {
+        return element.before(error);
+      },
+      rules: {
+        required: true
+      }
+    });
     stepBack = function() {
       return false;
     };
     stepBack = function() {
       if ($('#steps-calc').steps('previous')) {
-        return setTimeout((function() {
+        setTimeout((function() {
           return stepBack();
         }), 200);
       }
+      return $('a[href="#previous"]').show();
     };
     return $('#steps-calc').steps({
       headerTag: '.hidden-title',
@@ -216,6 +226,7 @@
         return stepBack();
       },
       onStepChanging: function(event, currentIndex, newIndex) {
+        form.validate().settings.ignore = ':disabled,:hidden';
         $('.steps-numbers p span').text(newIndex + 1);
         if (newIndex === $('.wizard .step').length - 1) {
           $('.component-calculator__forms_controls, .steps.clearfix').css({
@@ -230,7 +241,11 @@
             visibility: 'visible'
           });
         }
-        return true;
+        if (currentIndex < newIndex) {
+          form.find('.body:eq(' + newIndex + ') label.error').remove();
+          form.find('.body:eq(' + newIndex + ') .error').removeClass('error');
+        }
+        return form.valid();
       }
     });
   };
