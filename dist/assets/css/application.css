@@ -2554,6 +2554,7 @@ ol {
     max-width: 382px;
     background-color: #fff;
     padding: 0 0 65px;
+    text-decoration: none;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -2575,7 +2576,8 @@ ol {
         max-width: 100%; }
     .component-news__item_date {
       padding: 45px 20px 0;
-      margin-bottom: 13px; }
+      margin-bottom: 13px;
+      display: block; }
       .component-news__item_date span {
         display: inline-block;
         vertical-align: top;
@@ -2593,13 +2595,15 @@ ol {
       line-height: 24px;
       font-weight: bold;
       margin-bottom: 13px;
-      padding: 0 20px; }
+      padding: 0 20px;
+      display: block; }
     .component-news__item_info {
       color: #666666;
       font-size: 14px;
       line-height: 24px;
       margin-bottom: 13px;
-      padding: 0 20px; }
+      padding: 0 20px;
+      display: block; }
     .component-news__item a {
       color: #1758a5;
       text-decoration: none;
@@ -3600,7 +3604,7 @@ ol {
   width: 100%;
   max-width: 280px;
   position: relative;
-  padding: 32px 0 30px; }
+  padding: 32px 0 20px; }
   .progress-line .percentage {
     position: absolute;
     font-weight: bold;
@@ -5053,17 +5057,13 @@ h2 {
       width: 100%;
       margin-bottom: 15px; }
   .popup {
-    width: 96%;
+    width: 100%;
     padding: 40px 20px 50px;
     margin: auto; }
     .popup-title {
       font-size: 24px; }
-    .popup:before {
-      width: 96vw;
-      width: calc(100% + 24px);
-      height: calc(100% + 20px);
-      left: -12px;
-      top: -10px; }
+  #contacts_popup {
+    width: 92%; }
   .component {
     margin: 20px 0;
     padding: 20px 0; }
@@ -5601,7 +5601,7 @@ h2 {
   .engineering-promo p {
     max-width: 100%; }
   .component-cabinet_description {
-    padding: 55px 0;
+    padding: 40px 0;
     margin: 0; }
     .component-cabinet_description .desk-hide {
       display: block; }
@@ -5610,8 +5610,7 @@ h2 {
       padding: 5px 40px 5px 10px;
       position: relative;
       font-size: 16px;
-      line-height: 22px;
-      margin-top: 15px; }
+      line-height: 22px; }
       .component-cabinet_description .show-info.active:after {
         transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
@@ -5650,11 +5649,11 @@ h2 {
     max-width: 100%;
     padding: 0 10px; }
     .cabinet_description-sub-info .image {
-      margin-top: 30px; }
+      margin-top: 20px; }
       .cabinet_description-sub-info .image img {
         width: 100%; }
     .cabinet_description-sub-info .project-progress {
-      margin-top: 60px; }
+      margin-top: 40px; }
   .cabinet_description-info {
     width: 100%;
     padding: 0 10px; }
@@ -5662,7 +5661,8 @@ h2 {
     padding: 0 10px;
     text-align: left; }
   .build-preview_item {
-    padding: 0 10px; }
+    padding: 0 10px 10px;
+    margin-top: 20px; }
     .build-preview_item .build-gallery_item {
       width: calc(50% - 5px);
       margin: 0 10px 10px 0; }

@@ -4,16 +4,15 @@
       h1 Новости
     .component-news__content
       -for (i = 0; i < 3; i++)
-        .component-news__item
-          .component-news__item_image
+        a.component-news__item(href="#")
+          span.component-news__item_image
             img(src="assets/images/house_photo.jpg", alt="")
-          .component-news__item_date
+          span.component-news__item_date
             span 01.08.2018
-          .component-news__item_title 
+          span.component-news__item_title 
             | Новости со стройплощадок — август
-          .component-news__item_info
+          span.component-news__item_info
             | На объекте в п. Белоостров завершена кладка 2 этажа, монтаж армопояса и раскладка балок межэтажного перекрытия
-          a(href="javascript:void(0)") Читать далее
 
     span.show-all
       a(href="./news.html")
