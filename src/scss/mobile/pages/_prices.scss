@@ -132,3 +132,19 @@
     }
   }
 }
+
+.tabs {
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+.tab-nav {
+  margin-bottom: 10px;
+  background-color: #f0f4f9;
+
+  @include border-radius(5px);
+
+  &:before {
+    display: none;
+  }
+}
