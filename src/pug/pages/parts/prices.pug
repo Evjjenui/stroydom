@@ -77,118 +77,246 @@ block container
         p
           | С помощью этого калькулятора вы можете сделать приблизительный расчет стоимости строительства дома в комплектации «Базовый» включая стоимость строительных материалов.
 
-      form
       .prices-form__item.material
         .prices-form__item-title
           .icon
           span Из чего будет ваш дом?
         .prices-form__item-content
-          .radiobuttons
-            input#material1(type="radio" name="material" checked="checked")
-            label(for="material1")
+          .tabs
+            a(href="#tab-1").tab-nav.active
               span Дома из газобетона
-            input#material2(type="radio" name="material")
-            label(for="material2")
+            a(href="#tab-2").tab-nav
               span Каркасные дома
-            input#material3(type="radio" name="material")
-            label(for="material3")
+            a(href="#tab-3").tab-nav
               span Теплая керамика
+      form
+        .tabs-content
+          #tab-1.tab-item
+            .prices-form__item.fundament
+              .prices-form__item-title
+                .icon
+                span Фундамент
+              .prices-form__item-content
+                .radiobuttons
+                  input#fundament1(type="radio" name="fundament" checked="checked")
+                  label(for="fundament1")
+                    span Монолитная плита 300 мм
+            
+            .prices-form__item.size
+              .prices-form__item-title
+                .icon
+                span Размеры дома
+              .prices-form__item-content
+                .prices-form__subitem.size
+                  label(for="")
+                    | Площадь дома
+                    | (по фундаменту)
+                  input(type="text" placeholder="10")
+                  span м
+                    sup 2
 
-      
-      .prices-form__item.fundament
-        .prices-form__item-title
-          .icon
-          span Фундамент
-        .prices-form__item-content
-          .radiobuttons
-            input#fundament1(type="radio" name="fundament" checked="checked")
-            label(for="fundament1")
-              span Монолитная плита 300 мм
-            input.type-2#fundament2(type="radio" name="fundament")
-            label.type-2(for="fundament2")
-              span
-                | Забивные ж/б сваи 150х150мм
-      
-      .prices-form__item.size
-        .prices-form__item-title
-          .icon
-          span Размеры дома
-        .prices-form__item-content
-          .prices-form__subitem.size
-            label(for="")
-              | Площадь дома
-              | (по фундаменту)
-            input(type="text" placeholder="10")
-            span м
-              sup 2
+                .prices-form__subitem
+                  strong
+                    | Толщина стен, мм
+                  .radiobuttons
+                    input#depth1(type="radio" name="depth" checked="checked")
+                    label(for="depth1")
+                      span 300
+                    input#depth2(type="radio" name="depth")
+                    label(for="depth2")
+                      span 400
 
-          .type-1.prices-form__subitem
-            strong
-              | Толщина стен, мм
-            .radiobuttons.type-1
-              input#depth1(type="radio" name="depth" checked="checked")
-              label(for="depth1")
-                span 300
-              input#depth2(type="radio" name="depth")
-              label(for="depth2")
-                span 400
-            .radiobuttons.type-3
-              input#depth1(type="radio" name="depth3" checked="checked")
-              label(for="depth31")
-                span 380
-              input#depth2(type="radio" name="depth3")
-              label(for="depth32")
-                span 440
+                .prices-form__subitem
+                  strong
+                    | Количество этажей:
+                  .radiobuttons
+                    input#floors1(type="radio" name="floors" checked="checked")
+                    label(for="floors1")
+                      span 1
+                    input#floors2(type="radio" name="floors")
+                    label(for="floors2")
+                      span 2
 
-          .prices-form__subitem
-            strong
-              | Количество этажей:
-            .radiobuttons
-              input#floors1(type="radio" name="floors" checked="checked")
-              label(for="floors1")
-                span 1
-              input#floors2(type="radio" name="floors")
-              label(for="floors2")
-                span 2
+            .prices-form__item.floors
+              .prices-form__item-title
+                .icon
+                span Межэтажные перекрытия
+              .prices-form__item-content
+                .radiobuttons
+                  input#floor1(type="radio" name="floor" checked="checked")
+                  label(for="floor1")
+                    span Монолитное перекрытие 
+                  input#floor2(type="radio" name="floor")
+                  label(for="floor2")
+                    span Плиты перекрытия ПБ 220мм
+                  input#floor3(type="radio" name="floor")
+                  label(for="floor3")
+                    span Деревянные балки
 
-      .prices-form__item.floors
-        .prices-form__item-title
-          .icon
-          span Межэтажные перекрытия
-        .prices-form__item-content
-          .radiobuttons
-            input.type-1#floor1(type="radio" name="floor" checked="checked")
-            label.type-1(for="floor1")
-              span Монолитное перекрытие 
-            input.type-1#floor2(type="radio" name="floor")
-            label.type-1(for="floor2")
-              span Плиты перекрытия ПБ 220мм
-            input#floor3(type="radio" name="floor")
-            label(for="floor3")
-              span Деревянные балки
+            .prices-form__item.roof
+                .prices-form__item-title
+                  .icon
+                  span Кровля
+                .prices-form__item-content
+                  .radiobuttons
+                    input#roof1(type="radio" name="roof" checked="checked")
+                    label(for="roof1")
+                      span Металлочерепица
+                    input#roof2(type="radio" name="roof")
+                    label(for="roof2")
+                      span Мягкая кровля
+                    input#roof3(type="radio" name="roof")
+                    label(for="roof3")
+                      span Керамическая черепица
+          
+          #tab-2.tab-item(style="display: none;")
+            .prices-form__item.fundament
+              .prices-form__item-title
+                .icon
+                span Фундамент
+              .prices-form__item-content
+                .radiobuttons
+                  input#fundament21(type="radio" name="fundament" checked="checked")
+                  label(for="fundament21")
+                    span Монолитная плита 300 мм
+                  input#fundament22(type="radio" name="fundament")
+                  label(for="fundament22")
+                    span Забивные ж/б сваи 150х150мм
+            
+            .prices-form__item.size
+              .prices-form__item-title
+                .icon
+                span Размеры дома
+              .prices-form__item-content
+                .prices-form__subitem.size
+                  label(for="")
+                    | Площадь дома
+                    | (по фундаменту)
+                  input(type="text" placeholder="10")
+                  span м
+                    sup 2
 
-      .prices-form__item.roof
-        .prices-form__item-title
-          .icon
-          span Кровля
-        .prices-form__item-content
-          .radiobuttons
-            input#roof1(type="radio" name="roof" checked="checked")
-            label(for="roof1")
-              span Металлочерепица
-            input#roof2(type="radio" name="roof")
-            label(for="roof2")
-              span Мягкая кровля
-            input#roof3(type="radio" name="roof")
-            label(for="roof3")
-              span Керамическая черепица
-      
-      .prices-form__item.total
-        .total-price
-          p Стоимость работ с материалами &mdash;
-            span 5 495 600 рублей
-          p Стоимость работ без материалов &mdash;
-            span 5 495 600 рублей
+                .prices-form__subitem
+                  strong
+                    | Количество этажей:
+                  .radiobuttons
+                    input#floors21(type="radio" name="floors" checked="checked")
+                    label(for="floors21")
+                      span 1
+                    input#floors22(type="radio" name="floors")
+                    label(for="floors22")
+                      span 2
+
+            .prices-form__item.floors
+              .prices-form__item-title
+                .icon
+                span Межэтажные перекрытия
+              .prices-form__item-content
+                .radiobuttons
+                  input#floor23(type="radio" name="floor" checked="checked")
+                  label(for="floor23")
+                    span Деревянные балки
+
+            .prices-form__item.roof
+                .prices-form__item-title
+                  .icon
+                  span Кровля
+                .prices-form__item-content
+                  .radiobuttons
+                    input#roof21(type="radio" name="roof" checked="checked")
+                    label(for="roof21")
+                      span Металлочерепица
+                    input#roof22(type="radio" name="roof")
+                    label(for="roof22")
+                      span Мягкая кровля
+                    input#roof23(type="radio" name="roof")
+                    label(for="roof23")
+                      span Керамическая черепица
+
+          #tab-3.tab-item(style="display: none;")
+            .prices-form__item.fundament
+              .prices-form__item-title
+                .icon
+                span Фундамент
+              .prices-form__item-content
+                .radiobuttons
+                  input#fundament31(type="radio" name="fundament" checked="checked")
+                  label(for="fundament31")
+                    span Монолитная плита 300 мм
+            
+            .prices-form__item.size
+              .prices-form__item-title
+                .icon
+                span Размеры дома
+              .prices-form__item-content
+                .prices-form__subitem.size
+                  label(for="")
+                    | Площадь дома
+                    | (по фундаменту)
+                  input(type="text" placeholder="10")
+                  span м
+                    sup 2
+
+                .prices-form__subitem
+                  strong
+                    | Толщина стен, мм
+                  .radiobuttons
+                    input#depth31(type="radio" name="depth3" checked="checked")
+                    label(for="depth31")
+                      span 380
+                    input#depth32(type="radio" name="depth3")
+                    label(for="depth32")
+                      span 440
+
+                .prices-form__subitem
+                  strong
+                    | Количество этажей:
+                  .radiobuttons
+                    input#floors31(type="radio" name="floors" checked="checked")
+                    label(for="floors31")
+                      span 1
+                    input#floors32(type="radio" name="floors")
+                    label(for="floors32")
+                      span 2
+
+            .prices-form__item.floors
+              .prices-form__item-title
+                .icon
+                span Межэтажные перекрытия
+              .prices-form__item-content
+                .radiobuttons
+                  input#floor31(type="radio" name="floor" checked="checked")
+                  label(for="floor31")
+                    span Монолитное перекрытие 
+                  input#floor32(type="radio" name="floor")
+                  label(for="floor32")
+                    span Плиты перекрытия ПБ 220мм
+                  input#floor33(type="radio" name="floor")
+                  label(for="floor33")
+                    span Деревянные балки
+
+            .prices-form__item.roof
+                .prices-form__item-title
+                  .icon
+                  span Кровля
+                .prices-form__item-content
+                  .radiobuttons
+                    input#roof31(type="radio" name="roof" checked="checked")
+                    label(for="roof31")
+                      span Металлочерепица
+                    input#roof32(type="radio" name="roof")
+                    label(for="roof32")
+                      span Мягкая кровля
+                    input#roof33(type="radio" name="roof")
+                    label(for="roof33")
+                      span Керамическая черепица
+          
+        .prices-form__item.total
+          .total-price
+            p Стоимость работ с материалами &mdash;
+              span 5 495 600 рублей
+            p Стоимость работ без материалов &mdash;
+              span 5 495 600 рублей
 
 
 

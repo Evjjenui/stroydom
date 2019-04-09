@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>СтройДом &mdash; Строительство домов в Санкт-Петербурге и Ленинградской области</title>
+    <title></title>
     <meta charset="utf-8" content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
@@ -39,6 +39,7 @@
                       <li><a href="services_page.html">Индивидуальный проект дома</a></li>
                       <li><a href="services_page.html">Фундамент ленточный</a></li>
                       <li><a href="fundament.html">Фундамент монолитная плита</a></li>
+                      <li><a href="engineering.html">Проектирование</a></li>
                       <li><a href="services_page.html">Монтаж перекрытий </a></li>
                       <li><a href="services_page.html">Монтаж перекрытий </a></li>
                       <li><a href="services_page.html">Благоустройство</a></li>
@@ -47,7 +48,7 @@
                 </li>
                 <li><a href="prices.html">Цены</a></li>
                 <li><a href="our_objects.html">Наши объекты</a></li>
-                <li><a href="engineering.html">Проектирование</a></li>
+                <li><a href="building.html">Строительство</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
               </ul>
             </div>
@@ -168,7 +169,7 @@
               <div class="clone-item">
                 <div class="clone-item__icon"><img src="assets/images/clone_icon2.png" alt=""></div>
                 <div class="clone-item__info">
-                  <p>Мы самостоятельно приобретаем<br>и организовываем доставку строительного</p>
+                  <p>Мы приобретаем и доставляем материал на объект</p>
                 </div>
               </div>
             </div>
@@ -181,107 +182,233 @@
               <h2>Рассчитать стоимость</h2>
               <p>С помощью этого калькулятора вы можете сделать приблизительный расчет стоимости строительства дома в комплектации «Базовый» включая стоимость строительных материалов.</p>
             </div>
-            <form></form>
             <div class="prices-form__item material">
               <div class="prices-form__item-title">
                 <div class="icon"></div><span>Из чего будет ваш дом?</span>
               </div>
               <div class="prices-form__item-content">
-                <div class="radiobuttons">
-                  <input id="material1" type="radio" name="material" checked="checked">
-                  <label for="material1"><span>Дома из газобетона</span></label>
-                  <input id="material2" type="radio" name="material">
-                  <label for="material2"><span>Каркасные дома</span></label>
-                  <input id="material3" type="radio" name="material">
-                  <label for="material3"><span>Теплая керамика</span></label>
-                </div>
+                <div class="tabs"><a class="tab-nav active" href="#tab-1"><span>Дома из газобетона</span></a><a class="tab-nav" href="#tab-2"><span>Каркасные дома</span></a><a class="tab-nav" href="#tab-3"><span>Теплая керамика</span></a></div>
               </div>
             </div>
-            <div class="prices-form__item fundament">
-              <div class="prices-form__item-title">
-                <div class="icon"></div><span>Фундамент</span>
-              </div>
-              <div class="prices-form__item-content">
-                <div class="radiobuttons">
-                  <input id="fundament1" type="radio" name="fundament" checked="checked">
-                  <label for="fundament1"><span>Монолитная плита 300 мм</span></label>
-                  <input class="type-2" id="fundament2" type="radio" name="fundament">
-                  <label class="type-2" for="fundament2"><span>Забивные ж/б сваи 150х150мм</span></label>
-                </div>
-              </div>
-            </div>
-            <div class="prices-form__item size">
-              <div class="prices-form__item-title">
-                <div class="icon"></div><span>Размеры дома</span>
-              </div>
-              <div class="prices-form__item-content">
-                <div class="prices-form__subitem size">
-                  <label for="">
-                    Площадь дома
-                    (по фундаменту)
-                  </label>
-                  <input type="text" placeholder="10"><span>м<sup>2</sup></span>
-                </div>
-                <div class="type-1 prices-form__subitem"><strong>Толщина стен, мм</strong>
-                  <div class="radiobuttons type-1">
-                    <input id="depth1" type="radio" name="depth" checked="checked">
-                    <label for="depth1"><span>300</span></label>
-                    <input id="depth2" type="radio" name="depth">
-                    <label for="depth2"><span>400</span></label>
+            <form>
+              <div class="tabs-content">
+                <div class="tab-item" id="tab-1">
+                  <div class="prices-form__item fundament">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Фундамент</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="fundament1" type="radio" name="fundament" checked="checked">
+                        <label for="fundament1"><span>Монолитная плита 300 мм</span></label>
+                      </div>
+                    </div>
                   </div>
-                  <div class="radiobuttons type-3">
-                    <input id="depth1" type="radio" name="depth3" checked="checked">
-                    <label for="depth31"><span>380</span></label>
-                    <input id="depth2" type="radio" name="depth3">
-                    <label for="depth32"><span>440</span></label>
+                  <div class="prices-form__item size">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Размеры дома</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="prices-form__subitem size">
+                        <label for="">
+                          Площадь дома
+                          (по фундаменту)
+                        </label>
+                        <input type="text" placeholder="10"><span>м<sup>2</sup></span>
+                      </div>
+                      <div class="prices-form__subitem"><strong>Толщина стен, мм</strong>
+                        <div class="radiobuttons">
+                          <input id="depth1" type="radio" name="depth" checked="checked">
+                          <label for="depth1"><span>300</span></label>
+                          <input id="depth2" type="radio" name="depth">
+                          <label for="depth2"><span>400</span></label>
+                        </div>
+                      </div>
+                      <div class="prices-form__subitem"><strong>Количество этажей:</strong>
+                        <div class="radiobuttons">
+                          <input id="floors1" type="radio" name="floors" checked="checked">
+                          <label for="floors1"><span>1</span></label>
+                          <input id="floors2" type="radio" name="floors">
+                          <label for="floors2"><span>2</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices-form__item floors">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Межэтажные перекрытия</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="floor1" type="radio" name="floor" checked="checked">
+                        <label for="floor1"><span>Монолитное перекрытие </span></label>
+                        <input id="floor2" type="radio" name="floor">
+                        <label for="floor2"><span>Плиты перекрытия ПБ 220мм</span></label>
+                        <input id="floor3" type="radio" name="floor">
+                        <label for="floor3"><span>Деревянные балки</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices-form__item roof">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Кровля</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="roof1" type="radio" name="roof" checked="checked">
+                        <label for="roof1"><span>Металлочерепица</span></label>
+                        <input id="roof2" type="radio" name="roof">
+                        <label for="roof2"><span>Мягкая кровля</span></label>
+                        <input id="roof3" type="radio" name="roof">
+                        <label for="roof3"><span>Керамическая черепица</span></label>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="prices-form__subitem"><strong>Количество этажей:</strong>
-                  <div class="radiobuttons">
-                    <input id="floors1" type="radio" name="floors" checked="checked">
-                    <label for="floors1"><span>1</span></label>
-                    <input id="floors2" type="radio" name="floors">
-                    <label for="floors2"><span>2</span></label>
+                <div class="tab-item" id="tab-2" style="display: none;">
+                  <div class="prices-form__item fundament">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Фундамент</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="fundament21" type="radio" name="fundament" checked="checked">
+                        <label for="fundament21"><span>Монолитная плита 300 мм</span></label>
+                        <input id="fundament22" type="radio" name="fundament">
+                        <label for="fundament22"><span>Забивные ж/б сваи 150х150мм</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices-form__item size">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Размеры дома</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="prices-form__subitem size">
+                        <label for="">
+                          Площадь дома
+                          (по фундаменту)
+                        </label>
+                        <input type="text" placeholder="10"><span>м<sup>2</sup></span>
+                      </div>
+                      <div class="prices-form__subitem"><strong>Количество этажей:</strong>
+                        <div class="radiobuttons">
+                          <input id="floors21" type="radio" name="floors" checked="checked">
+                          <label for="floors21"><span>1</span></label>
+                          <input id="floors22" type="radio" name="floors">
+                          <label for="floors22"><span>2</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices-form__item floors">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Межэтажные перекрытия</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="floor23" type="radio" name="floor" checked="checked">
+                        <label for="floor23"><span>Деревянные балки</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices-form__item roof">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Кровля</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="roof21" type="radio" name="roof" checked="checked">
+                        <label for="roof21"><span>Металлочерепица</span></label>
+                        <input id="roof22" type="radio" name="roof">
+                        <label for="roof22"><span>Мягкая кровля</span></label>
+                        <input id="roof23" type="radio" name="roof">
+                        <label for="roof23"><span>Керамическая черепица</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-item" id="tab-3" style="display: none;">
+                  <div class="prices-form__item fundament">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Фундамент</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="fundament31" type="radio" name="fundament" checked="checked">
+                        <label for="fundament31"><span>Монолитная плита 300 мм</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices-form__item size">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Размеры дома</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="prices-form__subitem size">
+                        <label for="">
+                          Площадь дома
+                          (по фундаменту)
+                        </label>
+                        <input type="text" placeholder="10"><span>м<sup>2</sup></span>
+                      </div>
+                      <div class="prices-form__subitem"><strong>Толщина стен, мм</strong>
+                        <div class="radiobuttons">
+                          <input id="depth31" type="radio" name="depth3" checked="checked">
+                          <label for="depth31"><span>380</span></label>
+                          <input id="depth32" type="radio" name="depth3">
+                          <label for="depth32"><span>440</span></label>
+                        </div>
+                      </div>
+                      <div class="prices-form__subitem"><strong>Количество этажей:</strong>
+                        <div class="radiobuttons">
+                          <input id="floors31" type="radio" name="floors" checked="checked">
+                          <label for="floors31"><span>1</span></label>
+                          <input id="floors32" type="radio" name="floors">
+                          <label for="floors32"><span>2</span></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices-form__item floors">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Межэтажные перекрытия</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="floor31" type="radio" name="floor" checked="checked">
+                        <label for="floor31"><span>Монолитное перекрытие </span></label>
+                        <input id="floor32" type="radio" name="floor">
+                        <label for="floor32"><span>Плиты перекрытия ПБ 220мм</span></label>
+                        <input id="floor33" type="radio" name="floor">
+                        <label for="floor33"><span>Деревянные балки</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prices-form__item roof">
+                    <div class="prices-form__item-title">
+                      <div class="icon"></div><span>Кровля</span>
+                    </div>
+                    <div class="prices-form__item-content">
+                      <div class="radiobuttons">
+                        <input id="roof31" type="radio" name="roof" checked="checked">
+                        <label for="roof31"><span>Металлочерепица</span></label>
+                        <input id="roof32" type="radio" name="roof">
+                        <label for="roof32"><span>Мягкая кровля</span></label>
+                        <input id="roof33" type="radio" name="roof">
+                        <label for="roof33"><span>Керамическая черепица</span></label>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="prices-form__item floors">
-              <div class="prices-form__item-title">
-                <div class="icon"></div><span>Межэтажные перекрытия</span>
-              </div>
-              <div class="prices-form__item-content">
-                <div class="radiobuttons">
-                  <input class="type-1" id="floor1" type="radio" name="floor" checked="checked">
-                  <label class="type-1" for="floor1"><span>Монолитное перекрытие </span></label>
-                  <input class="type-1" id="floor2" type="radio" name="floor">
-                  <label class="type-1" for="floor2"><span>Плиты перекрытия ПБ 220мм</span></label>
-                  <input id="floor3" type="radio" name="floor">
-                  <label for="floor3"><span>Деревянные балки</span></label>
+              <div class="prices-form__item total">
+                <div class="total-price">
+                  <p>Стоимость работ с материалами &mdash;<span>5 495 600 рублей</span></p>
+                  <p>Стоимость работ без материалов &mdash;<span>5 495 600 рублей</span></p>
                 </div>
               </div>
-            </div>
-            <div class="prices-form__item roof">
-              <div class="prices-form__item-title">
-                <div class="icon"></div><span>Кровля</span>
-              </div>
-              <div class="prices-form__item-content">
-                <div class="radiobuttons">
-                  <input id="roof1" type="radio" name="roof" checked="checked">
-                  <label for="roof1"><span>Металлочерепица</span></label>
-                  <input id="roof2" type="radio" name="roof">
-                  <label for="roof2"><span>Мягкая кровля</span></label>
-                  <input id="roof3" type="radio" name="roof">
-                  <label for="roof3"><span>Керамическая черепица</span></label>
-                </div>
-              </div>
-            </div>
-            <div class="prices-form__item total">
-              <div class="total-price">
-                <p>Стоимость работ с материалами &mdash;<span>5 495 600 рублей</span></p>
-                <p>Стоимость работ без материалов &mdash;<span>5 495 600 рублей</span></p>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
         <div class="component component-order component-doubled">

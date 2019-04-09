@@ -63,11 +63,23 @@
   }
 }
 
+.project-progress {
+  width: 100%;
+  margin: 0 auto 20px;
+  max-width: calc(100% - 20px);
+}
 
 .cabinet_description {
 
   &-info_text {
     margin-top: 15px;
+  }
+
+  &-info {
+
+    .sub-title {
+      margin-top: 20px;
+    }
   }
 
   &-sub-info {
@@ -80,10 +92,6 @@
       img {
         width: 100%;
       }
-    }
-
-    .project-progress {
-      margin-top: 40px;
     }
   }
 

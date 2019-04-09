@@ -1,5 +1,5 @@
 (function() {
-  var cabinetAccordion, initAccordion, initCarousel, initFancyBox, initMenu, initPrices, initProgress, initSteps, initUI, initVideoSHow;
+  var cabinetAccordion, initAccordion, initCarousel, initFancyBox, initMenu, initPrices, initProgress, initSteps, initTabs, initUI, initVideoSHow;
 
   initCarousel = function() {
     $('.component-advantages .content-wrapper').slick({
@@ -289,6 +289,18 @@
     });
   };
 
+  initTabs = function() {
+    return $('.tab-nav').on('click', function(e) {
+      var tabId;
+      e.preventDefault();
+      tabId = $(this).attr('href');
+      $('.tab-item').hide();
+      $('.tab-nav').removeClass('active');
+      $(this).addClass('active');
+      return $('.prices-form').find(tabId).show();
+    });
+  };
+
   $(window).load(function() {
     return initPrices();
   });
@@ -302,7 +314,8 @@
     initSteps();
     initProgress();
     initUI();
-    return cabinetAccordion();
+    cabinetAccordion();
+    return initTabs();
   });
 
 }).call(this);

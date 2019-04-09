@@ -11,7 +11,23 @@
 .accordion {
 
   &-item {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
+
+    &.blue {
+
+      .accordion-item__title {
+        font-size: 1.3em;
+        line-height: 1.3em;
+
+        span {
+          color: #1758a5;
+
+          b {
+            color: #221f1f;
+          }
+        }
+      }
+    }
 
     &.empty {
 

@@ -264,6 +264,19 @@ initPrices = ->
     else
       return
 
+initTabs = ->
+  $('.tab-nav').on 'click', (e) ->
+    e.preventDefault()
+
+    tabId = $(this).attr('href')
+
+    $('.tab-item').hide()
+    $('.tab-nav').removeClass('active')
+    
+    $(this).addClass('active')
+    $('.prices-form').find(tabId).show()
+
+
 
 
 
@@ -280,3 +293,4 @@ $ ->
   initProgress()
   initUI()
   cabinetAccordion()
+  initTabs()

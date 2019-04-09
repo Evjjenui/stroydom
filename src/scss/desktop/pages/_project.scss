@@ -21,21 +21,21 @@
     &-item {
       font-size: 16px;
       line-height: 24px;
-      width: 18%; 
+      width: 18%;
 
       span {
         font-weight: 700;
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
+        line-height: 30px;
       }
 
       p {
         line-height: 30px;
         color: #1758a5;
 
-        i {
-          font-style: normal;
-          padding-left: 5px;
+        sup {
+          padding-left: 2px;
           color: #777;
         }
       }
@@ -58,6 +58,10 @@
         }
       }
     }
+  }
+
+  .tip {
+    margin-top: 40px;
   }
 }
 

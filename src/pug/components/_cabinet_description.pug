@@ -2,6 +2,14 @@
   .content-wrapper
     .component__title.desk-hide
       h1 Новое Минулово
+    .project-progress.desk-hide(data-progress="30")
+      //- span Проект завершен на:
+      .progress-line
+        .percentage
+          span 0
+          | %
+        .line
+          .line__bg
     .show-info.desk-hide
       | Подробнее
     .show-block
@@ -33,7 +41,7 @@
       .cabinet_description-sub-info
         .image
           img(src="./assets/images/cabinet_project_preview.jpg", alt="")
-        .project-progress(data-progress="30")
+        .project-progress.mob-hide(data-progress="30")
           //- span Проект завершен на:
           .progress-line
             .percentage
