@@ -35,12 +35,20 @@
       width: 100%;
     }
   }
+
+  .step-form__item {
+
+    > label {
+      min-width: 192px;
+    }
+  }
 }
 
 .component-doubled__forms {
   background-color: #fff;
   height: 100%;
   width: 50%;
+  position: relative;
 
   @include flexbox();
   justify-content: center;
@@ -56,7 +64,7 @@
   }
 
   .step {
-    @include flexbox();
+    display: none;
     justify-content: flex-start;
     flex-direction: column;
     padding-left: 80px;
@@ -64,20 +72,14 @@
     width: 100%;
 
     @include box-shadow(0 14px 35px rgba(#000, .11));
+
+    &.active {
+      @include flexbox();
+    }
   }
 }
 
 .component-calculator__forms {
-  
-  &_step2 {
-
-    .step-form__item {
-
-      > label {
-        width: 192px;
-      }
-    }
-  }
 
   &_step5.step {
     padding-top: 40px;
@@ -123,9 +125,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    position: absolute;
-    height: 100%;
-    right: 0px;
+    position: relative;
 
     .steps-numbers {
       margin: 115px 0 0;
@@ -228,138 +228,118 @@
       color: #666;
     }
   }
+}
 
-  .actions.clearfix {
-    position: absolute;
-    left: 80px;
-    bottom: 50px;
+.calc-buttons {
+  position: absolute;
+  left: 25px;
+  bottom: 50px;
+    
+  a {
+    @include button("big", "blue-border");
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 140px;
+    padding: 0 0 0 15px;
+    color: #1758a5;
+    cursor: pointer;
 
-    li {
-      display: inline-block;
-      vertical-align: top;
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 24px;
+      right: 15px;
+      top: calc(50% - 12px);
+      background-image: url(../images/sprite.png);
+      background-position: -63px -30px;
+      background-repeat: no-repeat;
 
-      &.disabled {
-        opacity: 0;
-        visibility: hidden;
+      @include transform(rotate(180deg));
+    }
+
+    &.disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover,
+    &:active {
+
+      &:before {
+        background-position: -63px 0;
+        @include transform(rotate(0));
       }
-      
-      a {
-        @include button("big", "blue-border");
-        display: inline-block;
-        vertical-align: top;
-        text-align: left;
-        width: 140px;
-        padding: 0 0 0 15px;
-        color: #1758a5;
+    }
+
+    &.prev {
+      text-align: right;
+      padding: 0 15px 0 0;
+      margin-right: 15px;
+
+      &:before {
+        right: auto;
+        left: 15px;
+        @include transform(rotate(0));
+      }
+
+      &:hover,
+      &:active {
 
         &:before {
-          display: block;
-          position: absolute;
-          content: '';
-          width: 32px;
-          height: 24px;
-          right: 15px;
-          top: calc(50% - 12px);
-          background-image: url(../images/sprite.png);
-          background-position: -63px -30px;
-          background-repeat: no-repeat;
-
+          background-position: -63px 0;
           @include transform(rotate(180deg));
         }
+      }
+    }
 
-        &:hover,
-        &:active {
+    &.retreat {
+      width: 306px;
+      text-align: right;
+      padding-right: 32px;
+      position: absolute;
+      bottom: -20px;
 
-          &:before {
-            background-position: -63px 0;
-            @include transform(rotate(0));
-          }
-        }
+      &:before {
+        right: auto;
+        left: 38px;
+        @include transform(rotate(0));
+      }
 
-        &.previous {
-          text-align: right;
-          padding: 0 15px 0 0;
-          margin-right: 15px;
+      &:hover,
+      &:active {
 
-          &:before {
-            right: auto;
-            left: 15px;
-            @include transform(rotate(0));
-          }
-
-          &:hover,
-          &:active {
-
-            &:before {
-              background-position: -63px 0;
-              @include transform(rotate(180deg));
-            }
-          }
-        }
-
-        &.finish-button {
-          width: 306px;
-          text-align: right;
-          position: absolute;
-          padding-right: 32px;
-          top: -10px;
-
-          &:before {
-            right: auto;
-            left: 38px;
-            @include transform(rotate(0));
-          }
-
-          &:hover,
-          &:active {
-
-            &:before {
-              background-position: -63px 0;
-              @include transform(rotate(180deg));
-            }
-          }
+        &:before {
+          background-position: -63px 0;
+          @include transform(rotate(180deg));
         }
       }
     }
   }
 }
 
-
-.steps.clearfix,
 .steps-dots {
   text-align: center;
   width: 114px;
   z-index: 2;
-  right: 0;
+  left: calc(50% - 5px);
+  top: 126px;
   position: absolute;
 
-  ul {
-    list-style: none;
-  }
-  
-  li {
+  span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 0 20px;
+    background-color: #f0f4f9;
+    cursor: pointer;
 
-    a {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin: 0 0 20px;
-      background-color: #f0f4f9;
-      cursor: pointer;
+    @include border-radius(50%);
 
-      @include border-radius(50%);
-    }
-
-    &.last {
-      display: none;
-    }
-
-    &.active,
-    &.current {
-
-      a {
-        background-color: #1758a5;
-      }
+    &.active {
+      background-color: #1758a5;
     }
   }
 }

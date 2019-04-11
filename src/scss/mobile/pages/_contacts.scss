@@ -1,9 +1,5 @@
 .contacts {
-  padding: 45px 0 0 0;
-
-  .content-title {
-    margin-bottom: 40px;
-  }
+  padding: 0;
 
   &__content {
     flex-wrap: wrap;
@@ -54,5 +50,15 @@
     iframe {
       border: none;
     }
+  }
+}
+
+.map-routes {
+  margin: 40px 0 20px;
+  flex-wrap: wrap;
+
+  .image {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }

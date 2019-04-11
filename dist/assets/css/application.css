@@ -2644,10 +2644,14 @@ ol {
   .component-calculator .component-doubled__forms .step.component-calculator__forms_step5 {
     width: 100%; }
 
+.component-calculator .step-form__item > label {
+  min-width: 192px; }
+
 .component-doubled__forms {
   background-color: #fff;
   height: 100%;
   width: 50%;
+  position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2665,11 +2669,7 @@ ol {
       width: 100%;
       justify-content: start; }
   .component-doubled__forms .step {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+    display: none;
     justify-content: flex-start;
     flex-direction: column;
     padding-left: 80px;
@@ -2678,9 +2678,12 @@ ol {
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11);
     -webkit-box-shadow: 0 14px 35px rgba(0, 0, 0, 0.11); }
-
-.component-calculator__forms_step2 .step-form__item > label {
-  width: 192px; }
+    .component-doubled__forms .step.active {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
 
 .component-calculator__forms_step5.step {
   padding-top: 40px; }
@@ -2716,9 +2719,7 @@ ol {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  position: absolute;
-  height: 100%;
-  right: 0px; }
+  position: relative; }
   .component-calculator__forms_controls .steps-numbers {
     margin: 115px 0 0;
     color: #1758a5; }
@@ -2834,118 +2835,112 @@ ol {
   .component-doubled__info p {
     color: #666; }
 
-.component-doubled .actions.clearfix {
+.calc-buttons {
   position: absolute;
-  left: 80px;
+  left: 25px;
   bottom: 50px; }
-  .component-doubled .actions.clearfix li {
+  .calc-buttons a {
+    color: #fff;
     display: inline-block;
-    vertical-align: top; }
-    .component-doubled .actions.clearfix li.disabled {
+    vertical-align: top;
+    font-family: "GothamPro", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    clear: both;
+    outline: none;
+    letter-spacing: .4px;
+    transition: 0.25s all ease-in;
+    -moz-transition: 0.25s all ease-in;
+    -webkit-transition: 0.25s all ease-in;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-size: 15px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 900;
+    font-size: 16px;
+    border: 3px solid #1758a5;
+    background-color: #fff;
+    color: #1758a5;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 140px;
+    padding: 0 0 0 15px;
+    color: #1758a5;
+    cursor: pointer; }
+    .calc-buttons a:hover, .calc-buttons a:active {
+      background-color: #1758a5;
+      color: #fff; }
+    .calc-buttons a:before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 24px;
+      right: 15px;
+      top: calc(50% - 12px);
+      background-image: url(../images/sprite.png);
+      background-position: -63px -30px;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg); }
+    .calc-buttons a.disabled {
       opacity: 0;
       visibility: hidden; }
-    .component-doubled .actions.clearfix li a {
-      color: #fff;
-      display: inline-block;
-      vertical-align: top;
-      font-family: "GothamPro", sans-serif;
-      font-weight: 500;
-      text-align: center;
-      text-decoration: none;
-      position: relative;
-      border: none;
-      cursor: pointer;
-      clear: both;
-      outline: none;
-      letter-spacing: .4px;
-      transition: 0.25s all ease-in;
-      -moz-transition: 0.25s all ease-in;
-      -webkit-transition: 0.25s all ease-in;
-      border-radius: 5px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      font-size: 15px;
-      height: 60px;
-      line-height: 60px;
-      font-weight: 900;
-      font-size: 16px;
-      border: 3px solid #1758a5;
-      background-color: #fff;
-      color: #1758a5;
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
-      width: 140px;
-      padding: 0 0 0 15px;
-      color: #1758a5; }
-      .component-doubled .actions.clearfix li a:hover, .component-doubled .actions.clearfix li a:active {
-        background-color: #1758a5;
-        color: #fff; }
-      .component-doubled .actions.clearfix li a:before {
-        display: block;
-        position: absolute;
-        content: '';
-        width: 32px;
-        height: 24px;
-        right: 15px;
-        top: calc(50% - 12px);
-        background-image: url(../images/sprite.png);
-        background-position: -63px -30px;
-        background-repeat: no-repeat;
-        transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg); }
-      .component-doubled .actions.clearfix li a:hover:before, .component-doubled .actions.clearfix li a:active:before {
-        background-position: -63px 0;
+    .calc-buttons a:hover:before, .calc-buttons a:active:before {
+      background-position: -63px 0;
+      transform: rotate(0);
+      -moz-transform: rotate(0);
+      -webkit-transform: rotate(0); }
+    .calc-buttons a.prev {
+      text-align: right;
+      padding: 0 15px 0 0;
+      margin-right: 15px; }
+      .calc-buttons a.prev:before {
+        right: auto;
+        left: 15px;
         transform: rotate(0);
         -moz-transform: rotate(0);
         -webkit-transform: rotate(0); }
-      .component-doubled .actions.clearfix li a.previous {
-        text-align: right;
-        padding: 0 15px 0 0;
-        margin-right: 15px; }
-        .component-doubled .actions.clearfix li a.previous:before {
-          right: auto;
-          left: 15px;
-          transform: rotate(0);
-          -moz-transform: rotate(0);
-          -webkit-transform: rotate(0); }
-        .component-doubled .actions.clearfix li a.previous:hover:before, .component-doubled .actions.clearfix li a.previous:active:before {
-          background-position: -63px 0;
-          transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -webkit-transform: rotate(180deg); }
-      .component-doubled .actions.clearfix li a.finish-button {
-        width: 306px;
-        text-align: right;
-        position: absolute;
-        padding-right: 32px;
-        top: -10px; }
-        .component-doubled .actions.clearfix li a.finish-button:before {
-          right: auto;
-          left: 38px;
-          transform: rotate(0);
-          -moz-transform: rotate(0);
-          -webkit-transform: rotate(0); }
-        .component-doubled .actions.clearfix li a.finish-button:hover:before, .component-doubled .actions.clearfix li a.finish-button:active:before {
-          background-position: -63px 0;
-          transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -webkit-transform: rotate(180deg); }
+      .calc-buttons a.prev:hover:before, .calc-buttons a.prev:active:before {
+        background-position: -63px 0;
+        transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg); }
+    .calc-buttons a.retreat {
+      width: 306px;
+      text-align: right;
+      padding-right: 32px;
+      position: absolute;
+      bottom: -20px; }
+      .calc-buttons a.retreat:before {
+        right: auto;
+        left: 38px;
+        transform: rotate(0);
+        -moz-transform: rotate(0);
+        -webkit-transform: rotate(0); }
+      .calc-buttons a.retreat:hover:before, .calc-buttons a.retreat:active:before {
+        background-position: -63px 0;
+        transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg); }
 
-.steps.clearfix,
 .steps-dots {
   text-align: center;
   width: 114px;
   z-index: 2;
-  right: 0;
+  left: calc(50% - 5px);
+  top: 126px;
   position: absolute; }
-  .steps.clearfix ul,
-  .steps-dots ul {
-    list-style: none; }
-  .steps.clearfix li a,
-  .steps-dots li a {
-    display: inline-block;
+  .steps-dots span {
+    display: block;
     width: 10px;
     height: 10px;
     margin: 0 0 20px;
@@ -2954,13 +2949,8 @@ ol {
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%; }
-  .steps.clearfix li.last,
-  .steps-dots li.last {
-    display: none; }
-  .steps.clearfix li.active a, .steps.clearfix li.current a,
-  .steps-dots li.active a,
-  .steps-dots li.current a {
-    background-color: #1758a5; }
+    .steps-dots span.active {
+      background-color: #1758a5; }
 
 .component-map {
   position: relative;
@@ -3744,6 +3734,25 @@ ol {
       .contacts__info-item:last-child {
         margin-bottom: 0; }
 
+.map-routes {
+  margin: 40px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between; }
+  .map-routes .image {
+    overflow: hidden;
+    width: calc(50% - 10px);
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px; }
+    .map-routes .image img {
+      display: block;
+      width: 100%; }
+
 .project-page .content-accordion {
   width: 100%; }
 
@@ -4001,50 +4010,6 @@ ol {
           display: inline-block;
           vertical-align: middle;
           margin-left: 7px; }
-
-.type-one-active .type-1 {
-  position: relative;
-  left: 0;
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto; }
-
-.type-one-active .type-2 {
-  position: fixed;
-  left: -9999999px;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none; }
-
-.type-2 {
-  position: relative;
-  left: 0;
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto; }
-
-.radiobuttons.type-3,
-label.type-1,
-.type-1 {
-  position: fixed;
-  left: -9999999px;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none; }
-
-.type-three-active .radiobuttons.type-3 {
-  position: relative;
-  left: 0;
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto; }
-
-.type-three-active .radiobuttons.type-1 {
-  position: fixed;
-  left: -9999999px;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none; }
 
 .tab-item {
   animation: fadeEffect 1s; }
@@ -5359,21 +5324,9 @@ h2 {
         font-size: 30px;
         line-height: 36px;
         margin-bottom: 0; }
-    .component-doubled .actions.clearfix {
-      position: absolute;
-      left: 20px;
-      bottom: 130px;
-      width: calc(100% - 40px); }
-      .component-doubled .actions.clearfix li a {
-        width: 132px; }
   .component-doubled__forms {
     width: 100%;
     height: auto; }
-    .component-doubled__forms .actions.clearfix li a.finish-button {
-      width: 100%;
-      top: 70px; }
-      .component-doubled__forms .actions.clearfix li a.finish-button:before {
-        left: 18px; }
     .component-doubled__forms.wizard .content {
       flex-wrap: wrap; }
     .component-doubled__forms .step {
@@ -5386,12 +5339,31 @@ h2 {
         line-height: 24px; }
     .component-doubled__forms .step-form__item .radiobuttons {
       width: 120px; }
+    .component-doubled__forms .step-form__item > label {
+      min-width: 160px; }
+  .calc-buttons {
+    position: absolute;
+    left: 20px;
+    bottom: 130px;
+    width: calc(100% - 40px); }
+    .calc-buttons a {
+      width: 132px; }
+      .calc-buttons a.retreat {
+        width: 100%;
+        bottom: auto;
+        top: 50px; }
+        .calc-buttons a.retreat:before {
+          left: 18px; }
   .component-calculator__forms_controls {
-    width: auto;
+    width: calc(100% - 40px);
     padding-bottom: 0;
     position: absolute;
     bottom: 30px;
     right: 20px; }
+    .component-calculator__forms_controls .steps-numbers {
+      margin: 0;
+      position: absolute;
+      right: 0; }
   .component-calculator__forms_step5.step {
     padding: 30px 20px 100px; }
     .component-calculator__forms_step5.step input[type="text"] {
@@ -5407,29 +5379,16 @@ h2 {
       .component-calculator__forms_step5.step .total-price span {
         font-size: 24px;
         line-height: 32px; }
-  .component-calculator__forms_step2 .step-form__item > label {
-    width: 160px; }
-  .steps.clearfix {
+  .steps-dots {
     right: auto;
     top: auto;
-    left: 20px;
-    bottom: 33px;
+    left: 0;
+    bottom: 5px;
     width: auto; }
-  .steps.clearfix ul,
-  .steps-dots ul {
-    list-style: none; }
-  .steps.clearfix li,
-  .steps-dots li {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 20px; }
-    .steps.clearfix li a,
-    .steps-dots li a {
-      display: block;
-      margin: 0; }
-    .steps.clearfix li.last,
-    .steps-dots li.last {
-      display: none; }
+    .steps-dots span {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 20px 0 0; }
   .component-why,
   .component-about,
   .component-map {
@@ -5901,9 +5860,7 @@ h2 {
         .header__navigation-menu > ul > li:hover:before, .header__navigation-menu > ul > li.current:before {
           display: none; }
   .contacts {
-    padding: 45px 0 0 0; }
-    .contacts .content-title {
-      margin-bottom: 40px; }
+    padding: 0; }
     .contacts__content {
       flex-wrap: wrap;
       align-items: baseline; }
@@ -5940,6 +5897,12 @@ h2 {
         padding: 0 20px; }
       .contacts .interactive-map iframe {
         border: none; }
+  .map-routes {
+    margin: 40px 0 20px;
+    flex-wrap: wrap; }
+    .map-routes .image {
+      width: 100%;
+      margin-bottom: 20px; }
   .project-page .accordion-item__title {
     display: block; }
   .project-page .content-title {

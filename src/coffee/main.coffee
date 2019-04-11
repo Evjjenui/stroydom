@@ -244,25 +244,7 @@ initUI = ->
   )
 
 initPrices = ->
-  priceForm = $(".prices-form, .component-calculator")
-    
-  if ($("#material1, #material3").is(':checked'))
-    priceForm.addClass('type-one-active')
-  else
-    return
-
-  $("#material1, #material2, #material3").on 'change', (e) ->
-    priceForm.removeClass('type-one-active, type-three-active')
-    
-    if ($("#material1, #material3").is(':checked'))
-      priceForm.addClass('type-one-active')
-    else
-      priceForm.removeClass('type-one-active')
-
-    if ($("#material3").is(':checked'))
-      priceForm.addClass('type-three-active')
-    else
-      return
+  $('#steps-calc').calculator()
 
 initTabs = ->
   $('.tab-nav').on 'click', (e) ->
@@ -277,19 +259,13 @@ initTabs = ->
     $('.prices-form').find(tabId).show()
 
 
-
-
-
-$(window).load ->
-  initPrices()
-
 $ ->
   initCarousel()
   initFancyBox()
   initMenu()
   initVideoSHow()
   initAccordion()
-  initSteps()
+  initPrices()
   initProgress()
   initUI()
   cabinetAccordion()

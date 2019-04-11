@@ -61,3 +61,23 @@
     }
   }
 }
+
+.map-routes {
+  margin: 40px 0;
+  width: 100%;
+  
+  @include flexbox();
+  justify-content: space-between;
+
+  .image {
+    overflow: hidden;
+    width: calc(50% - 10px);
+
+    @include border-radius(6px);
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

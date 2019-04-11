@@ -51,37 +51,11 @@
       margin-bottom: 0;
     }
   }
-
-  .actions.clearfix {
-    position: absolute;
-    left: 20px;
-    bottom: 130px;
-    width: calc(100% - 40px);
-
-    li a {
-      width: 132px;
-    }
-  }
 }
 
 .component-doubled__forms {
   width: 100%;
   height: auto;
-
-  .actions.clearfix {
-
-    li a {
-
-      &.finish-button {
-        width: 100%;
-        top: 70px;
-
-        &:before {
-          left: 18px;
-        }
-      }
-    }
-  }
 
   &.wizard .content {
     flex-wrap: wrap;
@@ -101,19 +75,54 @@
     }
   }
   
-  .step-form__item .radiobuttons {
-    width: 120px;
+  .step-form__item {
+
+    .radiobuttons {
+      width: 120px;
+    }
+
+    > label {
+      min-width: 160px;
+    }
+  }
+}
+
+
+.calc-buttons {
+  position: absolute;
+  left: 20px;
+  bottom: 130px;
+  width: calc(100% - 40px);
+
+  a {
+    width: 132px;
+
+    &.retreat {
+      width: 100%;
+      bottom: auto;
+      top: 50px;
+
+      &:before {
+        left: 18px;
+      }
+    }
   }
 }
 
 .component-calculator__forms {
 
   &_controls {
-    width: auto;
+    width: calc(100% - 40px);
     padding-bottom: 0;
     position: absolute;
     bottom: 30px;
     right: 20px;
+
+    .steps-numbers {
+      margin: 0;
+      position: absolute;
+      right: 0;
+    }
   }
   
   &_step5.step {
@@ -142,45 +151,20 @@
       }
     }
   }
-
-  &_step2 {
-
-    .step-form__item {
-
-      > label {
-        width: 160px;
-      }
-    }
-  }
+  
 }
 
-.steps.clearfix {
+
+.steps-dots {
   right: auto;
   top: auto;
-  left: 20px;
-  bottom: 33px;
+  left: 0;
+  bottom: 5px;
   width: auto;
-}
-
-.steps.clearfix,
-.steps-dots {
-
-  ul {
-    list-style: none;
-  }
   
-  li {
+  span {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 20px;
-
-    a {
-      display: block;
-      margin: 0;
-    }
-
-    &.last {
-      display: none;
-    }
+    margin: 0 20px 0 0;
   }
 }
